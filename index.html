@@ -1,0 +1,2452 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Practice for the Goethe A1 and A2 German exams: listening, vocabulary, reading, writing and speaking, with a plan that adapts to your weak spots.">
+<meta name="theme-color" content="#2743C9">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>html{padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Startklar Deutsch</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Startklar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&family=Playwrite+DE+Grund:wght@300;400&display=swap">
+<style>
+:root{
+  --paper:#F6F7FB; --grid:rgba(39,67,201,.075); --card:#FFFFFF; --card-2:#F0F2F9;
+  --ink:#1B2140; --ink-2:#4A5170; --ink-3:#737A96; --line:#DCDFEA;
+  --blue:#2743C9; --blue-ink:#FFFFFF; --blue-soft:#E7EBFC;
+  --red:#C9352A; --red-soft:#FBE8E6; --green:#1B7F52; --green-soft:#E1F3EA;
+  --amber:#A86B12; --amber-soft:#FBF0DC;
+  --shadow:0 1px 2px rgba(27,33,64,.06),0 4px 14px rgba(27,33,64,.05);
+  --f-display:"Jost","Futura","Avenir Next","Century Gothic",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Source Sans Pro",-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-hand:"Playwrite DE Grund","Bradley Hand","Segoe Print",cursive;
+  --r:14px; --r-s:9px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#11152A; --grid:rgba(143,163,255,.06); --card:#1A1F3A; --card-2:#222847;
+    --ink:#E9EBF7; --ink-2:#B5BAD7; --ink-3:#8A91B4; --line:#2D3456;
+    --blue:#93A6FF; --blue-ink:#10142A; --blue-soft:#252E5E;
+    --red:#FF8175; --red-soft:#3B2030; --green:#55D39C; --green-soft:#173628;
+    --amber:#EDB552; --amber-soft:#3A2F1A;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#11152A; --grid:rgba(143,163,255,.06); --card:#1A1F3A; --card-2:#222847;
+  --ink:#E9EBF7; --ink-2:#B5BAD7; --ink-3:#8A91B4; --line:#2D3456;
+  --blue:#93A6FF; --blue-ink:#10142A; --blue-soft:#252E5E;
+  --red:#FF8175; --red-soft:#3B2030; --green:#55D39C; --green-soft:#173628;
+  --amber:#EDB552; --amber-soft:#3A2F1A;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  background-color:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:20px 20px; background-attachment:fixed;
+  color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.45;
+  -webkit-font-smoothing:antialiased; -webkit-tap-highlight-color:transparent;
+}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+.app{max-width:580px;margin:0 auto;padding-inline:16px;padding-block:14px calc(96px + env(safe-area-inset-bottom,0px))}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:6px 14px}
+.wordmark{font-family:var(--f-display);font-weight:700;font-size:22px;letter-spacing:-.01em;display:flex;align-items:baseline;gap:8px}
+.wordmark .dot{width:9px;height:9px;border-radius:2px;background:var(--blue);display:inline-block;transform:translateY(-2px)}
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;letter-spacing:.02em;padding:4px 10px;border-radius:999px;background:var(--blue-soft);color:var(--blue);border:0}
+.pill.ghost{background:transparent;border:1px solid var(--line);color:var(--ink-2)}
+.sync{font-size:12px;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+.sync i{width:7px;height:7px;border-radius:50%;background:var(--ink-3);display:inline-block}
+.sync.ok i{background:var(--green)}
+
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+h1{font-size:30px;font-weight:600;letter-spacing:-.015em;line-height:1.1}
+h2{font-size:20px;font-weight:600;letter-spacing:-.005em}
+h3{font-size:16px;font-weight:600}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.muted{color:var(--ink-2)} .small{font-size:13.5px} .tiny{font-size:12px;color:var(--ink-3)}
+.num{font-variant-numeric:tabular-nums}
+.stack{display:flex;flex-direction:column;gap:14px}
+.stack-s{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.between{justify-content:space-between}
+.section{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow)}
+.card.flat{box-shadow:none}
+.card.ink{background:var(--blue);color:var(--blue-ink);border-color:transparent}
+.card.ink .muted,.card.ink .tiny,.card.ink .eyebrow{color:inherit;opacity:.78}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;border:1px solid var(--line);background:var(--card);padding:11px 16px;font-weight:600;font-size:15.5px;min-height:46px;transition:transform .08s ease,background .15s}
+.btn:active{transform:scale(.98)}
+.btn.primary{background:var(--blue);color:var(--blue-ink);border-color:transparent}
+.btn.ink-on{background:var(--blue-ink);color:var(--blue);border-color:transparent}
+.btn.block{width:100%}
+.btn.small{min-height:36px;padding:6px 12px;font-size:14px;border-radius:10px}
+.btn:disabled{opacity:.45;cursor:default}
+.linkbtn{background:none;border:0;padding:0;color:var(--blue);font-weight:600;font-size:14px}
+
+/* countdown hero */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+.days{font-family:var(--f-display);font-weight:600;font-size:64px;line-height:.85;letter-spacing:-.03em}
+.days small{display:block;font-size:14px;letter-spacing:.02em;font-weight:500;margin-top:8px}
+.scoreline{position:relative;height:10px;border-radius:5px;background:rgba(255,255,255,.22);overflow:visible;margin-top:8px}
+.scoreline b{position:absolute;inset:0 auto 0 0;border-radius:5px;background:var(--blue-ink)}
+.scoreline .pass{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--blue-ink);opacity:.9}
+.scoreline .pass::after{content:"60";position:absolute;top:-16px;left:-6px;font-size:10.5px;font-weight:700}
+
+/* plan list */
+.plan{display:flex;flex-direction:column;gap:0;margin:4px 0 12px}
+.plan-row{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:start;padding:10px 0;border-top:1px dashed var(--line)}
+.plan-row:first-child{border-top:0}
+.plan-ico{width:28px;height:28px;border-radius:8px;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center}
+.plan-ico svg{width:16px;height:16px}
+.why{font-size:13px;color:var(--ink-2);margin-top:2px}
+
+.hand{font-family:var(--f-hand);font-weight:300;color:var(--red);font-size:14px;line-height:1.7}
+.hand.blue{color:var(--blue)} .hand.green{color:var(--green)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:6px;text-align:left;min-height:96px}
+.tile .t-title{font-family:var(--f-display);font-weight:600;font-size:16px}
+.tile.accent{border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+
+/* meters */
+.meter{height:8px;border-radius:4px;background:var(--card-2);overflow:hidden;position:relative}
+.meter b{display:block;height:100%;border-radius:4px;background:var(--blue)}
+.meter.good b{background:var(--green)} .meter.warn b{background:var(--amber)} .meter.bad b{background:var(--red)}
+.mrow{display:grid;grid-template-columns:minmax(92px,34%) 1fr 48px;gap:10px;align-items:center;padding:6px 0}
+.mrow .lbl{font-size:14.5px;font-weight:600}
+.mrow .val{text-align:right;font-size:13.5px;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--card)}
+.chip.red{background:var(--red-soft);color:var(--red);border-color:transparent}
+.chip.green{background:var(--green-soft);color:var(--green);border-color:transparent}
+.chip.amber{background:var(--amber-soft);color:var(--amber);border-color:transparent}
+.chip.blue{background:var(--blue-soft);color:var(--blue);border-color:transparent}
+
+.weak{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.weak:first-child{border-top:0}
+.weak .pct{font-family:var(--f-display);font-weight:600;font-size:20px;color:var(--red)}
+
+/* tabbar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+.tabbar-in{max-width:580px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.tab{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;font-size:11px;font-weight:600;color:var(--ink-3);border-radius:10px}
+.tab svg{width:22px;height:22px}
+.tab[aria-current="page"]{color:var(--blue)}
+
+/* runner */
+.runner{position:fixed;inset:0;z-index:40;background:var(--paper);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.runner-top{display:flex;align-items:center;gap:12px;padding:10px 16px;max-width:580px;width:100%;margin:0 auto}
+.xbtn{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;flex:none}
+.prog{flex:1;height:8px;border-radius:4px;background:var(--card-2);overflow:hidden}
+.prog b{display:block;height:100%;background:var(--blue);transition:width .3s ease}
+.runner-body{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.runner-in{max-width:580px;margin:0 auto;padding-inline:16px;padding-block:8px 24px;display:flex;flex-direction:column;gap:14px}
+.runner-foot{border-top:1px solid var(--line);background:var(--card);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.runner-foot-in{max-width:580px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.runner-foot.good{background:var(--green-soft);border-color:transparent}
+.runner-foot.bad{background:var(--red-soft);border-color:transparent}
+.fb-title{font-family:var(--f-display);font-weight:600;font-size:18px}
+.runner-foot.good .fb-title{color:var(--green)} .runner-foot.bad .fb-title{color:var(--red)}
+
+.tag{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--blue)}
+.prompt{font-family:var(--f-display);font-size:26px;font-weight:600;line-height:1.15;letter-spacing:-.01em}
+.prompt.de{font-size:30px}
+.art{font-weight:500;color:var(--ink-3)}
+.q{font-size:18px;font-weight:600;line-height:1.3}
+
+/* answer sheet options */
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:center;text-align:left;width:100%;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:17px;min-height:54px;position:relative}
+.opt .box{width:30px;height:30px;border:1.5px solid var(--ink-3);border-radius:6px;display:grid;place-items:center;font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--ink-2)}
+.opt.sel{border-color:var(--blue)} .opt.sel .box{background:var(--blue);border-color:var(--blue);color:var(--blue-ink)}
+.opt.right{border-color:var(--green);background:var(--green-soft)} .opt.right .box{background:var(--green);border-color:var(--green);color:var(--card)}
+.opt.wrong{border-color:var(--red);background:var(--red-soft)} .opt.wrong .box{background:var(--red);border-color:var(--red);color:var(--card)}
+.opt.wrong .otext .de{text-decoration:line-through;text-decoration-color:var(--red);text-decoration-thickness:2px}
+.opt:disabled{cursor:default}
+.rf{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.rf .opt{grid-template-columns:30px 1fr}
+
+/* player */
+.player{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px}
+.play{width:58px;height:58px;border-radius:50%;background:var(--blue);color:var(--blue-ink);border:0;display:grid;place-items:center;flex:none}
+.play svg{width:24px;height:24px}
+.play.playing{animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px var(--blue-soft)}}
+.wave{display:flex;gap:3px;align-items:center;height:26px}
+.wave i{width:3px;border-radius:2px;background:var(--ink-3);opacity:.5}
+.playing-wave i{background:var(--blue);opacity:1;animation:wv .9s ease-in-out infinite}
+@keyframes wv{50%{transform:scaleY(.4)}}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{border:0;background:var(--card);padding:6px 10px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--blue-soft);color:var(--blue)}
+
+.transcript{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;font-size:15.5px;display:flex;flex-direction:column;gap:6px}
+.transcript .sp{font-weight:700;color:var(--ink-3);font-size:12px;letter-spacing:.06em;margin-right:6px}
+.transcript mark{background:var(--amber-soft);color:inherit;border-bottom:2px solid var(--amber);padding:0 2px;border-radius:2px}
+
+.text-doc{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px;font-size:16px;white-space:pre-wrap;box-shadow:var(--shadow);line-height:1.5}
+.text-doc.sign{border:2px solid var(--ink);border-radius:4px;font-weight:600;text-align:center;font-family:var(--f-display);white-space:pre-wrap}
+.ads{display:grid;grid-template-columns:1fr;gap:10px}
+.ad{background:var(--card);border:1.5px dashed var(--ink-3);border-radius:8px;padding:12px;font-size:15px;white-space:pre-wrap;text-align:left;width:100%}
+.ad b.lt{font-family:var(--f-display);font-size:18px;margin-right:6px}
+
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:13px;font-weight:700;color:var(--ink-2);letter-spacing:.02em}
+.input,textarea.input{width:100%;border:1.5px solid var(--line);border-radius:10px;background:var(--card);padding:12px 13px;font-size:17px;min-height:48px}
+.input:focus{border-color:var(--blue);outline:none}
+textarea.input{min-height:150px;resize:vertical;line-height:1.45}
+.input.right{border-color:var(--green);background:var(--green-soft)} .input.wrong{border-color:var(--red);background:var(--red-soft)}
+.umlauts{display:flex;gap:6px}
+.umlauts button{min-width:44px;height:38px;border-radius:9px;border:1px solid var(--line);background:var(--card);font-size:17px;font-weight:600}
+.checklist{display:flex;flex-direction:column;gap:6px;font-size:15px}
+.ck{display:flex;gap:9px;align-items:flex-start}
+.ck i{flex:none;width:20px;height:20px;border-radius:5px;border:1.5px solid var(--ink-3);display:grid;place-items:center;font-style:normal;font-size:13px;font-weight:700;margin-top:1px}
+.ck.on i{background:var(--green);border-color:var(--green);color:var(--card)}
+.ck.off i{border-color:var(--red);color:var(--red)}
+
+.bildkarte{width:112px;height:112px;border-radius:14px;border:2px solid var(--ink);display:grid;place-items:center;font-size:54px;background:var(--card);margin:4px auto}
+.wortkarte{border:2px solid var(--ink);border-radius:10px;padding:14px;text-align:center;background:var(--card);max-width:260px;margin:0 auto;width:100%}
+.wortkarte .thema{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.wortkarte .wort{font-family:var(--f-display);font-size:26px;font-weight:600;margin-top:6px}
+
+.bars{display:flex;align-items:flex-end;gap:4px;height:92px;padding-top:6px;border-bottom:1px solid var(--line)}
+.bars .bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;position:relative}
+.bars .bar b{display:block;background:var(--blue);border-radius:4px 4px 0 0;min-height:2px}
+.bars .bar.today b{background:var(--ink)}
+.bars .bar.zero b{background:var(--line)}
+.bars-x{display:flex;gap:4px;margin-top:4px}
+.bars-x span{flex:1;text-align:center;font-size:10.5px;color:var(--ink-3)}
+
+.list-btn{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.list-btn .sub{font-size:13px;color:var(--ink-2)}
+.chev{color:var(--ink-3)}
+
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(92px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;font-size:14px;font-weight:600;z-index:60;max-width:calc(100% - 32px)}
+.notice{border-radius:12px;padding:12px 14px;background:var(--amber-soft);color:var(--ink);font-size:14px}
+.notice b{color:var(--amber)}
+.ai-out{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:10px;padding:12px 14px;font-size:15px;white-space:pre-wrap}
+.correction{display:grid;grid-template-columns:1fr;gap:2px;padding:8px 0;border-top:1px dashed var(--line)}
+.correction:first-child{border-top:0}
+.correction s{color:var(--red);text-decoration-thickness:2px}
+.correction ins{color:var(--green);text-decoration:none;font-weight:600}
+.summary-num{font-family:var(--f-display);font-weight:600;font-size:56px;line-height:1;letter-spacing:-.02em}
+details.more summary{cursor:pointer;color:var(--blue);font-weight:600;font-size:14px}
+hr.rule{border:0;border-top:1px solid var(--line);margin:4px 0}
+.set-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.set-row:first-child{border-top:0}
+select.input{min-height:42px;padding:8px 10px;font-size:16px;width:auto}
+input[type=date].input{min-height:42px;padding:8px 10px;width:auto}
+
+/* English help */
+.h-en{font-size:13px;color:var(--ink-3);margin-top:2px;font-weight:500}
+.en-q{font-size:13.5px;color:var(--ink-3);margin-top:3px;line-height:1.35}
+.otext{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px;min-width:0}
+.otext .en{font-size:12.5px;color:var(--ink-3);font-weight:400;margin-left:auto;text-align:right;line-height:1.3}
+.opt.right .otext .en{color:var(--green)} .opt.wrong .otext .en{color:var(--red)}
+.steps{display:flex;gap:6px;flex-wrap:wrap}
+.steps span{font-size:12px;font-weight:600;color:var(--blue);background:var(--blue-soft);border-radius:999px;padding:3px 10px}
+/* today + countdown */
+.today-box{background:color-mix(in srgb,var(--blue-ink) 13%,transparent);border-radius:12px;padding:12px 14px}
+.today-t{font-family:var(--f-display);font-size:22px;font-weight:600;line-height:1.15;margin-top:2px}
+.linkbtn.on-ink{color:var(--blue-ink);text-decoration:underline;text-underline-offset:3px;align-self:center;padding:4px}
+.cd-strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;margin-inline:-16px;padding:2px 16px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.cd-strip::-webkit-scrollbar{display:none}
+.cd{flex:0 0 136px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 11px;display:flex;flex-direction:column;gap:3px}
+.cd-date{font-size:11.5px;color:var(--ink-3);font-weight:700;letter-spacing:.03em}
+.cd-mark{font-family:var(--f-display);font-weight:600;font-size:15px;color:var(--blue)}
+.cd-t{font-weight:600;font-size:13.5px;line-height:1.25}
+.cd-en{font-size:12px;color:var(--ink-2);line-height:1.3}
+.cd.today{border-color:var(--blue);box-shadow:inset 0 0 0 1.5px var(--blue);background:var(--blue-soft)}
+.cd.past{opacity:.55} .cd.past.done{opacity:.85}
+.cd.done .cd-mark{color:var(--green)}
+.tile:disabled{opacity:.5;cursor:default}
+.runner-top .pill{padding:6px 10px}
+@media (max-width:380px){.days{font-size:54px}.prompt.de{font-size:26px}.grid2{grid-template-columns:1fr}}
+</style>
+<style>[hidden]{display:none!important}</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="runner" class="runner" hidden></div>
+<script>
+// Wortschatz — organised by the themes of the Goethe A1 / A2 word lists.
+// Line format: "German = English"
+const VOCAB_SRC = {
+A1: [
+{id:"person", de:"Person & Familie", en:"People & family", w:`
+der Name = name
+der Vorname = first name
+der Familienname = surname
+die Adresse = address
+die Telefonnummer = phone number
+das Alter = age
+geboren = born
+verheiratet = married
+ledig = single (not married)
+geschieden = divorced
+die Mutter = mother
+der Vater = father
+die Eltern = parents
+der Bruder = brother
+die Schwester = sister
+die Geschwister = siblings
+der Sohn = son
+die Tochter = daughter
+das Kind = child
+die Großmutter = grandmother
+der Großvater = grandfather
+der Mann = man / husband
+die Frau = woman / wife / Mrs
+der Freund = friend (male) / boyfriend
+die Freundin = friend (female) / girlfriend
+heißen = to be called
+wohnen = to live (reside)
+kommen aus = to come from
+das Land = country
+die Sprache = language
+der Beruf = job, profession
+die Leute = people`},
+{id:"wohnen", de:"Wohnen", en:"Home & living", w:`
+die Wohnung = flat, apartment
+das Haus = house
+das Zimmer = room
+die Küche = kitchen
+das Bad = bathroom
+das Schlafzimmer = bedroom
+das Wohnzimmer = living room
+der Balkon = balcony
+der Garten = garden
+die Miete = rent
+der Stock = floor, storey
+der Aufzug = lift, elevator
+die Treppe = stairs
+das Fenster = window
+die Tür = door
+der Tisch = table
+der Stuhl = chair
+das Bett = bed
+der Schrank = cupboard, wardrobe
+das Sofa = sofa
+die Lampe = lamp
+der Kühlschrank = fridge
+die Waschmaschine = washing machine
+hell = bright
+dunkel = dark
+ruhig = quiet
+laut = loud
+mieten = to rent
+der Schlüssel = key
+das Erdgeschoss = ground floor`},
+{id:"essen", de:"Essen & Trinken", en:"Food & drink", w:`
+das Frühstück = breakfast
+das Mittagessen = lunch
+das Abendessen = dinner
+das Brot = bread
+das Brötchen = bread roll
+die Butter = butter
+der Käse = cheese
+die Wurst = sausage, cold cuts
+das Fleisch = meat
+der Fisch = fish
+das Ei = egg
+das Gemüse = vegetables
+das Obst = fruit
+der Apfel = apple
+die Kartoffel = potato
+der Reis = rice
+die Nudeln = pasta, noodles
+der Salat = salad / lettuce
+die Tomate = tomato
+der Kuchen = cake
+der Kaffee = coffee
+der Tee = tea
+das Wasser = water
+die Milch = milk
+der Saft = juice
+das Bier = beer
+der Wein = wine
+essen = to eat
+trinken = to drink
+kochen = to cook
+der Hunger = hunger
+der Durst = thirst
+lecker = tasty
+die Speisekarte = menu
+die Rechnung = bill, invoice`},
+{id:"einkaufen", de:"Einkaufen & Geld", en:"Shopping & money", w:`
+der Supermarkt = supermarket
+das Geschäft = shop
+der Markt = market
+kaufen = to buy
+verkaufen = to sell
+kosten = to cost
+der Preis = price
+das Geld = money
+billig = cheap
+teuer = expensive
+das Angebot = offer, special deal
+die Kasse = checkout, till
+bar bezahlen = to pay cash
+die Kreditkarte = credit card
+bezahlen = to pay
+die Tüte = bag
+das Kilo = kilo
+der Liter = litre
+die Flasche = bottle
+die Packung = packet
+das Stück = piece
+geöffnet = open
+geschlossen = closed
+die Öffnungszeiten = opening hours
+der Kunde = customer
+brauchen = to need
+möchten = would like
+wie viel = how much`},
+{id:"zeit", de:"Zeit & Kalender", en:"Time & calendar", w:`
+die Uhr = clock / o'clock
+die Stunde = hour
+die Minute = minute
+der Tag = day
+die Woche = week
+der Monat = month
+das Jahr = year
+heute = today
+morgen = tomorrow
+gestern = yesterday
+der Morgen = morning
+der Vormittag = late morning
+der Mittag = noon
+der Nachmittag = afternoon
+der Abend = evening
+die Nacht = night
+das Wochenende = weekend
+der Montag = Monday
+der Dienstag = Tuesday
+der Mittwoch = Wednesday
+der Donnerstag = Thursday
+der Freitag = Friday
+der Samstag = Saturday
+der Sonntag = Sunday
+der Termin = appointment
+der Geburtstag = birthday
+pünktlich = on time
+früh = early
+spät = late
+jetzt = now
+bald = soon
+oft = often
+manchmal = sometimes
+nie = never
+halb = half (halb drei = 2:30)
+das Viertel = quarter`},
+{id:"verkehr", de:"Reisen & Verkehr", en:"Travel & transport", w:`
+der Bahnhof = train station
+der Zug = train
+der Bus = bus
+die U-Bahn = underground, subway
+die Straßenbahn = tram
+das Auto = car
+das Fahrrad = bicycle
+das Taxi = taxi
+das Flugzeug = aeroplane
+der Flughafen = airport
+die Haltestelle = stop (bus/tram)
+das Gleis = platform, track
+die Fahrkarte = ticket
+die Abfahrt = departure
+die Ankunft = arrival
+abfahren = to depart
+ankommen = to arrive
+umsteigen = to change (trains)
+die Reise = trip, journey
+der Urlaub = holiday, vacation
+das Hotel = hotel
+das Gepäck = luggage
+der Koffer = suitcase
+der Pass = passport
+hin und zurück = return (ticket)
+die Verspätung = delay
+der Ausgang = exit / gate
+der Eingang = entrance
+fahren = to go (by vehicle), drive
+fliegen = to fly`},
+{id:"stadt", de:"Stadt & Orientierung", en:"Town & directions", w:`
+die Stadt = town, city
+das Dorf = village
+die Straße = street
+der Platz = square / seat / space
+die Ampel = traffic light
+die Kreuzung = crossroads
+links = left
+rechts = right
+geradeaus = straight ahead
+die Ecke = corner
+die Bank = bank / bench
+die Post = post office
+die Apotheke = pharmacy
+das Krankenhaus = hospital
+das Kino = cinema
+das Museum = museum
+die Kirche = church
+der Park = park
+das Rathaus = town hall
+die Schule = school
+weit = far
+nah = near
+gegenüber = opposite
+neben = next to
+zwischen = between
+hier = here
+dort = there
+die Information = information desk`},
+{id:"gesundheit", de:"Gesundheit & Körper", en:"Health & body", w:`
+der Kopf = head
+der Arm = arm
+das Bein = leg
+der Fuß = foot
+die Hand = hand
+der Bauch = belly, stomach
+der Rücken = back
+das Auge = eye
+das Ohr = ear
+der Mund = mouth
+der Zahn = tooth
+krank = ill, sick
+gesund = healthy
+der Arzt = doctor (male)
+die Ärztin = doctor (female)
+die Praxis = doctor's surgery
+das Medikament = medicine
+die Tablette = tablet, pill
+das Fieber = fever
+die Schmerzen = pain
+wehtun = to hurt
+die Sprechstunde = consultation hours
+müde = tired
+die Erkältung = cold (illness)`},
+{id:"arbeit", de:"Arbeit & Lernen", en:"Work & study", w:`
+arbeiten = to work
+die Arbeit = work
+die Firma = company
+das Büro = office
+der Chef = boss (male)
+die Chefin = boss (female)
+der Kollege = colleague (male)
+die Kollegin = colleague (female)
+der Lehrer = teacher (male)
+die Lehrerin = teacher (female)
+der Student = student (male)
+der Verkäufer = sales assistant
+der Kellner = waiter
+der Kurs = course
+lernen = to learn, study
+studieren = to study (at university)
+die Prüfung = exam
+die Hausaufgabe = homework
+der Job = job
+verdienen = to earn
+die Pause = break
+frei haben = to have time off
+der Computer = computer
+die E-Mail = email
+der Drucker = printer
+das Papier = paper`},
+{id:"freizeit", de:"Freizeit & Hobbys", en:"Free time & hobbies", w:`
+die Freizeit = free time
+das Hobby = hobby
+schwimmen = to swim
+lesen = to read
+spielen = to play
+tanzen = to dance
+singen = to sing
+der Fußball = football
+der Sport = sport
+wandern = to hike
+Rad fahren = to cycle
+fotografieren = to take photos
+die Musik = music
+das Konzert = concert
+der Film = film
+das Theater = theatre
+die Party = party
+das Fest = celebration, festival
+einladen = to invite
+die Einladung = invitation
+treffen = to meet
+besuchen = to visit
+spazieren gehen = to go for a walk
+gern = gladly (ich lese gern = I like reading)
+das Buch = book
+das Schwimmbad = swimming pool`},
+{id:"wetter", de:"Wetter & Natur", en:"Weather & nature", w:`
+das Wetter = weather
+die Sonne = sun
+der Regen = rain
+regnen = to rain
+der Schnee = snow
+der Wind = wind
+warm = warm
+kalt = cold
+heiß = hot
+der Grad = degree
+der Frühling = spring
+der Sommer = summer
+der Herbst = autumn
+der Winter = winter
+das Meer = sea
+der See = lake
+der Berg = mountain
+der Baum = tree
+die Blume = flower
+das Tier = animal
+der Hund = dog
+die Katze = cat`},
+{id:"kleidung", de:"Kleidung & Farben", en:"Clothes & colours", w:`
+die Kleidung = clothes
+die Hose = trousers
+das Hemd = shirt
+die Bluse = blouse
+der Rock = skirt
+das Kleid = dress
+die Jacke = jacket
+der Mantel = coat
+der Pullover = jumper, sweater
+die Schuhe = shoes
+die Größe = size
+anziehen = to put on (clothes)
+tragen = to wear / carry
+passen = to fit
+die Farbe = colour
+rot = red
+blau = blue
+grün = green
+gelb = yellow
+schwarz = black
+weiß = white
+grau = grey
+braun = brown`},
+{id:"kommunikation", de:"Post, Telefon & Formulare", en:"Post, phone & forms", w:`
+das Telefon = telephone
+das Handy = mobile phone
+anrufen = to call (phone)
+die Nachricht = message
+der Brief = letter
+die Postkarte = postcard
+das Paket = parcel
+die Briefmarke = stamp
+schicken = to send
+schreiben = to write
+antworten = to answer
+das Formular = form
+ausfüllen = to fill in
+unterschreiben = to sign
+die Unterschrift = signature
+das Konto = bank account
+die Postleitzahl = postcode
+der Wohnort = place of residence
+das Datum = date
+die Anmeldung = registration
+buchstabieren = to spell
+wiederholen = to repeat`},
+{id:"alltag", de:"Alltag: Verben & Adjektive", en:"Everyday verbs & adjectives", w:`
+gehen = to go (on foot)
+kommen = to come
+machen = to do, make
+sehen = to see
+hören = to hear, listen
+sprechen = to speak
+verstehen = to understand
+wissen = to know (a fact)
+kennen = to know (a person/place)
+helfen = to help
+suchen = to look for
+finden = to find
+geben = to give
+nehmen = to take
+öffnen = to open
+schließen = to close
+beginnen = to begin
+warten = to wait
+bleiben = to stay
+schlafen = to sleep
+aufstehen = to get up
+fragen = to ask
+sagen = to say
+können = can, to be able to
+müssen = must, to have to
+dürfen = may, to be allowed to
+neu = new
+alt = old
+schnell = fast
+langsam = slow
+leicht = easy / light
+schwer = difficult / heavy
+richtig = correct
+falsch = wrong
+wichtig = important
+frei = free / vacant
+besetzt = occupied, engaged
+kaputt = broken`}
+],
+A2: [
+{id:"a2arbeit", de:"Arbeit & Bewerbung", en:"Work & applications", w:`
+die Bewerbung = job application
+sich bewerben = to apply
+der Lebenslauf = CV, résumé
+das Vorstellungsgespräch = job interview
+die Stelle = position, job
+die Erfahrung = experience
+der Arbeitgeber = employer
+das Gehalt = salary
+die Überstunde = overtime hour
+kündigen = to quit / give notice
+die Ausbildung = vocational training
+die Besprechung = meeting
+erledigen = to get done, deal with
+die Abteilung = department
+selbstständig = self-employed
+arbeitslos = unemployed
+der Vertrag = contract
+die Teilzeit = part-time
+die Vollzeit = full-time
+der Feierabend = end of the working day`},
+{id:"a2gesundheit", de:"Gesundheit", en:"Health (A2)", w:`
+der Unfall = accident
+verletzt = injured
+die Versicherung = insurance
+das Rezept = prescription / recipe
+die Grippe = flu
+der Husten = cough
+die Erkältung = cold
+sich fühlen = to feel
+sich erholen = to recover
+der Notfall = emergency
+untersuchen = to examine
+das Wartezimmer = waiting room
+sich ausruhen = to rest
+die Ernährung = diet, nutrition
+abnehmen = to lose weight
+die Krankmeldung = sick note
+gute Besserung = get well soon`},
+{id:"a2medien", de:"Medien & Technik", en:"Media & technology", w:`
+herunterladen = to download
+das Passwort = password
+der Bildschirm = screen
+die Nachrichten = the news
+die Zeitung = newspaper
+die Zeitschrift = magazine
+die Sendung = broadcast, TV programme
+das Gerät = device
+aufladen = to charge
+der Akku = battery
+speichern = to save
+löschen = to delete
+die Anzeige = advert / display
+drucken = to print
+das Ladegerät = charger
+der Empfang = reception (signal) / front desk`},
+{id:"a2wohnen", de:"Wohnen & Umzug", en:"Housing & moving", w:`
+umziehen = to move house
+der Umzug = move (house)
+die Nebenkosten = additional costs (utilities)
+die Kaution = deposit
+der Nachbar = neighbour
+die Hausordnung = house rules
+der Müll = rubbish, trash
+trennen = to separate
+die Heizung = heating
+der Keller = cellar, basement
+einrichten = to furnish
+möbliert = furnished
+der Hausmeister = caretaker
+renovieren = to renovate
+der Mieter = tenant
+der Vermieter = landlord`},
+{id:"a2reisen", de:"Reisen & Unterwegs", en:"Travel (A2)", w:`
+die Unterkunft = accommodation
+buchen = to book
+reservieren = to reserve
+die Ermäßigung = discount, reduction
+die Rückfahrt = return journey
+verpassen = to miss (a train)
+der Anschluss = connection
+das Reisebüro = travel agency
+die Sehenswürdigkeit = sight, attraction
+die Führung = guided tour
+der Ausweis = ID card
+das Einzelzimmer = single room
+das Doppelzimmer = double room
+die Halbpension = half board
+die Aussicht = view
+der Stau = traffic jam`},
+{id:"a2gefuehle", de:"Gefühle & Beziehungen", en:"Feelings & relationships", w:`
+sich freuen = to be happy, look forward
+sich ärgern = to be annoyed
+traurig = sad
+glücklich = happy
+zufrieden = satisfied
+nervös = nervous
+die Hochzeit = wedding
+heiraten = to marry
+sich verlieben = to fall in love
+sich trennen = to separate, split up
+die Beziehung = relationship
+sich kennenlernen = to get to know each other
+streiten = to argue
+sich entschuldigen = to apologise
+enttäuscht = disappointed
+stolz = proud
+die Sorge = worry`},
+{id:"a2feste", de:"Feste & Freizeit", en:"Celebrations & leisure", w:`
+feiern = to celebrate
+das Geschenk = present, gift
+schenken = to give (as a gift)
+gratulieren = to congratulate
+Weihnachten = Christmas
+Ostern = Easter
+Silvester = New Year's Eve
+der Verein = club, association
+das Mitglied = member
+die Ausstellung = exhibition
+die Veranstaltung = event
+die Eintrittskarte = admission ticket
+der Ausflug = excursion, day trip
+sich verabreden = to arrange to meet
+die Stimmung = atmosphere, mood`},
+{id:"a2umwelt", de:"Umwelt & Wetter", en:"Environment & weather", w:`
+die Umwelt = environment
+die Temperatur = temperature
+das Gewitter = thunderstorm
+der Nebel = fog
+bewölkt = cloudy
+trocken = dry
+feucht = damp, humid
+die Energie = energy
+sparen = to save (money/energy)
+der Strom = electricity
+die Luft = air
+schützen = to protect
+das Klima = climate
+die Landschaft = landscape`}
+]};
+// Original practice material written in the style of the Goethe A1 (Start Deutsch 1) and A2 exams.
+// s = script lines [speaker, text]; speaker A/B = two voices, N = announcer.
+const RF = ["Richtig","Falsch"];
+const JN = ["Ja","Nein"];
+
+const HOEREN = [
+// ---------- A1 Teil 1: short everyday dialogues, heard twice, a/b/c ----------
+{id:"h1-01",lvl:"A1",part:1,topic:"einkaufen",traps:["price"],
+ s:[["A","Guten Morgen. Ich hätte gern sechs Brötchen, bitte."],["B","Gern. Sonst noch etwas?"],["A","Nein, danke. Was kostet das?"],["B","Das macht zwei Euro vierzig."]],
+ qs:[{q:"Wie viel kosten die Brötchen?",o:["2,14 €","2,40 €","4,20 €"],a:1}],key:"zwei Euro vierzig",
+ ex:"„zwei Euro vierzig“ = 2,40 €. Listen for the euro amount first, then the cents."},
+{id:"h1-02",lvl:"A1",part:1,topic:"zeit",traps:["time","change"],
+ s:[["A","Treffen wir uns um halb sieben vor dem Kino?"],["B","Halb sieben ist zu früh. Ich arbeite bis sechs."],["A","Okay, dann um sieben?"],["B","Ja, um sieben passt gut."]],
+ qs:[{q:"Wann treffen sich die beiden?",o:["Um 6:30 Uhr","Um 7:00 Uhr","Um 7:30 Uhr"],a:1}],key:"um sieben passt gut",
+ ex:"The first time (halb sieben = 6:30) is rejected. In the exam the first thing you hear is often NOT the answer."},
+{id:"h1-03",lvl:"A1",part:1,topic:"arbeit",traps:["number"],
+ s:[["A","Entschuldigung, wo finde ich Frau Berger?"],["B","Frau Berger ist im zweiten Stock, Zimmer zweihundertdreizehn."],["A","Zweihundertdreißig?"],["B","Nein, zweihundertdreizehn."]],
+ qs:[{q:"In welchem Zimmer ist Frau Berger?",o:["213","230","312"],a:0}],key:"zweihundertdreizehn",
+ ex:"dreizehn = 13, dreißig = 30. The „-zehn“ ending means 13–19, „-zig/-ßig“ means tens."},
+{id:"h1-04",lvl:"A1",part:1,topic:"gesundheit",traps:["day","change"],
+ s:[["A","Praxis Dr. Wolf, guten Tag."],["B","Guten Tag, ich brauche einen Termin. Geht es am Dienstag?"],["A","Dienstag ist leider alles voll. Donnerstag um zehn Uhr?"],["B","Donnerstag ist gut. Vielen Dank."]],
+ qs:[{q:"Wann hat die Frau einen Termin?",o:["Am Dienstag","Am Mittwoch","Am Donnerstag"],a:2}],key:"Donnerstag ist gut",
+ ex:"Dienstag is full („alles voll“). The appointment is Donnerstag. Dienstag and Donnerstag sound similar — listen for the „-ners-“."},
+{id:"h1-05",lvl:"A1",part:1,topic:"essen",traps:["negation"],
+ s:[["A","Wir brauchen noch Milch. Und Eier?"],["B","Eier haben wir noch genug."],["A","Gut. Dann kaufe ich Milch und Käse."]],
+ qs:[{q:"Was kauft die Frau?",o:["Milch und Eier","Milch und Käse","Käse und Eier"],a:1}],key:"Milch und Käse",
+ ex:"„Eier haben wir noch genug“ = we still have enough eggs, so no eggs."},
+{id:"h1-06",lvl:"A1",part:1,topic:"verkehr",traps:["change"],
+ s:[["A","Fährst du heute mit dem Fahrrad zur Arbeit?"],["B","Normalerweise ja. Aber heute regnet es."],["A","Nimmst du den Bus?"],["B","Nein, der Bus ist immer so voll. Ich fahre mit der U-Bahn."]],
+ qs:[{q:"Wie fährt der Mann heute zur Arbeit?",o:["Mit dem Fahrrad","Mit dem Bus","Mit der U-Bahn"],a:2}],key:"Ich fahre mit der U-Bahn",
+ ex:"All three options are mentioned. „Normalerweise“ (normally) = not today. The final decision is the U-Bahn."},
+{id:"h1-07",lvl:"A1",part:1,topic:"kommunikation",traps:["phone","number"],
+ s:[["A","Wie ist deine Handynummer?"],["B","Null eins sieben sechs, zweiundvierzig, achtzehn, fünfundfünfzig."],["A","Noch einmal, bitte langsam."],["B","Null eins sieben sechs, zweiundvierzig, achtzehn, fünfundfünfzig."]],
+ qs:[{q:"Wie ist die Handynummer?",o:["0176 24 81 55","0176 42 18 55","0167 42 18 55"],a:1}],key:"zweiundvierzig, achtzehn",
+ ex:"German says the ones before the tens: zweiundvierzig = 2-and-40 = 42. Write the second digit first!"},
+{id:"h1-08",lvl:"A1",part:1,topic:"wohnen",traps:["place"],
+ s:[["A","Wo ist denn mein Schlüssel? Liegt er auf dem Tisch?"],["B","Nein, da ist er nicht. Vielleicht in deiner Tasche?"],["A","Nein. Ah, hier! Er ist in der Küche, neben dem Kühlschrank."]],
+ qs:[{q:"Wo ist der Schlüssel?",o:["Auf dem Tisch","In der Tasche","In der Küche"],a:2}],key:"in der Küche",
+ ex:"Table and bag are checked and rejected („nicht“, „Nein“). The key is in the kitchen."},
+{id:"h1-09",lvl:"A1",part:1,topic:"verkehr",traps:["number","day"],
+ s:[["A","Hotel am See, guten Abend."],["B","Guten Abend. Ich möchte ein Einzelzimmer reservieren, von Freitag bis Montag."],["A","Also drei Nächte. Das ist kein Problem."]],
+ qs:[{q:"Wie viele Nächte bleibt der Mann im Hotel?",o:["Zwei Nächte","Drei Nächte","Vier Nächte"],a:1}],key:"Also drei Nächte",
+ ex:"Freitag → Montag = Friday, Saturday, Sunday night = drei Nächte."},
+{id:"h1-10",lvl:"A1",part:1,topic:"verkehr",traps:["number","change"],
+ s:[["A","Entschuldigung, fährt der Zug nach Hamburg von Gleis vier?"],["B","Heute nicht. Heute fährt er von Gleis sieben."],["A","Gleis sieben. Danke schön!"]],
+ qs:[{q:"Von welchem Gleis fährt der Zug nach Hamburg?",o:["Gleis 4","Gleis 7","Gleis 11"],a:1}],key:"Gleis sieben",
+ ex:"„Heute nicht“ corrects the first platform. Gleis = platform."},
+{id:"h1-11",lvl:"A1",part:1,topic:"freizeit",traps:["change"],
+ s:[["A","Wir wollten am Samstag schwimmen gehen, oder?"],["B","Ja, aber es ist viel zu kalt. Gehen wir lieber ins Museum?"],["A","Gute Idee. Und danach vielleicht ins Café."]],
+ qs:[{q:"Wohin gehen sie am Samstag?",o:["Ins Schwimmbad","Ins Museum","Ins Kino"],a:1}],key:"ins Museum",
+ ex:"„wollten“ = wanted to (the old plan). „lieber“ = rather → the new plan is the museum."},
+{id:"h1-12",lvl:"A1",part:1,topic:"zeit",traps:["date","number"],
+ s:[["A","Wann hast du Geburtstag?"],["B","Am dritten Mai."],["A","Am dreizehnten?"],["B","Nein, am dritten. Am dritten Mai."]],
+ qs:[{q:"Wann hat die Frau Geburtstag?",o:["Am 3. Mai","Am 13. Mai","Am 3. März"],a:0}],key:"am dritten Mai",
+ ex:"dritten = 3rd, dreizehnten = 13th. Mai (May) vs März (March) is another classic trap."},
+{id:"h1-13",lvl:"A1",part:1,topic:"einkaufen",traps:["price","number"],
+ s:[["A","Wie viel kostet die Jacke?"],["B","Normal kostet sie neunundachtzig Euro. Heute ist sie im Angebot, nur neunundfünfzig Euro."],["A","Super, die nehme ich."]],
+ qs:[{q:"Wie viel bezahlt die Frau für die Jacke?",o:["59 €","89 €","95 €"],a:0}],key:"nur neunundfünfzig Euro",
+ ex:"„Normal“ is the old price. „im Angebot“ = on offer → she pays 59 €."},
+// ---------- A1 Teil 2: announcements, heard ONCE, Richtig/Falsch ----------
+{id:"h2-01",lvl:"A1",part:2,topic:"verkehr",traps:["time"],
+ s:[["N","Achtung an Gleis drei. Der ICE nach München hat heute zwanzig Minuten Verspätung. Wir bitten um Entschuldigung."]],
+ qs:[{q:"Der Zug nach München kommt pünktlich.",o:RF,a:1}],key:"zwanzig Minuten Verspätung",
+ ex:"Verspätung = delay. 20 minutes late, so not pünktlich (on time)."},
+{id:"h2-02",lvl:"A1",part:2,topic:"einkaufen",traps:["place"],
+ s:[["N","Liebe Kundinnen und Kunden! Heute im Erdgeschoss: alle Jacken und Mäntel dreißig Prozent billiger. Nur heute!"]],
+ qs:[{q:"Jacken sind heute billiger.",o:RF,a:0}],key:"dreißig Prozent billiger",
+ ex:"billiger = cheaper. Erdgeschoss = ground floor."},
+{id:"h2-03",lvl:"A1",part:2,topic:"verkehr",traps:["place"],
+ s:[["N","Passagiere des Fluges LH vierhundertzwei nach Wien: Bitte kommen Sie sofort zum Ausgang B zwölf. Der Flug ist bereit zum Einsteigen."]],
+ qs:[{q:"Die Passagiere nach Wien sollen zu Ausgang B 12 gehen.",o:RF,a:0}],key:"Ausgang B zwölf",
+ ex:"At the airport „Ausgang“ = gate. zwölf = 12."},
+{id:"h2-04",lvl:"A1",part:2,topic:"einkaufen",traps:["number","time"],
+ s:[["N","Liebe Kunden, unser Markt schließt in fünfzehn Minuten. Bitte gehen Sie jetzt zur Kasse. Vielen Dank für Ihren Einkauf."]],
+ qs:[{q:"Der Supermarkt schließt in 50 Minuten.",o:RF,a:1}],key:"in fünfzehn Minuten",
+ ex:"fünfzehn = 15, fünfzig = 50. Listen for „-zehn“ vs „-zig“."},
+{id:"h2-05",lvl:"A1",part:2,topic:"wetter",traps:["time"],
+ s:[["N","Und jetzt das Wetter für morgen: Am Vormittag ist es sonnig und warm, bis fünfundzwanzig Grad. Am Abend kann es regnen."]],
+ qs:[{q:"Morgen regnet es den ganzen Tag.",o:RF,a:1}],key:"Am Abend kann es regnen",
+ ex:"Sunny in the morning, only maybe rain in the evening — not the whole day („den ganzen Tag“)."},
+{id:"h2-06",lvl:"A1",part:2,topic:"verkehr",traps:["change"],
+ s:[["N","Eine Information für unsere Fahrgäste: Die U-Bahn-Linie zwei fährt heute wegen Bauarbeiten nicht. Bitte nehmen Sie den Bus siebenundfünfzig."]],
+ qs:[{q:"Man soll heute mit dem Bus fahren.",o:RF,a:0}],key:"Bitte nehmen Sie den Bus",
+ ex:"The U2 doesn't run („fährt nicht“), so take bus 57."},
+{id:"h2-07",lvl:"A1",part:2,topic:"freizeit",traps:["day"],
+ s:[["N","Das Hallenbad ist am Montag geschlossen. Von Dienstag bis Sonntag ist das Bad von sieben bis einundzwanzig Uhr geöffnet."]],
+ qs:[{q:"Am Montag kann man schwimmen.",o:RF,a:1}],key:"am Montag geschlossen",
+ ex:"geschlossen = closed on Monday."},
+{id:"h2-08",lvl:"A1",part:2,topic:"arbeit",traps:["time","change"],
+ s:[["N","Achtung, eine Information für die Teilnehmer vom Deutschkurs A1: Der Kurs beginnt heute nicht um neun, sondern um halb zehn. Wir sind in Raum vierzehn."]],
+ qs:[{q:"Der Kurs beginnt heute um 9:30 Uhr.",o:RF,a:0}],key:"sondern um halb zehn",
+ ex:"„nicht X, sondern Y“ = not X but Y. halb zehn = 9:30 (half TO ten!)."},
+{id:"h2-09",lvl:"A1",part:2,topic:"verkehr",traps:["number"],
+ s:[["N","Nächster Halt: Frankfurt Hauptbahnhof. Sie haben Anschluss an den Regionalexpress nach Mainz. Abfahrt vierzehn Uhr zweiundfünfzig von Gleis zwölf."]],
+ qs:[{q:"Der Zug nach Mainz fährt von Gleis 2.",o:RF,a:1}],key:"von Gleis zwölf",
+ ex:"zwölf = 12, not zwei (2)."},
+{id:"h2-10",lvl:"A1",part:2,topic:"einkaufen",traps:["place"],
+ s:[["N","Liebe Kunden, der kleine Tim sucht seine Mutter. Tim wartet an der Information im ersten Stock."]],
+ qs:[{q:"Tim wartet im Erdgeschoss.",o:RF,a:1}],key:"im ersten Stock",
+ ex:"erster Stock = first floor (one floor up). Erdgeschoss = ground floor."},
+{id:"h2-11",lvl:"A1",part:2,topic:"verkehr",traps:["time"],
+ s:[["N","Liebe Fahrgäste, der Bus nach Oberstadt fährt heute nur bis achtzehn Uhr. Danach fährt ein Taxi-Bus. Bitte rufen Sie eine Stunde vorher an."]],
+ qs:[{q:"Nach 18 Uhr fährt kein Bus nach Oberstadt.",o:RF,a:0}],key:"nur bis achtzehn Uhr",
+ ex:"The bus runs only until 18:00; after that a taxi-bus you have to call."},
+// ---------- A1 Teil 3: phone messages, heard twice, a/b/c ----------
+{id:"h3-01",lvl:"A1",part:3,topic:"freizeit",traps:["day"],
+ s:[["A","Hallo Maria, hier ist Jonas. Ich kann heute leider nicht zum Sport kommen. Ich bin krank. Können wir am Freitag zusammen gehen? Ruf mich bitte an. Tschüss!"]],
+ qs:[{q:"Warum ruft Jonas an?",o:["Er kommt heute nicht zum Sport.","Er möchte am Samstag Sport machen.","Er hat eine neue Telefonnummer."],a:0}],key:"kann heute leider nicht",
+ ex:"„leider nicht“ = unfortunately not. He suggests Freitag, not Samstag."},
+{id:"h3-02",lvl:"A1",part:3,topic:"gesundheit",traps:["time","change"],
+ s:[["A","Guten Tag, Herr Özdemir, hier ist die Praxis Dr. Lehmann. Ihr Termin morgen um acht Uhr geht leider nicht. Können Sie um Viertel nach elf kommen? Bitte rufen Sie uns kurz zurück. Danke."]],
+ qs:[{q:"Wann soll Herr Özdemir kommen?",o:["Um 8:00 Uhr","Um 11:15 Uhr","Um 10:45 Uhr"],a:1}],key:"um Viertel nach elf",
+ ex:"Viertel nach elf = quarter past eleven = 11:15. (Viertel vor elf would be 10:45.)"},
+{id:"h3-03",lvl:"A1",part:3,topic:"essen",traps:["negation"],
+ s:[["A","Hallo Schatz, ich bin noch im Büro. Kannst du bitte Brot und Tomaten kaufen? Käse haben wir noch. Die Kinder möchten heute Abend Pizza machen. Bis später!"]],
+ qs:[{q:"Was soll er kaufen?",o:["Brot und Tomaten","Pizza","Brot und Käse"],a:0}],key:"Brot und Tomaten",
+ ex:"Cheese: „haben wir noch“ (we still have). Pizza is what the kids will make, not buy."},
+{id:"h3-04",lvl:"A1",part:3,topic:"wohnen",traps:["day","time"],
+ s:[["A","Guten Tag, hier ist Möbel Krause. Ihr Sofa ist da. Wir bringen es am Mittwoch zwischen vierzehn und sechzehn Uhr. Ist das in Ordnung? Unsere Nummer ist null acht neun, zwölf, vierunddreißig, sechsundfünfzig."]],
+ qs:[{q:"Wann kommt das Sofa?",o:["Am Montag","Am Mittwoch am Vormittag","Am Mittwoch am Nachmittag"],a:2}],key:"zwischen vierzehn und sechzehn Uhr",
+ ex:"14–16 Uhr is the afternoon (Nachmittag)."},
+{id:"h3-05",lvl:"A1",part:3,topic:"stadt",traps:["number","change"],
+ s:[["A","Hi, hier ist Lena. Die Party am Samstag ist nicht bei mir, sondern bei Tom. Die Adresse ist Goethestraße achtzehn, im dritten Stock. Bis dann!"]],
+ qs:[{q:"Wo ist die Party?",o:["Bei Lena","Goethestraße 18","Goethestraße 80"],a:1}],key:"Goethestraße achtzehn",
+ ex:"„nicht bei mir, sondern bei Tom“. achtzehn = 18, achtzig = 80."},
+{id:"h3-06",lvl:"A1",part:3,topic:"einkaufen",traps:["price","number"],
+ s:[["A","Guten Tag, Frau Jansen, hier ist die Autowerkstatt Beck. Ihr Auto ist fertig. Die Reparatur kostet zweihundertfünfundvierzig Euro. Sie können das Auto heute bis achtzehn Uhr abholen."]],
+ qs:[{q:"Wie viel kostet die Reparatur?",o:["245 €","254 €","425 €"],a:0}],key:"zweihundertfünfundvierzig",
+ ex:"zweihundert-fünf-und-vierzig = 200 + 5 + 40 = 245."},
+{id:"h3-07",lvl:"A1",part:3,topic:"arbeit",traps:["date"],
+ s:[["A","Hier ist das Sekretariat der Sprachschule Lingua. Ihr Deutschkurs beginnt am vierzehnten Oktober. Bitte bringen Sie am ersten Tag Ihren Pass mit. Vielen Dank."]],
+ qs:[{q:"Was soll man mitbringen?",o:["Ein Foto","Den Pass","Geld"],a:1}],key:"Ihren Pass mit",
+ ex:"„mitbringen“ = bring along. Pass = passport."},
+{id:"h3-08",lvl:"A1",part:3,topic:"verkehr",traps:["change"],
+ s:[["A","Hallo, hier ist Mama. Wir kommen am Sonntag nicht mit dem Zug, sondern mit dem Auto. Wir sind so um zwölf Uhr bei euch. Bis Sonntag!"]],
+ qs:[{q:"Wie kommen die Eltern?",o:["Mit dem Zug","Mit dem Auto","Mit dem Bus"],a:1}],key:"sondern mit dem Auto",
+ ex:"„nicht mit dem Zug, sondern mit dem Auto“."},
+{id:"h3-09",lvl:"A1",part:3,topic:"essen",traps:["time"],
+ s:[["A","Guten Abend, hier ist das Restaurant Adria. Sie haben für heute einen Tisch für vier Personen reserviert. Leider haben wir um neunzehn Uhr keinen Tisch frei. Geht es auch um zwanzig Uhr? Bitte rufen Sie uns an."]],
+ qs:[{q:"Was ist das Problem?",o:["Das Restaurant ist heute geschlossen.","Um 19 Uhr ist kein Tisch frei.","Der Tisch ist zu klein."],a:1}],key:"um neunzehn Uhr keinen Tisch frei",
+ ex:"„keinen Tisch frei“ = no free table at 19:00; they offer 20:00."},
+{id:"h3-10",lvl:"A1",part:3,topic:"arbeit",traps:["number","change"],
+ s:[["A","Hallo Frau Weber, hier ist Klaus Maier. Die Besprechung morgen ist nicht in Raum fünf, sondern in Raum zwölf, im zweiten Stock. Bis morgen!"]],
+ qs:[{q:"Wo ist die Besprechung?",o:["In Raum 5","In Raum 12","In Raum 2"],a:1}],key:"sondern in Raum zwölf",
+ ex:"„zweiten Stock“ is the floor, not the room. Room = zwölf (12)."},
+{id:"h3-11",lvl:"A1",part:3,topic:"kommunikation",traps:["time"],
+ s:[["A","Guten Tag, hier ist die Post am Marktplatz. Ihr Paket ist da. Sie können es ab morgen abholen. Wir haben von Montag bis Freitag von neun bis achtzehn Uhr geöffnet, am Samstag bis zwölf."]],
+ qs:[{q:"Wann kann man das Paket am Samstag abholen?",o:["Bis 12 Uhr","Bis 18 Uhr","Am Samstag nicht"],a:0}],key:"am Samstag bis zwölf",
+ ex:"Saturday only until twelve (zwölf)."},
+// ---------- A2 Teil 1: radio / announcements, a/b/c ----------
+{id:"a2h1-01",lvl:"A2",part:1,topic:"a2umwelt",traps:["time"],
+ s:[["N","Und nun das Wetter. Heute Vormittag ist es in ganz Bayern noch neblig. Ab Mittag scheint die Sonne, die Temperaturen steigen auf achtzehn Grad. Am Abend kommen aus dem Westen Gewitter."]],
+ qs:[{q:"Wie wird das Wetter am Nachmittag?",o:["Neblig","Sonnig","Es gibt Gewitter"],a:1}],key:"Ab Mittag scheint die Sonne",
+ ex:"Fog in the morning, sun from midday, storms in the evening."},
+{id:"a2h1-02",lvl:"A2",part:1,topic:"a2reisen",traps:["change","place"],
+ s:[["N","Achtung, eine Durchsage für die Reisenden nach Köln: Ihr Zug fährt heute ausnahmsweise nicht von Gleis acht, sondern von Gleis fünfzehn ab. Bitte beachten Sie außerdem: Der Wagen der ersten Klasse ist heute am Ende des Zuges."]],
+ qs:[{q:"Was ist heute anders?",o:["Der Zug fährt später ab.","Der Zug fährt von einem anderen Gleis ab.","Es gibt keine erste Klasse."],a:1}],key:"nicht von Gleis acht, sondern von Gleis fünfzehn",
+ ex:"„ausnahmsweise“ = as an exception. The platform changes to 15."},
+{id:"a2h1-03",lvl:"A2",part:1,topic:"a2feste",traps:["price"],
+ s:[["N","Liebe Hörerinnen und Hörer, am Wochenende ist wieder Stadtfest! Am Samstag gibt es Musik auf dem Marktplatz, am Sonntag ein großes Kinderprogramm im Park. Der Eintritt ist frei, nur für das Konzert am Samstagabend braucht man eine Karte für zwölf Euro."]],
+ qs:[{q:"Wofür muss man bezahlen?",o:["Für das Kinderprogramm","Für das Konzert am Samstagabend","Für die Musik auf dem Marktplatz"],a:1}],key:"nur für das Konzert am Samstagabend",
+ ex:"„Der Eintritt ist frei, nur für …“ = free except for the evening concert."},
+{id:"a2h1-04",lvl:"A2",part:1,topic:"a2gesundheit",traps:["time","day"],
+ s:[["A","Guten Tag, hier ist die Praxis Dr. Schneider. Wir sind vom zwölften bis zum dreiundzwanzigsten August im Urlaub. In dringenden Fällen gehen Sie bitte zu Dr. Aydin in der Parkstraße. Ab dem vierundzwanzigsten August sind wir wieder für Sie da."]],
+ qs:[{q:"Ab wann ist die Praxis wieder geöffnet?",o:["Ab dem 12. August","Ab dem 23. August","Ab dem 24. August"],a:2}],key:"Ab dem vierundzwanzigsten August",
+ ex:"Holiday 12–23 August; open again from the 24th."},
+// ---------- A2 Teil 3: short dialogues ----------
+{id:"a2h3-01",lvl:"A2",part:3,topic:"a2wohnen",traps:["change"],
+ s:[["A","Hast du schon eine neue Wohnung gefunden?"],["B","Ja, endlich! Sie ist nicht so groß wie meine alte, aber sie hat einen Balkon und die Nebenkosten sind niedrig."],["A","Und wann ziehst du um?"],["B","Eigentlich wollte ich schon im Oktober umziehen, aber die Wohnung ist erst ab November frei."]],
+ qs:[{q:"Wann zieht die Frau um?",o:["Im Oktober","Im November","Im Dezember"],a:1}],key:"erst ab November frei",
+ ex:"„Eigentlich wollte ich …“ = actually I wanted to (old plan). „erst ab November“ = not until November."},
+{id:"a2h3-02",lvl:"A2",part:3,topic:"a2arbeit",traps:["time"],
+ s:[["A","Wie war dein Vorstellungsgespräch?"],["B","Ganz gut, glaube ich. Die Stelle ist interessant, aber ich müsste jeden Tag eine Stunde mit dem Zug fahren."],["A","Und das Gehalt?"],["B","Das ist in Ordnung. Sie sagen mir bis Freitag Bescheid."]],
+ qs:[{q:"Was findet der Mann nicht so gut?",o:["Das Gehalt","Den langen Arbeitsweg","Die Arbeit"],a:1}],key:"jeden Tag eine Stunde mit dem Zug",
+ ex:"The job is interesting, the salary is okay; the problem is the long commute."},
+{id:"a2h3-03",lvl:"A2",part:3,topic:"a2medien",traps:["negation"],
+ s:[["A","Mein Handy ist schon wieder leer. Der Akku hält nur noch drei Stunden."],["B","Kauf doch ein neues!"],["A","Ach, das Handy ist erst ein Jahr alt. Ich bringe es lieber zur Reparatur. Vielleicht bekomme ich einen neuen Akku."]],
+ qs:[{q:"Was macht die Frau?",o:["Sie kauft ein neues Handy.","Sie bringt das Handy zur Reparatur.","Sie kauft ein Ladegerät."],a:1}],key:"Ich bringe es lieber zur Reparatur",
+ ex:"„lieber“ = rather: she prefers repair over buying."},
+// ---------- A2 Teil 4: interview, Ja/Nein ----------
+{id:"a2h4-01",lvl:"A2",part:4,topic:"a2arbeit",traps:["change"],
+ s:[["A","Frau Kovač, Sie haben vor zwei Jahren ein kleines Café eröffnet. Wie kam es dazu?"],["B","Ich habe früher in einem Büro gearbeitet, in Vollzeit. Das war mir zu langweilig. Ich backe sehr gern, also habe ich gekündigt und mich selbstständig gemacht."],["A","War das nicht schwierig?"],["B","Am Anfang schon. Ich hatte wenig Geld und habe fast jeden Tag zwölf Stunden gearbeitet. Heute habe ich zwei Mitarbeiterinnen und sonntags ist das Café geschlossen."],["A","Und was ist das Besondere an Ihrem Café?"],["B","Alle Kuchen backen wir selbst, und viele Zutaten kommen von Bauern aus der Region."]],
+ qs:[{q:"Frau Kovač hat früher in einem Büro gearbeitet.",o:JN,a:0},{q:"Am Anfang hatte sie viel Geld.",o:JN,a:1},{q:"Heute arbeitet sie allein.",o:JN,a:1},{q:"Das Café ist am Sonntag geöffnet.",o:JN,a:1},{q:"Die Kuchen macht sie selbst.",o:JN,a:0}],
+ key:"Alle Kuchen backen wir selbst",
+ ex:"Two employees („zwei Mitarbeiterinnen“), closed on Sundays, little money at the start."}
+];
+
+const LESEN = [
+// ---------- A1 Teil 1: short letters / emails, Richtig/Falsch ----------
+{id:"l1-01",lvl:"A1",part:1,topic:"arbeit",kind:"text",
+ text:"Liebe Petra,\n\nwie geht es dir? Ich wohne jetzt in Hamburg. Ich habe eine neue Arbeit in einem Hotel. Die Arbeit ist interessant, aber ich muss oft am Wochenende arbeiten. Meine Wohnung ist klein, aber sie ist sehr hell und nicht teuer.\nNächsten Monat kommt meine Schwester zu Besuch. Möchtest du auch kommen?\n\nViele Grüße\nSabine",
+ qs:[{q:"Sabine arbeitet in einem Hotel.",o:RF,a:0},{q:"Sabine hat am Wochenende immer frei.",o:RF,a:1},{q:"Die Wohnung von Sabine ist groß.",o:RF,a:1}]},
+{id:"l1-02",lvl:"A1",part:1,topic:"arbeit",kind:"text",
+ text:"Lieber Herr Schmidt,\n\nich bin morgen nicht im Büro. Mein Sohn ist krank und ich muss mit ihm zum Arzt. Die Unterlagen für Frau Kaiser liegen auf meinem Schreibtisch. Bitte schicken Sie sie heute noch mit der Post. Am Donnerstag bin ich wieder da.\n\nDanke und viele Grüße\nAnna Roth",
+ qs:[{q:"Frau Roth ist morgen krank.",o:RF,a:1},{q:"Herr Schmidt soll die Unterlagen heute schicken.",o:RF,a:0}]},
+{id:"l1-03",lvl:"A1",part:1,topic:"freizeit",kind:"text",
+ text:"Hallo Ben,\n\ndanke für die Einladung! Ich komme gern zu deinem Geburtstag am Samstag. Aber ich komme erst um 21 Uhr, denn ich arbeite bis 20 Uhr. Soll ich etwas mitbringen? Vielleicht einen Salat?\n\nBis Samstag!\nMia",
+ qs:[{q:"Mia kommt nicht zur Party.",o:RF,a:1},{q:"Mia arbeitet am Samstag.",o:RF,a:0},{q:"Mia bringt vielleicht einen Salat mit.",o:RF,a:0}]},
+{id:"l1-04",lvl:"A1",part:1,topic:"wohnen",kind:"text",
+ text:"Liebe Nachbarn,\n\nam Samstag, 12. Oktober, feiere ich meinen 30. Geburtstag. Es kann ein bisschen laut werden, aber um 24 Uhr ist Schluss. Sie sind herzlich eingeladen! Die Party beginnt um 19 Uhr im Garten.\n\nIhr Nachbar\nDaniel Fischer (2. Stock)",
+ qs:[{q:"Die Party ist in der Wohnung von Daniel.",o:RF,a:1},{q:"Die Nachbarn dürfen auch kommen.",o:RF,a:0}]},
+// ---------- A1 Teil 2: which ad fits? a or b ----------
+{id:"l2-01",lvl:"A1",part:2,topic:"einkaufen",kind:"ads",situation:"Sie möchten am Sonntag frisches Brot kaufen.",
+ ads:["Bäckerei Sommer\nMo–Fr 6–18 Uhr\nSa 6–13 Uhr","Backstube am Bahnhof\ntäglich 6–20 Uhr\nauch sonntags!"],qs:[{q:"Wo können Sie einkaufen?",o:["a","b"],a:1}]},
+{id:"l2-02",lvl:"A1",part:2,topic:"arbeit",kind:"ads",situation:"Sie arbeiten tagsüber und suchen einen Deutschkurs am Abend.",
+ ads:["Volkshochschule\nDeutsch A1 · Mo + Mi\n18:30–20:00 Uhr","Sprachschule Lingua\nIntensivkurs A1\nMo–Fr 9–13 Uhr"],qs:[{q:"Welcher Kurs passt?",o:["a","b"],a:0}]},
+{id:"l2-03",lvl:"A1",part:2,topic:"verkehr",kind:"ads",situation:"Sie möchten billig mit dem Zug nach Berlin fahren.",
+ ads:["Sparpreis Berlin\nab 19,90 €\njetzt online buchen","1. Klasse Komfort\nBerlin ab 89 €\nmit Getränk am Platz"],qs:[{q:"Welches Angebot wählen Sie?",o:["a","b"],a:0}]},
+{id:"l2-04",lvl:"A1",part:2,topic:"verkehr",kind:"ads",situation:"Ihr Fahrrad ist kaputt.",
+ ads:["Fahrradverleih Stadtrad\nRäder mieten ab 10 € pro Tag","Rad-Service Meyer\nReparatur – schnell und günstig"],qs:[{q:"Wohin gehen Sie?",o:["a","b"],a:1}]},
+{id:"l2-05",lvl:"A1",part:2,topic:"wohnen",kind:"ads",situation:"Sie haben zwei Kinder und suchen eine Wohnung.",
+ ads:["1-Zimmer-Wohnung, 30 m²\nideal für Studenten","4-Zimmer-Wohnung, 95 m²\nmit Garten, ab 1. Dezember"],qs:[{q:"Welche Wohnung passt?",o:["a","b"],a:1}]},
+{id:"l2-06",lvl:"A1",part:2,topic:"freizeit",kind:"ads",situation:"Sie möchten am Samstagabend tanzen gehen.",
+ ads:["Tanzschule Jung\nKurse Mo–Do, 18–21 Uhr","Club Nachtfalter\nParty jeden Fr + Sa ab 22 Uhr"],qs:[{q:"Wohin gehen Sie?",o:["a","b"],a:1}]},
+{id:"l2-07",lvl:"A1",part:2,topic:"gesundheit",kind:"ads",situation:"Sie haben am Samstag Zahnschmerzen.",
+ ads:["Zahnarztpraxis Dr. Kühn\nMo–Fr 8–17 Uhr","Zahnärztlicher Notdienst\nam Wochenende: Tel. 0180 123 45"],qs:[{q:"Wen rufen Sie an?",o:["a","b"],a:1}]},
+// ---------- A1 Teil 3: signs & notices, Richtig/Falsch ----------
+{id:"l3-01",lvl:"A1",part:3,topic:"gesundheit",kind:"sign",text:"Praxis Dr. Hahn\nWir sind im Urlaub vom 2. bis 16. August.\nVertretung: Dr. Weiß, Bahnhofstraße 4",
+ qs:[{q:"Im August können Sie zu Dr. Weiß gehen.",o:RF,a:0}]},
+{id:"l3-02",lvl:"A1",part:3,topic:"einkaufen",kind:"sign",text:"Heute wegen Inventur geschlossen!\nAb morgen sind wir wieder für Sie da.",
+ qs:[{q:"Das Geschäft ist heute offen.",o:RF,a:1}]},
+{id:"l3-03",lvl:"A1",part:3,topic:"arbeit",kind:"sign",text:"Anmeldung für Deutschkurse\nZimmer 3 · 2. Stock\nBitte Pass mitbringen!",
+ qs:[{q:"Für die Anmeldung braucht man einen Pass.",o:RF,a:0}]},
+{id:"l3-04",lvl:"A1",part:3,topic:"verkehr",kind:"sign",text:"Fahrkarten bitte am Automaten kaufen.\nKein Ticketverkauf im Bus!",
+ qs:[{q:"Man kann im Bus eine Fahrkarte kaufen.",o:RF,a:1}]},
+{id:"l3-05",lvl:"A1",part:3,topic:"freizeit",kind:"sign",text:"Stadtmuseum\nKinder unter 12 Jahren: Eintritt frei\nMittwoch: Eintritt frei für alle",
+ qs:[{q:"Am Mittwoch müssen Erwachsene nichts bezahlen.",o:RF,a:0}]},
+{id:"l3-06",lvl:"A1",part:3,topic:"essen",kind:"sign",text:"Mittagstisch\nMo–Fr 11:30–14:30 Uhr\nSuppe + Hauptgericht 9,50 €",
+ qs:[{q:"Das Mittagessen gibt es auch am Samstag.",o:RF,a:1}]},
+{id:"l3-07",lvl:"A1",part:3,topic:"wohnen",kind:"sign",text:"Liebe Hausbewohner!\nDer Aufzug ist von Montag bis Mittwoch kaputt.\nBitte nehmen Sie die Treppe.",
+ qs:[{q:"Am Dienstag kann man den Aufzug benutzen.",o:RF,a:1}]},
+// ---------- A2 ----------
+{id:"a2l-01",lvl:"A2",part:3,topic:"a2wohnen",kind:"text",
+ text:"Hallo Jana,\n\nstell dir vor, ich bin letzte Woche umgezogen! Die neue Wohnung ist viel größer als die alte und liegt direkt am Park. Leider ist sie auch teurer, deshalb suche ich jetzt einen Mitbewohner. Das Zimmer ist möbliert und hat einen eigenen Balkon.\nAm Samstag mache ich eine kleine Einweihungsparty. Hast du Lust zu kommen? Du musst nichts mitbringen, nur gute Laune!\n\nLiebe Grüße\nMarkus",
+ qs:[{q:"Warum sucht Markus einen Mitbewohner?",o:["Die Wohnung ist zu groß.","Die Wohnung kostet mehr als die alte.","Er möchte nicht allein wohnen."],a:1},{q:"Das freie Zimmer …",o:["hat Möbel.","hat keinen Balkon.","ist sehr klein."],a:0},{q:"Was soll Jana zur Party mitbringen?",o:["Etwas zu essen","Getränke","Nichts"],a:2}]},
+{id:"a2l-02",lvl:"A2",part:2,topic:"a2feste",kind:"sign",
+ text:"Kaufhaus Zentral – Wegweiser\nUG: Lebensmittel · Getränke\nEG: Kosmetik · Taschen · Information\n1. OG: Damenmode · Schuhe\n2. OG: Herrenmode · Sportbekleidung\n3. OG: Spielwaren · Kinderwagen · Babymode\n4. OG: Elektronik · Restaurant",
+ qs:[{q:"Sie brauchen ein Geschenk für ein Baby. Wohin gehen Sie?",o:["Erdgeschoss","3. Stock","Anderes Stockwerk"],a:1},{q:"Sie möchten Laufschuhe für sich (Mann) kaufen.",o:["1. Stock","2. Stock","Anderes Stockwerk"],a:1},{q:"Sie möchten ein neues Handy kaufen.",o:["Untergeschoss","2. Stock","Anderes Stockwerk"],a:2}]}
+];
+
+const SCHREIBEN = [
+{id:"s1-01",lvl:"A1",part:1,
+ text:"Ihr Freund Karim Haddad (28) möchte einen Deutschkurs machen. Er wohnt mit seiner Frau in Köln, Rosenweg 5, 50667 Köln. Er kommt aus Marokko. Er möchte am Abend lernen und mit Karte bezahlen. Füllen Sie das Formular für ihn aus.",
+ fields:[{label:"Familienname",acc:["haddad"]},{label:"Herkunftsland",acc:["marokko"]},{label:"Postleitzahl, Wohnort",acc:["50667 köln","50667, köln","köln 50667"]},{label:"Familienstand",acc:["verheiratet"]},{label:"Kurszeit (Vormittag/Abend)",acc:["abend","am abend","abends"]}]},
+{id:"s1-02",lvl:"A1",part:1,
+ text:"Ihre Kollegin Olga Petrenko fährt mit ihrer Tochter Lina (6 Jahre) im Juli nach Wien. Sie fahren mit dem Zug. Olga möchte ein Doppelzimmer vom 3. bis 7. Juli und zahlt bar. Füllen Sie die Hotelreservierung aus.",
+ fields:[{label:"Name",acc:["olga petrenko","petrenko","petrenko, olga"]},{label:"Anzahl Personen",acc:["2","zwei"]},{label:"Anreise am",acc:["3. juli","03.07.","3.7.","3.07.","03.07","3.7","03. juli"]},{label:"Verkehrsmittel",acc:["zug","mit dem zug","bahn"]},{label:"Zahlung (bar/Karte)",acc:["bar"]}]},
+{id:"s2-01",lvl:"A1",part:2,
+ task:"You are ill and can't come to your German course tomorrow. Write to your teacher, Frau Klein:",
+ points:[{label:"Say why you can't come",kw:["krank","fieber","kopfschmerzen","arzt","erkältet","schmerzen"]},{label:"Ask about the homework",kw:["hausaufgabe","aufgabe"]},{label:"Say when you will come again",kw:["montag","dienstag","mittwoch","donnerstag","freitag","nächste woche","wieder","übermorgen"]}],
+ formal:true,
+ model:"Liebe Frau Klein,\nich kann morgen leider nicht zum Kurs kommen. Ich bin krank und habe Fieber. Was sind die Hausaufgaben? Am Montag komme ich wieder.\nViele Grüße\nAlex"},
+{id:"s2-02",lvl:"A1",part:2,
+ task:"You're having a birthday party. Write to your friend Nico:",
+ points:[{label:"Invite: when is the party?",kw:["samstag","sonntag","freitag","uhr","am ","abend"]},{label:"Where is it?",kw:["bei mir","wohnung","garten","café","restaurant","in der","im "]},{label:"Ask them to bring something",kw:["mitbringen","bring","salat","kuchen","getränk","musik"]}],
+ formal:false,
+ model:"Lieber Nico,\nich habe am Samstag Geburtstag und mache eine Party. Sie beginnt um 19 Uhr bei mir im Garten. Kannst du bitte einen Salat mitbringen?\nLiebe Grüße\nAlex"},
+{id:"s2-03",lvl:"A1",part:2,
+ task:"Your washing machine is broken. Write to your landlord, Herr Braun:",
+ points:[{label:"Say what's broken",kw:["waschmaschine","kaputt"]},{label:"Say since when",kw:["seit","gestern","montag","woche","tagen"]},{label:"Ask when he can come",kw:["wann","kommen","zeit","können sie"]}],
+ formal:true,
+ model:"Sehr geehrter Herr Braun,\nmeine Waschmaschine ist kaputt. Sie funktioniert seit Montag nicht. Wann können Sie kommen? Ich bin jeden Tag ab 17 Uhr zu Hause.\nMit freundlichen Grüßen\nAlex Kumar"},
+{id:"s2-04",lvl:"A1",part:2,
+ task:"Your friend Julia invited you on Saturday, but you can't come. Write to her:",
+ points:[{label:"Say sorry / you can't come",kw:["leider","tut mir leid","kann nicht","entschuldigung"]},{label:"Say why",kw:["arbeite","arbeiten","besuch","krank","kurs","muss","eltern"]},{label:"Suggest another day",kw:["sonntag","montag","nächste","freitag","vielleicht","geht es","hast du"]}],
+ formal:false,
+ model:"Liebe Julia,\nvielen Dank für die Einladung. Leider kann ich am Samstag nicht kommen. Ich muss arbeiten. Hast du am Sonntag Zeit? Wir können zusammen Kaffee trinken.\nLiebe Grüße\nAlex"},
+{id:"a2s1-01",lvl:"A2",part:1,words:25,
+ task:"You're meeting your friend Paul at the cinema at 20:00 but you'll be late. Write a text message (20–30 words):",
+ points:[{label:"Apologise",kw:["tut mir leid","entschuldig","sorry","leider"]},{label:"Say why you're late",kw:["stau","bus","zug","arbeit","verpasst","verspätung","weil","denn"]},{label:"Say when you'll arrive / suggest what he does",kw:["uhr","minuten","später","komme","warte","geh schon"]}],
+ formal:false,
+ model:"Hallo Paul, es tut mir leid, aber ich komme etwa 20 Minuten später. Mein Bus steht im Stau. Kauf doch schon die Karten, ich bezahle dich dann. Bis gleich! Alex"},
+{id:"a2s2-01",lvl:"A2",part:2,words:40,
+ task:"Your course teacher Herr Wolf invited the class to a farewell party on Friday evening. Write an email (30–40 words):",
+ points:[{label:"Thank him for the invitation",kw:["danke","vielen dank","dank"]},{label:"Say you can't come and why",kw:["leider","kann nicht","nicht kommen","weil","denn"]},{label:"Ask if you can meet/help another time",kw:["können wir","vielleicht","nächste","treffen","helfen","später"]}],
+ formal:true,
+ model:"Sehr geehrter Herr Wolf,\nvielen Dank für Ihre Einladung. Leider kann ich am Freitag nicht kommen, weil meine Eltern zu Besuch kommen. Können wir uns vielleicht nächste Woche im Café treffen? Ich möchte mich gern verabschieden.\nMit freundlichen Grüßen\nAlex Kumar"}
+];
+
+const SPRECHEN = {
+ A1: {
+  intro: {prompts:[
+   {label:"Name",kw:["heiße","name ist","ich bin "]},
+   {label:"Alter",kw:["jahre alt","jahre"]},
+   {label:"Land",kw:["komme aus"]},
+   {label:"Wohnort",kw:["wohne in","wohne jetzt","lebe in"]},
+   {label:"Sprachen",kw:["spreche"]},
+   {label:"Beruf",kw:["von beruf","arbeite","bin student","bin studentin","studiere","bin ingenieur","bin lehrer"]},
+   {label:"Hobby",kw:["hobby","hobbys","gern","spiele","lese"]}],
+   model:"Hallo! Ich heiße Alex Kumar. Ich bin 29 Jahre alt. Ich komme aus Indien und wohne jetzt in Berlin. Ich spreche Englisch, Hindi und ein bisschen Deutsch. Ich bin Ingenieur von Beruf. Meine Hobbys sind Kochen und Laufen."},
+  cards:[
+   {thema:"Einkaufen",wort:"Obst",q:"Kaufst du gern Obst auf dem Markt?",a:"Ja, ich kaufe jeden Samstag Obst auf dem Markt."},
+   {thema:"Einkaufen",wort:"Preis",q:"Was ist der Preis für die Tomaten?",a:"Ein Kilo kostet zwei Euro fünfzig."},
+   {thema:"Einkaufen",wort:"Supermarkt",q:"Wann gehst du in den Supermarkt?",a:"Ich gehe meistens am Freitagabend in den Supermarkt."},
+   {thema:"Essen & Trinken",wort:"Frühstück",q:"Was isst du zum Frühstück?",a:"Ich esse Brot mit Käse und trinke Kaffee."},
+   {thema:"Essen & Trinken",wort:"Lieblingsessen",q:"Was ist dein Lieblingsessen?",a:"Mein Lieblingsessen ist Pizza."},
+   {thema:"Essen & Trinken",wort:"Restaurant",q:"Gehst du oft ins Restaurant?",a:"Nein, nicht oft. Ich koche lieber zu Hause."},
+   {thema:"Freizeit",wort:"Wochenende",q:"Was machst du am Wochenende?",a:"Am Wochenende treffe ich Freunde und gehe spazieren."},
+   {thema:"Freizeit",wort:"Sport",q:"Welchen Sport machst du?",a:"Ich spiele Fußball und gehe schwimmen."},
+   {thema:"Freizeit",wort:"Kino",q:"Gehst du gern ins Kino?",a:"Ja, ich gehe einmal im Monat ins Kino."},
+   {thema:"Wohnen",wort:"Wohnung",q:"Wie groß ist deine Wohnung?",a:"Meine Wohnung hat zwei Zimmer, eine Küche und ein Bad."},
+   {thema:"Wohnen",wort:"Nachbarn",q:"Kennst du deine Nachbarn?",a:"Ja, meine Nachbarn sind sehr nett."},
+   {thema:"Reisen",wort:"Urlaub",q:"Wohin fährst du im Urlaub?",a:"Im Urlaub fahre ich ans Meer."},
+   {thema:"Reisen",wort:"Zug",q:"Fährst du oft mit dem Zug?",a:"Ja, ich fahre jede Woche mit dem Zug zur Arbeit."},
+   {thema:"Arbeit",wort:"Beruf",q:"Was bist du von Beruf?",a:"Ich bin Verkäuferin."},
+   {thema:"Arbeit",wort:"Pause",q:"Wann machst du Pause?",a:"Ich mache um zwölf Uhr Mittagspause."},
+   {thema:"Familie",wort:"Geschwister",q:"Hast du Geschwister?",a:"Ja, ich habe einen Bruder und eine Schwester."}],
+  requests:[
+   {pic:"🪟",hint:"Fenster",req:"Können Sie bitte das Fenster öffnen?",resp:"Ja, gern.",kw:["fenster"]},
+   {pic:"✏️",hint:"Stift / Kuli",req:"Kannst du mir bitte einen Kuli geben?",resp:"Ja, hier bitte.",kw:["kuli","stift","kugelschreiber"]},
+   {pic:"☕",hint:"Kaffee",req:"Ich möchte bitte einen Kaffee.",resp:"Gern. Mit Milch?",kw:["kaffee"]},
+   {pic:"🕐",hint:"Uhr / Uhrzeit",req:"Wie spät ist es, bitte?",resp:"Es ist Viertel nach drei.",kw:["spät","uhr"]},
+   {pic:"📱",hint:"Handy",req:"Darf ich bitte kurz Ihr Handy benutzen?",resp:"Ja, natürlich.",kw:["handy","telefon"]},
+   {pic:"💡",hint:"Licht / Lampe",req:"Kannst du bitte das Licht anmachen?",resp:"Klar, mache ich.",kw:["licht","lampe"]},
+   {pic:"🧂",hint:"Salz",req:"Können Sie mir bitte das Salz geben?",resp:"Hier, bitte schön.",kw:["salz"]},
+   {pic:"🎫",hint:"Fahrkarte",req:"Eine Fahrkarte nach Berlin, bitte.",resp:"Einfach oder hin und zurück?",kw:["fahrkarte","ticket"]},
+   {pic:"🚪",hint:"Tür",req:"Kannst du bitte die Tür schließen?",resp:"Ja, sofort.",kw:["tür"]},
+   {pic:"💶",hint:"Geld / wechseln",req:"Können Sie mir bitte zehn Euro wechseln?",resp:"Ja, einen Moment.",kw:["euro","geld","wechseln"]}]
+ },
+ A2: {
+  cards:[
+   {thema:"Fragen zur Person",wort:"Geburtstag?",q:"Wann hast du Geburtstag?",a:"Ich habe im März Geburtstag, am zwölften."},
+   {thema:"Fragen zur Person",wort:"Sprachen?",q:"Welche Sprachen sprichst du?",a:"Ich spreche Englisch, Tamil und ein bisschen Deutsch."},
+   {thema:"Fragen zur Person",wort:"Wohnort?",q:"Wo wohnst du und wie gefällt es dir dort?",a:"Ich wohne in München. Es gefällt mir sehr gut, aber die Mieten sind hoch."},
+   {thema:"Fragen zur Person",wort:"Beruf?",q:"Was machst du beruflich?",a:"Ich arbeite als Softwareentwicklerin in einer großen Firma."}],
+  tell:[
+   {title:"Erzählen Sie: Ihr Wochenende",prompts:["Sport?","Freunde?","Essen?","Zu Hause?"],model:"Am Wochenende schlafe ich zuerst lange. Samstags gehe ich oft joggen oder schwimmen. Am Abend treffe ich meistens Freunde, wir kochen zusammen oder gehen ins Restaurant. Am Sonntag bleibe ich gern zu Hause, lese ein Buch und rufe meine Familie an."},
+   {title:"Erzählen Sie: Ihre Wohnung",prompts:["Wo?","Wie groß?","Lieblingszimmer?","Was fehlt?"],model:"Ich wohne in einer Zwei-Zimmer-Wohnung im Zentrum. Sie ist nicht sehr groß, aber hell. Mein Lieblingszimmer ist das Wohnzimmer, weil es einen Balkon hat. Leider habe ich keinen Garten, das fehlt mir ein bisschen."}],
+  plan:[
+   {title:"Gemeinsam etwas planen",task:"You and a colleague want to buy a present for a colleague's birthday on Saturday. Your calendar: 9–12 Sport · 12–14 frei · 14–17 Oma besuchen · ab 18 frei. Suggest a time and react to your partner.",model:"Hast du am Samstag um zwölf Uhr Zeit? Vorher mache ich Sport. — Nein? Schade. Wie wäre es dann mit achtzehn Uhr? Da habe ich Zeit. Wir können in die Stadt fahren und ein Buch kaufen. Was meinst du?",kw:["zeit","um ","wie wäre","können wir","geht es","passt"]}]
+ }
+};
+
+// ---------- English help (shown small beside questions and options) ----------
+const RF_EN = { Richtig: "true", Falsch: "false", Ja: "yes", Nein: "no" };
+const EN = {
+"h1-01":{q:[["How much do the rolls cost?"]]},
+"h1-02":{q:[["When are the two meeting?",["At 6:30","At 7:00","At 7:30"]]]},
+"h1-03":{q:[["Which room is Ms Berger in?"]]},
+"h1-04":{q:[["When is the woman's appointment?",["On Tuesday","On Wednesday","On Thursday"]]]},
+"h1-05":{q:[["What does the woman buy?",["Milk and eggs","Milk and cheese","Cheese and eggs"]]]},
+"h1-06":{q:[["How does the man get to work today?",["By bike","By bus","By underground"]]]},
+"h1-07":{q:[["What is the mobile number?"]]},
+"h1-08":{q:[["Where is the key?",["On the table","In the bag","In the kitchen"]]]},
+"h1-09":{q:[["How many nights is the man staying at the hotel?",["Two nights","Three nights","Four nights"]]]},
+"h1-10":{q:[["Which platform does the train to Hamburg leave from?",["Platform 4","Platform 7","Platform 11"]]]},
+"h1-11":{q:[["Where are they going on Saturday?",["To the swimming pool","To the museum","To the cinema"]]]},
+"h1-12":{q:[["When is the woman's birthday?",["3 May","13 May","3 March"]]]},
+"h1-13":{q:[["How much does the woman pay for the jacket?"]]},
+"h2-01":{q:[["The train to Munich arrives on time."]]},
+"h2-02":{q:[["Jackets are cheaper today."]]},
+"h2-03":{q:[["Passengers to Vienna should go to gate B12."]]},
+"h2-04":{q:[["The supermarket closes in 50 minutes."]]},
+"h2-05":{q:[["Tomorrow it will rain all day."]]},
+"h2-06":{q:[["You should take the bus today."]]},
+"h2-07":{q:[["You can go swimming on Monday."]]},
+"h2-08":{q:[["The course starts at 9:30 today."]]},
+"h2-09":{q:[["The train to Mainz leaves from platform 2."]]},
+"h2-10":{q:[["Tim is waiting on the ground floor."]]},
+"h2-11":{q:[["After 6 pm there is no bus to Oberstadt."]]},
+"h3-01":{q:[["Why is Jonas calling?",["He isn't coming to sport today.","He wants to do sport on Saturday.","He has a new phone number."]]]},
+"h3-02":{q:[["When should Mr Özdemir come?",["At 8:00","At 11:15","At 10:45"]]]},
+"h3-03":{q:[["What should he buy?",["Bread and tomatoes","Pizza","Bread and cheese"]]]},
+"h3-04":{q:[["When will the sofa arrive?",["On Monday","Wednesday morning","Wednesday afternoon"]]]},
+"h3-05":{q:[["Where is the party?",["At Lena's place","Goethestraße 18","Goethestraße 80"]]]},
+"h3-06":{q:[["How much does the repair cost?"]]},
+"h3-07":{q:[["What should you bring?",["A photo","Your passport","Money"]]]},
+"h3-08":{q:[["How are the parents travelling?",["By train","By car","By bus"]]]},
+"h3-09":{q:[["What is the problem?",["The restaurant is closed today.","No table is free at 7 pm.","The table is too small."]]]},
+"h3-10":{q:[["Where is the meeting?",["In room 5","In room 12","In room 2"]]]},
+"h3-11":{q:[["When can you collect the parcel on Saturday?",["Until 12 noon","Until 6 pm","Not on Saturday"]]]},
+"a2h1-01":{q:[["What will the weather be like in the afternoon?",["Foggy","Sunny","Thunderstorms"]]]},
+"a2h1-02":{q:[["What is different today?",["The train leaves later.","The train leaves from a different platform.","There is no first class."]]]},
+"a2h1-03":{q:[["What do you have to pay for?",["The children's programme","The concert on Saturday evening","The music on the market square"]]]},
+"a2h1-04":{q:[["From when is the practice open again?",["From 12 August","From 23 August","From 24 August"]]]},
+"a2h3-01":{q:[["When is the woman moving?",["In October","In November","In December"]]]},
+"a2h3-02":{q:[["What does the man not like so much?",["The salary","The long commute","The work itself"]]]},
+"a2h3-03":{q:[["What does the woman do?",["She buys a new phone.","She takes the phone to be repaired.","She buys a charger."]]]},
+"a2h4-01":{q:[["Ms Kovač used to work in an office."],["At the start she had a lot of money."],["Today she works alone."],["The café is open on Sundays."],["She makes the cakes herself."]]},
+"l1-01":{q:[["Sabine works in a hotel."],["Sabine always has weekends off."],["Sabine's flat is big."]]},
+"l1-02":{q:[["Ms Roth is ill tomorrow."],["Mr Schmidt should send the documents today."]]},
+"l1-03":{q:[["Mia isn't coming to the party."],["Mia works on Saturday."],["Mia might bring a salad."]]},
+"l1-04":{q:[["The party is in Daniel's flat."],["The neighbours may come too."]]},
+"l2-01":{sit:"You want to buy fresh bread on Sunday.",q:[["Where can you shop?"]]},
+"l2-02":{sit:"You work during the day and need an evening German course.",q:[["Which course fits?"]]},
+"l2-03":{sit:"You want to travel to Berlin cheaply by train.",q:[["Which offer do you choose?"]]},
+"l2-04":{sit:"Your bike is broken.",q:[["Where do you go?"]]},
+"l2-05":{sit:"You have two children and are looking for a flat.",q:[["Which flat fits?"]]},
+"l2-06":{sit:"You want to go dancing on Saturday evening.",q:[["Where do you go?"]]},
+"l2-07":{sit:"You have toothache on Saturday.",q:[["Who do you call?"]]},
+"l3-01":{q:[["In August you can go to Dr Weiß."]]},
+"l3-02":{q:[["The shop is open today."]]},
+"l3-03":{q:[["You need a passport to register."]]},
+"l3-04":{q:[["You can buy a ticket on the bus."]]},
+"l3-05":{q:[["On Wednesday adults don't have to pay."]]},
+"l3-06":{q:[["Lunch is also served on Saturday."]]},
+"l3-07":{q:[["You can use the lift on Tuesday."]]},
+"a2l-01":{q:[["Why is Markus looking for a flatmate?",["The flat is too big.","The flat costs more than the old one.","He doesn't want to live alone."]],["The free room …",["has furniture.","has no balcony.","is very small."]],["What should Jana bring to the party?",["Something to eat","Drinks","Nothing"]]]},
+"a2l-02":{q:[["You need a present for a baby. Where do you go?",["Ground floor","3rd floor","Another floor"]],["You want running shoes for yourself (a man).",["1st floor","2nd floor","Another floor"]],["You want to buy a new mobile phone.",["Basement","2nd floor","Another floor"]]]}
+};
+for (const it of [...HOEREN, ...LESEN]) {
+  const e = EN[it.id]; if (!e) continue;
+  if (e.sit) it.sitEn = e.sit;
+  it.qs.forEach((q, i) => { const x = e.q[i]; if (!x) return; q.en = x[0]; if (x[1]) q.oen = x[1]; });
+}
+// ================= Core: data, state, storage, speech, number drills, learning engine =================
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const rnd = n => Math.floor(Math.random() * n);
+const pick = a => a[rnd(a.length)];
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = rnd(i + 1); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const pct = x => Math.round(x * 100);
+
+// ---------- vocabulary ----------
+const TOPICS = {};   // id -> {id, de, en, lvl, words:[]}
+const WORDS = {};    // wid -> word
+for (const lvl of ["A1", "A2"]) for (const t of VOCAB_SRC[lvl]) {
+  const topic = { id: t.id, de: t.de, en: t.en, lvl, words: [] };
+  t.w.trim().split("\n").forEach(line => {
+    const [de, en] = line.split(" = ").map(s => s.trim());
+    if (!de || !en) return;
+    const m = de.match(/^(der|die|das) (.+)$/);
+    const w = { id: lvl + ":" + de, de, en, lvl, topic: t.id, art: m ? m[1] : null, noun: m ? m[2] : null };
+    topic.words.push(w); WORDS[w.id] = w;
+  });
+  TOPICS[t.id] = topic;
+}
+const topicsFor = lvl => Object.values(TOPICS).filter(t => t.lvl === lvl);
+
+// ---------- labels for the analysis ----------
+const PART_INFO = {
+  A1: {
+    hoeren: { 1: "Kurze Gespräche · 2× hören", 2: "Durchsagen · 1× hören", 3: "Telefonansagen · 2× hören" },
+    lesen: { 1: "E-Mails & Briefe", 2: "Anzeigen: a oder b?", 3: "Schilder & Aushänge" },
+    schreiben: { 1: "Formular ausfüllen", 2: "Kurze Nachricht (~30 Wörter)" },
+    sprechen: { 1: "Sich vorstellen", 2: "Fragen & Antworten (Themenkarten)", 3: "Bitten formulieren (Bildkarten)" }
+  },
+  A2: {
+    hoeren: { 1: "Radio & Durchsagen", 3: "Kurze Gespräche", 4: "Interview · Ja/Nein" },
+    lesen: { 2: "Wegweiser & Infos", 3: "E-Mails" },
+    schreiben: { 1: "SMS (20–30 Wörter)", 2: "E-Mail (30–40 Wörter)" },
+    sprechen: { 1: "Fragen zur Person", 2: "Über sich erzählen", 3: "Gemeinsam etwas planen" }
+  }
+};
+const TRAP_INFO = {
+  price: ["Preise", "prices like „zwei Euro vierzig“"],
+  time: ["Uhrzeiten", "times: halb, Viertel, 24-hour"],
+  number: ["Zahlen", "13 vs 30, 42 = zwei-und-vierzig"],
+  day: ["Wochentage", "Dienstag vs Donnerstag"],
+  date: ["Datum", "am dritten vs dreizehnten"],
+  phone: ["Telefonnummern", "digit groups"],
+  change: ["Planänderungen", "„nicht X, sondern Y“, first answer rejected"],
+  negation: ["Verneinung", "„haben wir noch“, „kein“, „nicht“"],
+  place: ["Orte & Stockwerke", "Erdgeschoss, erster Stock, Gleis"]
+};
+const DRILL_INFO = {
+  num: ["Zahlen", "Hear a number, pick the digits"],
+  price: ["Preise", "Euro and cent amounts"],
+  time: ["Uhrzeit (Alltag)", "halb, Viertel nach/vor"],
+  clock: ["Uhrzeit (offiziell)", "vierzehn Uhr fünfunddreißig"],
+  date: ["Datum", "am dreiundzwanzigsten März"],
+  phone: ["Telefonnummern", "Digit pairs, backwards tens"],
+  spell: ["Buchstabieren", "German alphabet: E/I, V/W, J/Y"]
+};
+
+// ---------- German numbers ----------
+const ONES = ["null","eins","zwei","drei","vier","fünf","sechs","sieben","acht","neun","zehn","elf","zwölf","dreizehn","vierzehn","fünfzehn","sechzehn","siebzehn","achtzehn","neunzehn"];
+const TENS = ["","","zwanzig","dreißig","vierzig","fünfzig","sechzig","siebzig","achtzig","neunzig"];
+function deNum(n) {
+  if (n < 20) return ONES[n];
+  if (n < 100) { const t = Math.floor(n / 10), o = n % 10; return o ? (o === 1 ? "ein" : ONES[o]) + "und" + TENS[t] : TENS[t]; }
+  if (n < 1000) { const h = Math.floor(n / 100), r = n % 100; return (h === 1 ? "ein" : ONES[h]) + "hundert" + (r ? deNum(r) : ""); }
+  const th = Math.floor(n / 1000), r = n % 1000; return (th === 1 ? "ein" : deNum(th)) + "tausend" + (r ? deNum(r) : "");
+}
+const MONTHS = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+function deOrd(n) { // dative: am ersten, am dritten ...
+  const irr = { 1: "ersten", 3: "dritten", 7: "siebten", 8: "achten" };
+  if (irr[n]) return irr[n];
+  return n < 20 ? deNum(n) + "ten" : deNum(n) + "sten";
+}
+const LETTERS = {a:"A",b:"Be",c:"Tse",d:"De",e:"E",f:"Eff",g:"Ge",h:"Ha",i:"I",j:"Jott",k:"Ka",l:"Ell",m:"Emm",n:"Enn",o:"O",p:"Pe",q:"Kuh",r:"Err",s:"Ess",t:"Te",u:"U",v:"Fau",w:"We",x:"Iks",y:"Ypsilon",z:"Zett","ä":"Ä","ö":"Ö","ü":"Ü"};
+const SPELL_NAMES = ["Berger","Weiß","Vogel","Jansen","Kiefer","Brehm","Pieper","Seidel","Wagner","Yilmaz","Diehl","Tietz","Engel","Ivanov","Jäger","Gerber","Heine","Wiegand"];
+const SWAPS = [["e","i"],["i","e"],["v","w"],["w","v"],["b","p"],["p","b"],["d","t"],["t","d"],["j","y"],["g","k"],["ie","ei"],["ei","ie"],["h","a"]];
+
+function uniqOpts(correct, cands, n = 3) {
+  const out = [correct];
+  for (const c of shuffle(cands)) { if (out.length >= n) break; if (!out.includes(c)) out.push(c); }
+  let guard = 0; while (out.length < n && guard++ < 20) { const c = correct.replace(/(\d)(\D*)$/, (m, d, rest) => ((+d + guard) % 10) + rest); if (!out.includes(c)) out.push(c); }
+  return shuffle(out);
+}
+function fmtTime(h, m) { return h + ":" + String(m).padStart(2, "0"); }
+
+function makeDrill(type) {
+  let say, ans, cands;
+  if (type === "num") {
+    const pairs = [[13,30],[14,40],[15,50],[16,60],[17,70],[18,80],[19,90]];
+    if (Math.random() < .45) { const p = pick(pairs); const n = pick(p); say = deNum(n); ans = String(n); cands = [String(p[0]), String(p[1]), String(p[0] + (p[1] === n ? 1 : 10))]; }
+    else { let n = 21 + rnd(78); if (n % 10 === 0) n++; const sw = Number(String(n).split("").reverse().join("")); const big = Math.random() < .35 ? 100 * (1 + rnd(8)) : 0; say = deNum(big + n); ans = String(big + n); cands = [String(big + sw), String(big + n + 10), String(big + n - 1)]; }
+  } else if (type === "price") {
+    const e = 1 + rnd(19), c = 10 + rnd(89); const cs = String(c).padStart(2, "0"); const csw = String(Number(String(c).split("").reverse().join(""))).padStart(2, "0");
+    say = deNum(e) + " Euro " + deNum(c); if (e === 1) say = "ein Euro " + deNum(c);
+    ans = e + "," + cs + " €"; cands = [e + "," + csw + " €", (e + 1) + "," + cs + " €", c + "," + String(e).padStart(2, "0") + " €"];
+  } else if (type === "time") {
+    const h = 1 + rnd(11); const kind = pick(["halb", "halb", "nach", "vor", "min"]); let hh = h, mm = 0;
+    const next = h % 12 + 1;
+    if (kind === "halb") { say = "halb " + deNum(next); hh = h; mm = 30; cands = [fmtTime(next, 30), fmtTime(h, 15), fmtTime(next, 0)]; }
+    else if (kind === "nach") { say = "Viertel nach " + deNum(h === 1 ? 1 : h).replace(/^eins$/, "eins"); mm = 15; cands = [fmtTime(h, 45), fmtTime(next, 15), fmtTime(h, 30)]; }
+    else if (kind === "vor") { say = "Viertel vor " + deNum(next); mm = 45; cands = [fmtTime(next, 45), fmtTime(next, 15), fmtTime(h, 15)]; }
+    else { const m = pick([5, 10, 20]); const v = Math.random() < .5; if (v) { say = deNum(m) + " vor " + deNum(next); hh = h; mm = 60 - m; cands = [fmtTime(next, m), fmtTime(h, m), fmtTime(next, 60 - m)]; } else { say = deNum(m) + " nach " + deNum(h); mm = m; cands = [fmtTime(h, 60 - m), fmtTime(h - 1 || 12, 60 - m), fmtTime(next, m)]; } }
+    say = "Es ist " + say + "."; ans = fmtTime(hh, mm);
+  } else if (type === "clock") {
+    const h = 6 + rnd(17), m = pick([5, 10, 15, 20, 25, 35, 40, 45, 50, 52, 13, 17, 38]);
+    say = deNum(h) + " Uhr " + deNum(m); ans = fmtTime(h, m);
+    const msw = Number(String(m).padStart(2, "0").split("").reverse().join(""));
+    cands = [fmtTime(h, msw < 60 ? msw : (m + 10) % 60), fmtTime((h + 12) % 24, m), fmtTime(h, (m + 30) % 60)];
+  } else if (type === "date") {
+    const d = 1 + rnd(28), mo = rnd(12);
+    say = "am " + deOrd(d) + " " + MONTHS[mo]; ans = d + ". " + MONTHS[mo];
+    const d2 = d < 10 ? d + 10 : d <= 20 ? (d === 10 ? 20 : d - 10) : d - 20;
+    const moAlt = mo === 2 ? 4 : mo === 4 ? 2 : mo === 5 ? 6 : mo === 6 ? 5 : (mo + 1) % 12;
+    cands = [d2 + ". " + MONTHS[mo], d + ". " + MONTHS[moAlt], d2 + ". " + MONTHS[moAlt]];
+  } else if (type === "phone") {
+    const g = [rnd(90) + 10, rnd(90) + 10, rnd(90) + 10].map(x => (x % 10 && x % 11) ? x : (x > 95 ? x - 3 : x + 2));
+    const pre = pick(["0176", "0151", "030", "089", "0221"]);
+    say = pre.split("").map(d => ONES[+d]).join(" ") + ", " + g.map(deNum).join(", ");
+    const f = a => pre + " " + a.join(" ");
+    ans = f(g); const rev = n => Number(String(n).split("").reverse().join(""));
+    cands = [f([rev(g[0]), g[1], g[2]]), f([g[0], rev(g[1]), g[2]]), f([g[0], g[1], rev(g[2])])];
+  } else { // spell
+    const name = pick(SPELL_NAMES); const low = name.toLowerCase();
+    say = low.split("").map(ch => ch === "ß" ? "Eszett" : LETTERS[ch] || ch).join(", ");
+    ans = name; cands = [];
+    for (const [x, y] of shuffle(SWAPS)) { if (low.includes(x)) { const alt = low.replace(x, y); cands.push(alt[0].toUpperCase() + alt.slice(1)); } if (cands.length >= 4) break; }
+    if (cands.length < 2) cands.push(name + "e", name.slice(0, -1));
+  }
+  return { kind: "drill", type, say, ans, opts: uniqOpts(ans, cands.filter(c => c !== ans), 3) };
+}
+
+// ---------- state ----------
+const TODAY = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+const dayNum = (iso = TODAY()) => Math.floor(Date.parse(iso + "T12:00:00") / 864e5);
+const addDays = (iso, n) => { const d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
+function freshState() {
+  return { v: 2, level: "A1", exam: { A1: "2026-10-06", A2: "2026-12-15" }, rate: 0.9, showEn: true, doneDays: {},
+    words: {}, items: {}, skills: {}, days: {}, mocks: [], writing: [], gen: [], mistakes: [], updatedAt: 0, created: Date.now() };
+}
+let S = freshState();
+
+const Store = {
+  db: null, uid: null, status: "local", saving: false, dirty: false, timer: null,
+  LS: "startklar-v1",
+  loadLocal() { try { const raw = localStorage.getItem(this.LS); if (raw) return JSON.parse(raw); } catch (e) {} return null; },
+  saveLocal() { try { localStorage.setItem(this.LS, JSON.stringify(S)); } catch (e) {} },
+  ref() { return this.db.doc("data/users/" + this.uid + "/progress"); },
+  async connect(onChange) {
+    try {
+      if (!window.claude?.use) return;
+      const [user, db] = await Promise.all([window.claude.use("user"), window.claude.use("db")]);
+      if (!user || !db) return;
+      const uid = await user.id(); if (!uid) return;
+      this.db = db; this.uid = uid;
+      const snap = await this.ref().get();
+      if (snap.exists) {
+        const remote = snap.data();
+        if ((remote.updatedAt || 0) > (S.updatedAt || 0)) { S = normalize(JSON.parse(JSON.stringify(remote))); this.saveLocal(); onChange(); }
+        else if ((S.updatedAt || 0) > (remote.updatedAt || 0)) this.queue(0);
+      } else if (S.updatedAt) this.queue(0);
+      this.status = "cloud"; onChange();
+    } catch (e) { this.db = null; this.status = "local"; onChange(); }
+  },
+  save() { S.updatedAt = Date.now(); this.saveLocal(); if (this.db) this.queue(2500); },
+  queue(ms) { this.dirty = true; clearTimeout(this.timer); this.timer = setTimeout(() => this.flush(), ms); },
+  async flush() {
+    if (!this.db || !this.dirty) return;
+    if (this.saving) { this.queue(1500); return; }
+    this.saving = true; this.dirty = false;
+    try { await this.ref().set(JSON.parse(JSON.stringify(S))); }
+    catch (e) { if (e && e.code === "unavailable") this.queue(4000); else if (e && (e.code === "revoked" || e.code === "invalid_argument")) { this.db = null; this.status = "local"; } }
+    finally { this.saving = false; }
+  }
+};
+function normalize(s) {
+  const f = freshState(); for (const k in f) if (s[k] === undefined) s[k] = f[k];
+  if (!s.v || s.v < 2) { s.exam.A1 = "2026-10-06"; s.v = 2; } // exam booked for Tue 6 Oct 2026
+  if (!s.exam.A2) s.exam.A2 = f.exam.A2; return s;
+}
+
+// ---------- speech ----------
+const TTS = {
+  ok: "speechSynthesis" in window, voices: [], playing: false, token: 0,
+  init() {
+    if (!this.ok) return;
+    const load = () => {
+      const all = speechSynthesis.getVoices().filter(v => /^de(-|_|$)/i.test(v.lang));
+      const score = v => (/premium|enhanced|natural|neural/i.test(v.name) ? 4 : 0) + (/de-DE/i.test(v.lang) ? 2 : 0) + (v.localService ? 1 : 0);
+      this.voices = all.sort((a, b) => score(b) - score(a));
+    };
+    load(); speechSynthesis.onvoiceschanged = load;
+  },
+  hasGerman() { return this.voices.length > 0; },
+  stop() { this.token++; this.playing = false; if (this.ok) speechSynthesis.cancel(); },
+  // lines: [[speaker, text], ...]
+  play(lines, { rate = S.rate, onend, onstart } = {}) {
+    if (!this.ok) { onend && onend(false); return; }
+    this.stop(); const my = ++this.token; this.playing = true; onstart && onstart();
+    const v0 = this.voices[0], v1 = this.voices.find(v => v !== v0 && v.name.split(" ")[0] !== v0?.name.split(" ")[0]) || this.voices[1];
+    let i = 0;
+    const next = () => {
+      if (my !== this.token) return;
+      if (i >= lines.length) { this.playing = false; onend && onend(true); return; }
+      const [sp, text] = lines[i++];
+      const u = new SpeechSynthesisUtterance(text);
+      u.lang = "de-DE"; u.rate = rate;
+      if (sp === "B") { if (v1) u.voice = v1; else { if (v0) u.voice = v0; u.pitch = 0.75; } }
+      else { if (v0) u.voice = v0; u.pitch = sp === "N" ? 0.95 : 1.05; }
+      u.onend = () => setTimeout(next, 380); u.onerror = () => setTimeout(next, 50);
+      speechSynthesis.speak(u);
+    };
+    next();
+  },
+  say(text, opts) { this.play([["A", text]], opts); }
+};
+
+// ---------- learning engine ----------
+const BOX_DAYS = [0, 1, 2, 4, 7, 14, 30];
+function skill(key) { return S.skills[key] || (S.skills[key] = { n: 0, c: 0, e: 0.5 }); }
+function record(keys, ok) {
+  for (const k of keys) { const s = skill(k); s.n++; if (ok) s.c++; s.e = s.e * 0.78 + (ok ? 1 : 0) * 0.22; s.t = dayNum(); }
+  const d = S.days[TODAY()] || (S.days[TODAY()] = { q: 0, c: 0 }); d.q++; if (ok) d.c++;
+}
+function skillVal(key) { const s = S.skills[key]; return s ? s.e : null; }
+function skillN(key) { return S.skills[key]?.n || 0; }
+
+function wordState(wid) { return S.words[wid]; }
+function gradeWord(w, ok, mode, artOk = true) {
+  const st = S.words[w.id] || (S.words[w.id] = { b: 0, d: 0, n: 0, c: 0, x: 0 });
+  st.n++;
+  if (ok) { st.c++; st.b = Math.min(6, st.b + 1); }
+  else { st.x++; st.b = Math.max(1, st.b - 2); }
+  st.d = dayNum() + (ok ? BOX_DAYS[st.b] : 0);
+  record(["topic." + w.topic, "vocab." + mode], ok);
+  if (w.art && mode === "recall") record(["vocab.article"], artOk);
+  if (!ok) addMistake({ t: "w", id: w.id });
+}
+function recordItem(kind, item, qi, ok) {
+  const key = kind + ":" + item.id + (item.qs.length > 1 ? "#" + qi : "");
+  const st = S.items[key] || (S.items[key] = { n: 0, c: 0 });
+  st.n++; if (ok) st.c++; st.last = dayNum(); st.ok = ok;
+  const keys = [kind + "." + item.lvl + "." + item.part, "topic." + item.topic];
+  if (item.traps) item.traps.forEach(t => keys.push("trap." + t));
+  record(keys, ok);
+  if (!ok) addMistake({ t: kind, id: item.id });
+}
+function addMistake(m) { S.mistakes = S.mistakes.filter(x => !(x.t === m.t && x.id === m.id)); S.mistakes.unshift({ ...m, d: dayNum() }); S.mistakes = S.mistakes.slice(0, 60); }
+function clearMistake(t, id) { S.mistakes = S.mistakes.filter(x => !(x.t === t && x.id === id)); }
+
+const lvlWords = (lvl = S.level) => Object.values(WORDS).filter(w => w.lvl === lvl);
+const dueWords = (lvl = S.level) => lvlWords(lvl).filter(w => { const s = S.words[w.id]; return s && s.d <= dayNum(); }).sort((a, b) => S.words[a.id].d - S.words[b.id].d);
+const newWords = (topic) => TOPICS[topic].words.filter(w => !S.words[w.id]);
+function topicMastery(tid) {
+  const ws = TOPICS[tid].words; let sum = 0;
+  for (const w of ws) { const s = S.words[w.id]; if (s) sum += Math.min(1, s.b / 4); }
+  return sum / ws.length;
+}
+function vocabMastery(lvl = S.level) { const ts = topicsFor(lvl); return ts.reduce((a, t) => a + topicMastery(t.id) * t.words.length, 0) / ts.reduce((a, t) => a + t.words.length, 0); }
+
+const allHoeren = () => HOEREN.concat(S.gen || []);
+function partsOf(mod, lvl = S.level) { return Object.keys(PART_INFO[lvl][mod]).map(Number); }
+function modulePart(mod, part, lvl = S.level) { return skillVal(mod + "." + lvl + "." + part); }
+function moduleScore(mod, lvl = S.level) {
+  // blend of the parts; unseen parts count as 0.45 (unknown = risky)
+  const ps = partsOf(mod, lvl); let sum = 0, n = 0;
+  for (const p of ps) { const k = mod + "." + lvl + "." + p; const s = S.skills[k]; const v = s ? (s.n < 3 ? (s.e + 0.45) / 2 : s.e) : 0.45; sum += v; n += s ? s.n : 0; }
+  let v = sum / ps.length;
+  if (mod === "hoeren") { const dk = Object.keys(DRILL_INFO).map(t => skillVal("drill." + t)).filter(x => x !== null); if (dk.length) v = v * 0.8 + (dk.reduce((a, b) => a + b, 0) / dk.length) * 0.2; }
+  return { v, n };
+}
+function estimate(lvl = S.level) {
+  const mods = ["hoeren", "lesen", "schreiben", "sprechen"].map(m => ({ m, ...moduleScore(m, lvl) }));
+  const total = Math.round(mods.reduce((a, x) => a + x.v * 25, 0));
+  const answered = mods.reduce((a, x) => a + x.n, 0);
+  return { mods, total, answered };
+}
+function weaknesses(limit = 5) {
+  const out = [];
+  const lvl = S.level;
+  for (const mod of ["hoeren", "lesen", "schreiben", "sprechen"]) for (const p of partsOf(mod, lvl)) {
+    const k = mod + "." + lvl + "." + p, s = S.skills[k]; if (s && s.n >= 2) out.push({ k, v: s.e, n: s.n, label: MOD_NAME[mod] + " Teil " + p, sub: PART_INFO[lvl][mod][p], go: { mod, part: p } });
+  }
+  for (const t in TRAP_INFO) { const s = S.skills["trap." + t]; if (s && s.n >= 3) out.push({ k: "trap." + t, v: s.e, n: s.n, label: "Hör-Falle: " + TRAP_INFO[t][0], sub: TRAP_INFO[t][1], go: { trap: t } }); }
+  for (const t in DRILL_INFO) { const s = S.skills["drill." + t]; if (s && s.n >= 4) out.push({ k: "drill." + t, v: s.e, n: s.n, label: "Hörtraining: " + DRILL_INFO[t][0], sub: DRILL_INFO[t][1], go: { drill: t } }); }
+  for (const t of topicsFor(lvl)) { const s = S.skills["topic." + t.id]; if (s && s.n >= 4) out.push({ k: "topic." + t.id, v: s.e, n: s.n, label: "Thema: " + t.de, sub: t.en, go: { topic: t.id } }); }
+  const a = S.skills["vocab.article"]; if (a && a.n >= 5) out.push({ k: "vocab.article", v: a.e, n: a.n, label: "Artikel (der/die/das)", sub: "noun genders", go: { article: true } });
+  return out.filter(x => x.v < 0.8).sort((x, y) => x.v - y.v).slice(0, limit);
+}
+const MOD_NAME = { hoeren: "Hören", lesen: "Lesen", schreiben: "Schreiben", sprechen: "Sprechen" };
+
+function daysLeft() { return dayNum(S.exam[S.level]) - dayNum(); }
+function phase() {
+  const d = daysLeft();
+  if (d < 0) return { key: "after", label: "Prüfung vorbei", sub: "Time to move on to the next level." };
+  if (d <= 2) return { key: "final", label: "Letzte Tage", sub: "Light review: your mistakes, due words, one short Hören set. Sleep well." };
+  if (d <= 7) return { key: "mock", label: "Prüfungstraining", sub: "Exam-mode practice and a mock test every other day." };
+  return { key: "build", label: "Aufbau", sub: "Build vocabulary and fix your weakest exam parts." };
+}
+
+// ---------- choosing items ----------
+function itemScore(kind, it) {
+  // lower = more useful now: previously wrong first, then unseen, then least recently seen
+  let best = 99;
+  const qs = it.qs || [0];
+  qs.forEach((q, i) => {
+    const st = S.items[kind + ":" + it.id + (qs.length > 1 ? "#" + i : "")];
+    const sc = !st ? 1 : (st.ok === false ? 0 : 2 + Math.min(20, dayNum() - (st.last || 0)) * -0.05 + st.c * 0.3);
+    best = Math.min(best, sc);
+  });
+  return best + Math.random() * 0.4;
+}
+function chooseItems(pool, kind, n, filter = () => true) {
+  return pool.filter(filter).map(it => ({ it, s: itemScore(kind, it) })).sort((a, b) => a.s - b.s).slice(0, n).map(x => x.it);
+}
+function weakestPart(mod, lvl = S.level) {
+  const ps = partsOf(mod, lvl).filter(p => (mod === "hoeren" ? allHoeren() : mod === "lesen" ? LESEN : SCHREIBEN).some(x => x.lvl === lvl && x.part === p) || mod === "sprechen");
+  return ps.map(p => ({ p, v: modulePart(mod, p, lvl) ?? 0.45 - Math.random() * 0.1 })).sort((a, b) => a.v - b.v)[0]?.p;
+}
+function weakestDrills(n = 2) {
+  const lvlTypes = Object.keys(DRILL_INFO);
+  return lvlTypes.map(t => ({ t, v: (skillVal("drill." + t) ?? 0.4) + Math.random() * 0.12 })).sort((a, b) => a.v - b.v).slice(0, n).map(x => x.t);
+}
+function weakestTopicWithNew(lvl = S.level) {
+  const ts = topicsFor(lvl).filter(t => newWords(t.id).length);
+  if (!ts.length) return null;
+  // prefer topics you are weak at but have started; otherwise the least covered
+  return ts.map(t => ({ t, v: (skillVal("topic." + t.id) ?? 0.55) * 0.6 + topicMastery(t.id) * 0.4 + Math.random() * 0.08 })).sort((a, b) => a.v - b.v)[0].t.id;
+}
+
+// ---------- building tasks ----------
+function vocabTask(w, forceMode) {
+  const st = S.words[w.id]; const b = st ? st.b : 0;
+  const mode = forceMode || (b <= 1 ? "recognize" : b === 2 ? "listen" : b === 3 ? "choose" : "recall");
+  return { kind: "vocab", wid: w.id, mode };
+}
+function learnTask(w) { return { kind: "learn", wid: w.id }; }
+function distractorWords(w, n) {
+  const same = TOPICS[w.topic].words.filter(x => x.id !== w.id && !!x.art === !!w.art && x.en !== w.en);
+  const pool = same.length >= n ? same : lvlWords(w.lvl).filter(x => x.id !== w.id && x.en !== w.en);
+  return shuffle(pool).slice(0, n);
+}
+
+// Fixed day-by-day countdown for the last 9 days before the A1 exam (keyed by days left).
+// Each day has a focus; the words, drills and extra listening inside it still follow your weak spots.
+const COUNTDOWN = {
+  9: { t: "Zahlen & Namen", en: "Numbers, spelling, introducing yourself", topics: ["person", "zeit"], hp: 1, lp: 3, prod: ["sprechen", 1], drills: ["num", "spell"] },
+  8: { t: "Uhrzeiten · Hören Teil 1", en: "Times and short dialogues", topics: ["zeit", "einkaufen"], hp: 1, lp: 3, prod: ["schreiben", 1], drills: ["time", "clock"] },
+  7: { t: "Durchsagen · Hören Teil 2", en: "Announcements (played once)", topics: ["verkehr", "stadt"], hp: 2, lp: 2, prod: ["sprechen", 2], drills: ["clock", "num"] },
+  6: { t: "Telefonansagen · Hören Teil 3", en: "Phone messages, prices, dates", topics: ["essen", "wohnen"], hp: 3, lp: 1, prod: ["schreiben", 2], drills: ["price", "date"] },
+  5: { mock: true, t: "Modelltest 1", en: "Mock test: Hören + Lesen under exam rules" },
+  4: { t: "Schwächen reparieren", en: "Fix what the mock test showed", topics: "weak", hp: "weak", lp: "weak", prod: ["sprechen", 3], drills: "weak" },
+  3: { t: "Schreiben & Sprechen", en: "Writing a message, question cards", topics: ["arbeit", "freizeit"], hp: "weak", lp: "weak", prod: ["schreiben", 2], prod2: ["sprechen", 2], drills: "weak" },
+  2: { mock: true, t: "Modelltest 2", en: "Second mock test, then your mistakes" },
+  1: { light: true, t: "Leicht wiederholen", en: "Light review, then rest" },
+  0: { light: true, examDay: true, t: "Prüfungstag", en: "15-minute warm-up. Viel Erfolg!" }
+};
+function countdownDay(dl = daysLeft()) { return S.level === "A1" && dl >= 0 && dl <= 9 ? COUNTDOWN[dl] : null; }
+
+function buildDaily(opts = {}) {
+  const lvl = S.level, tasks = [], short = !!opts.short;
+  const answered = Object.values(S.days).reduce((a, d) => a + d.q, 0);
+  const cd = countdownDay();
+  if (answered < 10 && !(cd && (cd.mock || cd.light))) {
+    // first run: a broad check so the plan can find your level
+    const ts = shuffle(topicsFor(lvl)).slice(0, 8);
+    ts.forEach(t => tasks.push(vocabTask(pick(t.words), "recognize")));
+    ["num", "time", "price", "spell"].forEach(t => tasks.push(makeDrill(t)));
+    partsOf("hoeren", lvl).forEach(p => chooseItems(allHoeren(), "hoeren", 1, x => x.lvl === lvl && x.part === p).forEach(it => tasks.push({ kind: "hoeren", id: it.id })));
+    chooseItems(LESEN, "lesen", 1, x => x.lvl === lvl && x.part === (lvl === "A1" ? 3 : 2)).forEach(it => tasks.push({ kind: "lesen", id: it.id }));
+    return { title: "Einstufung", en: "5-minute level check", check: true, tasks, mins: 7, blocks: [
+      { ico: "words", t: "8 words from 8 themes", why: "Finds which themes you already know." },
+      { ico: "ear", t: "4 number & time drills", why: "Numbers and times cost the most points in A1 Hören." },
+      { ico: "ear", t: partsOf("hoeren", lvl).length + " listening questions, one per part", why: "A starting score for each part." },
+      { ico: "doc", t: "1 reading task", why: "A starting score for Lesen." }] };
+  }
+  if (cd && cd.mock && !short) {
+    const m = buildMock();
+    return { title: cd.t, en: cd.en, tasks: m.tasks, mock: true, mins: 40, blocks: [
+      { ico: "ear", t: "Hören: 15 questions in 3 parts", why: "Exam speed. Teil 2 plays once, Teil 1 and 3 twice." },
+      { ico: "doc", t: "Lesen: 3 parts", why: "No feedback until the end, like the real exam." },
+      { ico: "chart", t: "Then: your mistakes", why: "Afterwards tap “Fehler wiederholen” on the home screen." }] };
+  }
+  const blocks = [];
+  const addDrills = (types, n, exam) => { for (let i = 0; i < n; i++) tasks.push({ ...makeDrill(types[i % types.length]), exam }); };
+  if (cd && cd.light) {
+    const due = dueWords(lvl).slice(0, cd.examDay ? 0 : (short ? 8 : 20));
+    due.forEach(w => tasks.push(vocabTask(w)));
+    if (due.length) blocks.push({ ico: "words", t: due.length + " words due for review", why: "Keep them fresh. No new words now." });
+    if (!cd.examDay) {
+      const ms = S.mistakes.filter(m => m.t !== "w").slice(0, short ? 2 : 5);
+      ms.forEach(m => { if (m.t === "hoeren" && hItem(m.id)) tasks.push({ kind: "hoeren", id: m.id }); if (m.t === "lesen" && lItem(m.id)) tasks.push({ kind: "lesen", id: m.id }); });
+      if (ms.length) blocks.push({ ico: "ear", t: ms.length + " questions you got wrong before", why: "One more try while it's fresh." });
+    }
+    addDrills(weakestDrills(2), 5, true);
+    blocks.push({ ico: "ear", t: "5 number & time drills at exam speed", why: "Warm up your ears." });
+    tasks.push({ kind: "sprechen", part: 1 });
+    blocks.push({ ico: "mic", t: "Introduce yourself out loud", why: "The first thing you'll do in Sprechen." });
+    return { title: cd.t, en: cd.en, tasks, blocks, mins: Math.max(8, Math.round(tasks.length * 0.6)) };
+  }
+  const ph = phase();
+  const due = dueWords(lvl).slice(0, short ? 8 : 15);
+  due.forEach(w => tasks.push(vocabTask(w)));
+  if (due.length) blocks.push({ ico: "words", t: due.length + " words due for review", why: "Spaced repetition: they're about to slip." });
+  const nNew = short ? 4 : cd ? (cd.topics === "weak" ? 6 : 10) : ph.key === "mock" ? 4 : 7;
+  let tid = null;
+  if (cd && Array.isArray(cd.topics)) tid = cd.topics.find(t => newWords(t).length);
+  if (!tid) tid = weakestTopicWithNew(lvl);
+  if (tid) {
+    const nw = shuffle(newWords(tid)).slice(0, nNew);
+    nw.forEach(w => tasks.push(learnTask(w)));
+    nw.forEach(w => tasks.push(vocabTask(w, "recognize")));
+    const sv = skillVal("topic." + tid);
+    blocks.push({ ico: "plus", t: nw.length + " new words · " + TOPICS[tid].de, why: cd && Array.isArray(cd.topics) ? "Today's theme: " + TOPICS[tid].en.toLowerCase() + "." : sv !== null ? "Your accuracy in this theme: " + pct(sv) + "%." : "A theme you haven't covered yet." });
+  }
+  const dts = cd && Array.isArray(cd.drills) ? cd.drills : weakestDrills(2);
+  addDrills(dts, short ? 3 : 5, ph.key !== "build");
+  blocks.push({ ico: "ear", t: (short ? 3 : 5) + " drills · " + dts.map(t => DRILL_INFO[t][0]).join(" + "), why: dts.map(t => { const v = skillVal("drill." + t); return v === null ? DRILL_INFO[t][0] + ": new" : DRILL_INFO[t][0] + ": " + pct(v) + "%"; }).join(" · ") });
+  const hp = cd && cd.hp !== "weak" ? cd.hp : weakestPart("hoeren", lvl);
+  const hItems = chooseItems(allHoeren(), "hoeren", short ? 2 : 3, x => x.lvl === lvl && x.part === hp);
+  const other = short ? [] : chooseItems(allHoeren(), "hoeren", 1, x => x.lvl === lvl && x.part !== hp);
+  hItems.concat(other).forEach(it => tasks.push({ kind: "hoeren", id: it.id, exam: ph.key !== "build" }));
+  const hv = modulePart("hoeren", hp, lvl);
+  blocks.push({ ico: "ear", t: (hItems.length + other.length) + " Hören questions · Teil " + hp, why: PART_INFO[lvl].hoeren[hp] + (hv !== null ? ". You're at " + pct(hv) + "%." : ".") });
+  if (!short) {
+    const lp = cd && cd.lp !== "weak" ? cd.lp : weakestPart("lesen", lvl);
+    chooseItems(LESEN, "lesen", 1, x => x.lvl === lvl && x.part === lp).forEach(it => tasks.push({ kind: "lesen", id: it.id }));
+    blocks.push({ ico: "doc", t: "1 Lesen task · Teil " + lp, why: PART_INFO[lvl].lesen[lp] + "." });
+    const prods = cd ? [cd.prod, cd.prod2].filter(Boolean) : [dayNum() % 2 === 0 ? ["sprechen", weakestPart("sprechen", lvl)] : ["schreiben", weakestPart("schreiben", lvl)]];
+    for (const [mod, part] of prods) {
+      if (mod === "sprechen") { tasks.push({ kind: "sprechen", part }); blocks.push({ ico: "mic", t: "Sprechen Teil " + part, why: PART_INFO[lvl].sprechen[part] + ". Say it out loud, then type or dictate it." }); }
+      else { const it = chooseItems(SCHREIBEN, "schreiben", 1, x => x.lvl === lvl && x.part === part)[0]; if (it) { tasks.push({ kind: "schreiben", id: it.id }); blocks.push({ ico: "pen", t: "Schreiben Teil " + part, why: PART_INFO[lvl].schreiben[part] + "." }); } }
+    }
+  }
+  const mins = Math.round(tasks.reduce((a, t) => a + ({ vocab: .35, learn: .25, drill: .3, hoeren: 1.3, lesen: 2, sprechen: 4, schreiben: 6 }[t.kind] || 1), 0));
+  return { title: cd ? cd.t : "Heute", en: cd ? cd.en : "Today's plan", tasks, blocks, mins };
+}
+
+function buildMock() {
+  const lvl = S.level, tasks = [];
+  const plan = lvl === "A1" ? [[1, 6], [2, 4], [3, 5]] : [[1, 4], [3, 3], [4, 1]];
+  for (const [p, n] of plan) chooseItems(allHoeren(), "hoeren", n, x => x.lvl === lvl && x.part === p).forEach(it => tasks.push({ kind: "hoeren", id: it.id, exam: true, mock: true }));
+  const lplan = lvl === "A1" ? [[1, 2], [2, 5], [3, 5]] : [[2, 1], [3, 1]];
+  for (const [p, n] of lplan) chooseItems(LESEN, "lesen", n, x => x.lvl === lvl && x.part === p).forEach(it => tasks.push({ kind: "lesen", id: it.id, mock: true }));
+  return { title: "Modelltest", tasks, mock: true };
+}
+// ================= Practice runner =================
+const ICON = {
+  home: '<path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>',
+  words: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h7M8 11h5"/>',
+  ear: '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/>',
+  exam: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 10l1.5 1.5 3-3M8.5 16h7"/>',
+  chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>', doc: '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>',
+  mic: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+  pen: '<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>',
+  play: '<path d="M7 4.5v15l13-7.5z" fill="currentColor" stroke="none"/>',
+  replay: '<path d="M4 12a8 8 0 1 0 3-6.2"/><path d="M4 4v5h5"/>',
+  x: '<path d="M6 6l12 12M18 6L6 18"/>', chev: '<path d="M9 5l7 7-7 7"/>', spark: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6"/>',
+  flame: '<path d="M12 3c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2.5 1.5-3.5 2-5.5 1 1.5 2 2 3 2-.5-2 0-4.5 0-6.5z"/>'
+};
+const ic = (n, s = 20) => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
+const LETTER = ["a", "b", "c", "d"];
+const WAVE = () => '<div class="wave">' + Array.from({ length: 22 }, (_, i) => `<i style="height:${6 + Math.round(Math.abs(Math.sin(i * 1.7)) * 18)}px;animation-delay:${(i % 6) * 0.08}s"></i>`).join("") + "</div>";
+
+let R = null; // current session
+
+function startSession(sess) {
+  if (!sess.tasks.length) { toast("Nothing to practise here yet."); return; }
+  TTS.stop();
+  R = { ...sess, i: 0, log: [], st: {}, started: Date.now(), requeued: 0 };
+  document.body.style.overflow = "hidden";
+  renderRunner(true);
+}
+function closeRunner() {
+  TTS.stop(); R = null; const el = $("#runner"); el.hidden = true; el.innerHTML = ""; document.body.style.overflow = ""; render();
+}
+const task = () => R.tasks[R.i];
+const hItem = id => allHoeren().find(x => x.id === id);
+function toggleEn() { S.showEn = !enOn(); Store.save(); if (R) renderRunner(false); else render(); }
+const lItem = id => LESEN.find(x => x.id === id);
+const sItem = id => SCHREIBEN.find(x => x.id === id);
+function playLimit(t) { if (!t.exam) return Infinity; const it = hItem(t.id); return (it.lvl === "A1" && it.part === 2) ? 1 : 2; }
+
+function renderRunner(autoplay) {
+  const el = $("#runner"); el.hidden = false;
+  const t = task(), st = R.st;
+  const view = VIEWS[t.kind](t, st);
+  el.innerHTML = `
+  <div class="runner-top">
+    <button class="xbtn" data-act="quit" aria-label="Close session">${ic("x", 18)}</button>
+    <div class="prog" role="progressbar" aria-valuenow="${R.i}" aria-valuemax="${R.tasks.length}"><b style="width:${(R.i / R.tasks.length) * 100}%"></b></div>
+    <span class="tiny num">${R.i + 1}/${R.tasks.length}</span>
+    <button class="pill ${enOn() ? "" : "ghost"}" data-act="toggle-en" aria-pressed="${enOn()}" title="English help on/off">EN</button>
+  </div>
+  <div class="runner-body"><div class="runner-in">${view}</div></div>
+  <div class="runner-foot ${st.done && !R.mock ? (st.ok ? "good" : "bad") : ""}"><div class="runner-foot-in">${footer(t, st)}</div></div>`;
+  el.querySelector(".runner-body").scrollTop = 0;
+  if (autoplay) autoPlay(t);
+}
+function footer(t, st) {
+  if (st.quitAsk) return `<div class="fb-title" style="color:var(--ink)">Stop this session?</div><div class="tiny">Your answers so far are saved.</div><div class="row"><button class="btn" data-act="quit-no" style="flex:1">Keep going</button><button class="btn primary" data-act="quit-yes" style="flex:1">Stop</button></div>`;
+  if (st.done) {
+    if (R.mock) return `<button class="btn primary block" data-act="next">Weiter</button>`;
+    return `<div class="fb-title">${esc(st.fbTitle || (st.ok ? "Richtig!" : "Nicht ganz."))}</div>${st.fbHtml ? `<div class="small">${st.fbHtml}</div>` : ""}<button class="btn primary block" data-act="next">Weiter</button>`;
+  }
+  const f = FOOTS[t.kind]; return f ? f(t, st) : "";
+}
+function autoPlay(t) {
+  if (t.kind === "learn" || (t.kind === "vocab" && (t.mode === "recognize" || t.mode === "listen"))) { const w = WORDS[t.wid]; TTS.say(w.de); }
+  if (t.kind === "drill") playDrill();
+}
+function finishTask(ok, fbTitle, fbHtml) {
+  Object.assign(R.st, { done: true, ok, fbTitle, fbHtml });
+  Store.save(); renderRunner(false);
+}
+function next() {
+  TTS.stop();
+  const t = task();
+  if (R.st.done && R.st.ok === false && !R.mock && t.kind === "vocab" && !t.retry && R.requeued < 8) { R.tasks.push({ ...t, mode: "recognize", retry: true }); R.requeued++; }
+  R.i++; R.st = {};
+  if (R.i >= R.tasks.length) return finishSession();
+  renderRunner(true);
+}
+
+// ---------- normalising typed German ----------
+const fold = s => String(s).toLowerCase().normalize("NFC").replace(/ß/g, "ss").replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/[.,!?;:„“"'()]/g, " ").replace(/\s+/g, " ").trim();
+function lev(a, b) { const m = a.length, n = b.length; const d = Array.from({ length: m + 1 }, (_, i) => [i]); for (let j = 1; j <= n; j++) d[0][j] = j; for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); return d[m][n]; }
+const has = (text, kws) => { const f = " " + fold(text) + " "; return kws.some(k => f.includes(fold(k) ? (k.endsWith(" ") ? fold(k) + " " : fold(k)) : "")); };
+const wordCount = s => (String(s).trim().match(/\S+/g) || []).length;
+
+// ---------- option list ----------
+const enOn = () => S.showEn !== false;
+function optList(opts, st, qi = 0, correct = null, oen = null) {
+  const sel = st.sel?.[qi], cls = "opts";
+  if (!oen && opts.length === 2 && RF_EN[opts[0]]) oen = opts.map(o => RF_EN[o]);
+  if (!enOn()) oen = null;
+  return `<div class="${opts.length === 2 ? "rf" : cls}">` + opts.map((o, i) => {
+    let c = "";
+    if (st.done && !R.mock && correct !== null) { if (i === correct) c = "right"; else if (i === sel) c = "wrong"; }
+    else if (i === sel) c = "sel";
+    return `<button class="opt ${c}" data-act="pick" data-q="${qi}" data-i="${i}" ${st.done ? "disabled" : ""}><span class="box">${opts.length === 2 ? (o[0]) : LETTER[i]}</span><span class="otext"><span class="de">${esc(o)}</span>${oen && oen[i] ? `<span class="en">${esc(oen[i])}</span>` : ""}</span></button>`;
+  }).join("") + "</div>";
+}
+function umlautRow(target) { return `<div class="umlauts">${["ä", "ö", "ü", "ß", "Ä", "Ö", "Ü"].map(c => `<button type="button" data-act="uml" data-t="${target}" data-c="${c}" aria-label="insert ${c}">${c}</button>`).join("")}</div>`; }
+
+// ---------- views ----------
+const VIEWS = {
+  learn(t) {
+    const w = WORDS[t.wid];
+    return `<div class="tag">Neues Wort · ${esc(TOPICS[w.topic].de)}</div>
+      <div class="card stack" style="align-items:flex-start">
+        <div class="prompt de">${w.art ? `<span class="art">${w.art}</span> ${esc(w.noun)}` : esc(w.de)}</div>
+        <div class="muted" style="font-size:18px">${esc(w.en)}</div>
+        <button class="btn small" data-act="say" data-text="${esc(w.de)}">${ic("play", 14)} Anhören</button>
+      </div>
+      ${w.art ? `<div class="hand blue">${w.art === "der" ? "der — masculine" : w.art === "die" ? "die — feminine (or plural)" : "das — neuter"}. Learn the article with the word.</div>` : ""}
+      <p class="tiny">Say it out loud twice. You'll be tested on it in a moment.</p>`;
+  },
+  vocab(t, st) {
+    const w = WORDS[t.wid];
+    if (!st.optW && t.mode !== "recall") {
+      st.optW = shuffle([w, ...distractorWords(w, 3)]);
+      st.opts = st.optW.map(x => t.mode === "choose" ? x.de : x.en);
+    }
+    // translations only after answering, so they don't give the answer away
+    const oen = st.done && st.optW ? st.optW.map(x => t.mode === "choose" ? x.en : x.de) : null;
+    const tag = { recognize: "Wortschatz · Was bedeutet das?", listen: "Hör-Vokabel · Was hören Sie?", choose: "Wortschatz · Wie heißt das auf Deutsch?", recall: "Wortschatz · Schreiben Sie das Wort" }[t.mode];
+    let head = "";
+    if (t.mode === "recognize") head = `<div class="row between"><div class="prompt de">${w.art ? `<span class="art">${w.art}</span> ${esc(w.noun)}` : esc(w.de)}</div><button class="xbtn" data-act="say" data-text="${esc(w.de)}" aria-label="Play">${ic("play", 16)}</button></div>`;
+    if (t.mode === "listen") head = `<div class="player"><button class="play" data-act="say" data-text="${esc(w.de)}" aria-label="Play word">${ic("play", 24)}</button><div><div style="font-weight:600">Tap to hear the word again</div><div class="tiny">${st.done ? esc(w.de) : "No text — listen only"}</div></div></div>`;
+    if (t.mode === "choose" || t.mode === "recall") head = `<div class="prompt">${esc(w.en)}</div>`;
+    const correctIdx = st.opts ? st.opts.indexOf(t.mode === "choose" ? w.de : w.en) : null;
+    const body = t.mode === "recall"
+      ? `<div class="field"><label for="recall">German ${w.art ? "(with der / die / das)" : ""}</label>
+          <input id="recall" class="input ${st.done ? (st.ok ? "right" : "wrong") : ""}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" value="${esc(st.typed || "")}" ${st.done ? "disabled" : ""} placeholder="${w.art ? "z. B. der Tisch" : ""}"></div>${st.done ? "" : umlautRow("recall")}`
+      : optList(st.opts, st, 0, correctIdx, oen);
+    const help = { recognize: "Tap the English meaning.", listen: "Listen, then tap the meaning.", choose: "Tap the German word.", recall: "Type the German word." }[t.mode];
+    return `<div class="tag">${tag}</div>${enOn() ? `<div class="en-q">${help}</div>` : ""}${head}${body}`;
+  },
+  article(t, st) {
+    const w = WORDS[t.wid];
+    const opts = ["der", "die", "das"];
+    return `<div class="tag">Artikel · der, die oder das?</div><div class="prompt de">${esc(w.noun)}</div><div class="muted">${esc(w.en)}</div>${optList(opts, st, 0, opts.indexOf(w.art))}`;
+  },
+  drill(t, st) {
+    const info = DRILL_INFO[t.type];
+    return `<div class="tag">Hörtraining · ${esc(info[0])}</div>
+      <div class="player"><button class="play ${st.playing ? "playing" : ""}" data-act="drill-play" aria-label="Play">${ic("play", 24)}</button><div style="flex:1;min-width:0">${WAVE()}<div class="tiny">${st.done ? "Sie hörten: <b>" + esc(t.say) + "</b>" : "Hören Sie genau. Tap to replay."}</div></div></div>
+      <div class="q">${t.type === "spell" ? "Welcher Name wird buchstabiert?" : t.type === "phone" ? "Welche Nummer hören Sie?" : t.type === "date" ? "Welches Datum hören Sie?" : t.type === "price" ? "Welcher Preis?" : t.type === "num" ? "Welche Zahl?" : "Wie spät ist es?"}</div>
+      ${optList(t.opts, st, 0, t.opts.indexOf(t.ans))}`;
+  },
+  hoeren(t, st) {
+    const it = hItem(t.id); if (!st.sel) st.sel = [];
+    const limit = playLimit(t); const plays = st.plays || 0;
+    const onceText = (it.lvl === "A1" && it.part === 2) ? "Im Test hören Sie den Text einmal." : "Im Test hören Sie den Text zweimal.";
+    const qs = qBlock(it, st);
+    const transcript = st.done && !R.mock ? `<div class="stack-s"><div class="eyebrow">Transkript</div><div class="transcript">${it.s.map(([sp, tx]) => `<div><span class="sp">${sp === "N" ? "📢" : sp === "A" ? "A" : "B"}</span>${hilite(tx, it.key)}</div>`).join("")}</div>${it.ex ? `<div class="hand">${esc(it.ex)}</div>` : ""}</div>` : "";
+    return `<div class="row between"><div class="tag">Hören · Teil ${it.part}${it.gen ? " · made by Claude" : ""}</div>${t.exam ? `<span class="chip amber">Prüfungsmodus</span>` : ""}</div>
+      <div class="steps"><span>1 Read the question</span><span>2 Tap ▶</span><span>3 Choose</span></div>
+      <div class="tiny">${onceText} ${t.exam ? "" : "Here you can replay as often as you like."}</div>
+      <div class="player"><button class="play ${st.playing ? "playing" : ""}" data-act="h-play" aria-label="Play recording" ${plays >= limit ? "disabled style='opacity:.4'" : ""}>${ic("play", 24)}</button>
+        <div style="flex:1;min-width:0" class="${st.playing ? "playing-wave" : ""}">${WAVE()}<div class="tiny num">${plays >= limit ? "Keine Wiederholung im Test" : plays ? plays + "× gehört" : "Read the questions first, then play."}</div></div></div>
+      ${t.exam ? "" : speedSeg()}
+      ${qs}${transcript}`;
+  },
+  lesen(t, st) {
+    const it = lItem(t.id); if (!st.sel) st.sel = [];
+    let doc = "";
+    if (it.kind === "ads") doc = `<div class="q">${esc(it.situation)}</div>${enOn() && it.sitEn ? `<div class="en-q">${esc(it.sitEn)}</div>` : ""}<div class="ads">${it.ads.map((a, i) => `<div class="ad"><b class="lt">${LETTER[i]}</b>${esc(a)}</div>`).join("")}</div>`;
+    else doc = `<div class="text-doc ${it.kind === "sign" ? "sign" : ""}">${esc(it.text)}</div>`;
+    const qs = qBlock(it, st);
+    return `<div class="tag">Lesen · Teil ${it.part}</div><div class="tiny">${esc(PART_INFO[it.lvl].lesen[it.part] || "")}</div>${doc}${qs}`;
+  },
+  schreiben(t, st) {
+    const it = sItem(t.id);
+    if (it.fields) {
+      return `<div class="tag">Schreiben · Teil 1 · Formular</div><div class="text-doc">${esc(it.text)}</div>
+        <div class="card stack">${it.fields.map((f, i) => `<div class="field"><label for="f${i}">${esc(f.label)}</label><input id="f${i}" class="input ${st.done ? (st.fieldOk?.[i] ? "right" : "wrong") : ""}" autocomplete="off" autocorrect="off" spellcheck="false" value="${esc(st.vals?.[i] || "")}" ${st.done ? "disabled" : ""}>${st.done && !st.fieldOk?.[i] ? `<div class="hand">→ ${esc(f.acc[0].replace(/(^|\s)\S/g, s => s.toUpperCase()))}</div>` : ""}</div>`).join("")}</div>`;
+    }
+    const target = it.words || 30;
+    return `<div class="tag">Schreiben · Teil ${it.part}</div><div class="q">${esc(it.task)}</div>
+      <div class="checklist">${it.points.map((p, i) => ck(st.done ? st.pts[i] : null, p.label)).join("")}${st.done ? ck(st.greet, "Anrede (" + (it.formal ? "Sehr geehrte/r … / Liebe/r Frau …" : "Liebe/r … / Hallo …") + ")") + ck(st.close, "Gruß (" + (it.formal ? "Mit freundlichen Grüßen / Viele Grüße" : "Liebe Grüße / Viele Grüße") + ")") + ck(st.len, "Länge: " + st.wc + " / ~" + target + " Wörter") : ""}</div>
+      <textarea id="wtext" class="input" placeholder="Liebe …" autocapitalize="sentences" spellcheck="false" ${st.done ? "readonly" : ""}>${esc(st.text || "")}</textarea>
+      ${st.done ? "" : `<div class="row between">${umlautRow("wtext")}<span class="tiny num" id="wc">0 Wörter</span></div>`}
+      ${st.done ? `<details class="more"><summary>Musterlösung ansehen</summary><div class="text-doc" style="margin-top:8px">${esc(it.model)}</div></details>${aiBlock("w")}` : ""}`;
+  },
+  sprechen(t, st) {
+    const lvl = S.level, sp = SPRECHEN[lvl];
+    const dictTip = `<div class="tiny">Tip: on iPhone, switch to the German keyboard and tap the microphone to <b>speak</b> your answer. If dictation understands you, the examiner will too.</div>`;
+    if (!st.cards) {
+      if (lvl === "A1" && t.part === 1) st.cards = [sp.intro];
+      else if ((lvl === "A1" && t.part === 2) || (lvl === "A2" && t.part === 1)) st.cards = shuffle(sp.cards).slice(0, 2);
+      else if (lvl === "A1" && t.part === 3) st.cards = shuffle(sp.requests).slice(0, 2);
+      else if (lvl === "A2" && t.part === 2) st.cards = [pick(sp.tell)];
+      else st.cards = [pick(sp.plan)];
+      st.vals = st.cards.map(() => "");
+    }
+    const type = lvl === "A1" ? ["", "intro", "card", "req"][t.part] : ["", "card", "tell", "plan"][t.part];
+    const head = `<div class="tag">Sprechen · Teil ${t.part}</div><div class="tiny">${esc(PART_INFO[lvl].sprechen[t.part])}</div>`;
+    const area = (i, ph, rows = 3) => `<textarea id="sp${i}" class="input" style="min-height:${rows * 34}px" placeholder="${esc(ph)}" autocapitalize="sentences" spellcheck="false" ${st.done ? "readonly" : ""}>${esc(st.vals[i] || "")}</textarea>`;
+    let body = "";
+    if (type === "intro") {
+      const c = st.cards[0];
+      body = `<div class="q">Stellen Sie sich vor. Use every card:</div><div class="row">${c.prompts.map((p, i) => `<span class="chip ${st.done ? (st.pts[i] ? "green" : "red") : ""}">${esc(p.label)}?</span>`).join("")}</div>
+        <div class="tiny">In the exam you'll also spell your name (<i>Buchstabieren</i>) and say a number (phone, house number).</div>${area(0, "Hallo! Ich heiße …", 5)}${dictTip}
+        ${st.done ? `<div class="stack-s"><div class="row between"><div class="eyebrow">Beispiel</div><button class="btn small" data-act="say" data-text="${esc(c.model)}">${ic("play", 14)} Anhören</button></div><div class="text-doc">${esc(c.model)}</div></div>` : ""}`;
+    } else if (type === "card") {
+      body = st.cards.map((c, i) => `<div class="wortkarte"><div class="thema">Thema: ${esc(c.thema)}</div><div class="wort">${esc(c.wort)}</div></div>
+        <div class="small">Ask your partner a question with this word${lvl === "A1" ? ", then answer it yourself" : ""}.</div>${area(i, "Frage … ? Antwort …", 3)}
+        ${st.done ? `<div class="stack-s"><div class="checklist">${ck(st.pts[i][0], "Contains a question („?“)")}${ck(st.pts[i][1], "Uses the word / theme")}${ck(st.pts[i][2], "Verb in position 1 or a W-word")}</div><div class="transcript"><div><span class="sp">?</span>${esc(c.q)}</div><div><span class="sp">!</span>${esc(c.a)}</div></div><button class="btn small" data-act="say" data-text="${esc(c.q + " " + c.a)}">${ic("play", 14)} Anhören</button></div>` : ""}`).join('<hr class="rule">');
+    } else if (type === "req") {
+      body = st.cards.map((c, i) => `<div class="bildkarte" role="img" aria-label="${esc(c.hint)}">${c.pic}</div><div class="small" style="text-align:center">Make a polite request that fits the picture.</div>${area(i, "Können Sie bitte …?", 2)}
+        ${st.done ? `<div class="stack-s"><div class="checklist">${ck(st.pts[i][0], "Polite form (bitte / Können Sie / Darf ich / Ich möchte)")}${ck(st.pts[i][1], "Names the thing: " + c.hint)}</div><div class="transcript"><div><span class="sp">A</span>${esc(c.req)}</div><div><span class="sp">B</span>${esc(c.resp)}</div></div><button class="btn small" data-act="say" data-text="${esc(c.req + " " + c.resp)}">${ic("play", 14)} Anhören</button></div>` : ""}`).join('<hr class="rule">');
+    } else if (type === "tell") {
+      const c = st.cards[0];
+      body = `<div class="wortkarte"><div class="wort" style="font-size:20px">${esc(c.title)}</div><div class="row" style="justify-content:center;margin-top:8px">${c.prompts.map(p => `<span class="chip">${esc(p)}</span>`).join("")}</div></div>
+        ${area(0, "Am Wochenende …", 6)}${dictTip}
+        ${st.done ? `<div class="checklist">${ck(st.pts[0], "At least 40 words (" + wordCount(st.vals[0]) + ")")}${ck(st.pts[1], "Connectors: und, aber, dann, weil, oft …")}</div><details class="more"><summary>Beispiel ansehen</summary><div class="text-doc" style="margin-top:8px">${esc(c.model)}</div><button class="btn small" style="margin-top:8px" data-act="say" data-text="${esc(c.model)}">${ic("play", 14)} Anhören</button></details>` : ""}`;
+    } else {
+      const c = st.cards[0];
+      body = `<div class="q">${esc(c.task)}</div>${area(0, "Hast du am Samstag um … Zeit?", 5)}
+        ${st.done ? `<div class="checklist">${ck(st.pts[0], "Suggests a time")}${ck(st.pts[1], "Asks the partner / reacts")}</div><details class="more"><summary>Beispiel ansehen</summary><div class="text-doc" style="margin-top:8px">${esc(c.model)}</div></details>` : ""}`;
+    }
+    return head + body + (st.done ? aiBlock("s") : "");
+  }
+};
+function qBlock(it, st) {
+  return it.qs.map((q, qi) => `<div class="stack-s"><div><div class="q">${it.qs.length > 1 ? `<span class="tiny num">${qi + 1}.</span> ` : ""}${esc(q.q)}</div>${enOn() && q.en ? `<div class="en-q">${esc(q.en)}</div>` : ""}</div>${optList(q.o, st, qi, q.a, q.oen)}</div>`).join("");
+}
+function ck(state, label) { return `<div class="ck ${state === true ? "on" : state === false ? "off" : ""}"><i>${state === true ? "✓" : state === false ? "✗" : ""}</i><span>${esc(label)}</span></div>`; }
+function hilite(text, key) { const e = esc(text); if (!key) return e; const k = esc(key); const i = e.indexOf(k); return i < 0 ? e : e.slice(0, i) + "<mark>" + k + "</mark>" + e.slice(i + k.length); }
+function speedSeg() { const r = S.rate; return `<div class="row"><span class="tiny">Tempo</span><div class="seg" role="group" aria-label="Speech speed">${[[0.7, "langsam"], [0.9, "normal"], [1.02, "Prüfung"]].map(([v, l]) => `<button data-act="rate" data-v="${v}" aria-pressed="${Math.abs(r - v) < 0.01}">${l}</button>`).join("")}</div></div>`; }
+
+// ---------- footers (before answering) ----------
+const FOOTS = {
+  learn: () => `<button class="btn primary block" data-act="learn-ok">Weiter</button>`,
+  vocab: (t) => t.mode === "recall" ? `<div class="row"><button class="btn" data-act="recall-skip" style="flex:1">Weiß ich nicht</button><button class="btn primary" data-act="recall-check" style="flex:2">Prüfen</button></div>` : `<div class="tiny" style="text-align:center">Tap an answer</div>`,
+  article: () => `<div class="tiny" style="text-align:center">Tap der, die or das</div>`,
+  drill: () => `<div class="tiny" style="text-align:center">Tap an answer · replay as often as you need</div>`,
+  hoeren: (t, st) => { const it = hItem(t.id); const ready = it.qs.every((_, i) => st.sel?.[i] !== undefined); return `<button class="btn primary block" data-act="multi-check" ${ready ? "" : "disabled"}>${R.mock ? "Antwort speichern" : "Prüfen"}</button>`; },
+  lesen: (t, st) => { const it = lItem(t.id); const ready = it.qs.every((_, i) => st.sel?.[i] !== undefined); return `<button class="btn primary block" data-act="multi-check" ${ready ? "" : "disabled"}>${R.mock ? "Antwort speichern" : "Prüfen"}</button>`; },
+  schreiben: () => `<button class="btn primary block" data-act="write-check">Prüfen</button>`,
+  sprechen: () => `<button class="btn primary block" data-act="speak-check">Prüfen & Beispiel zeigen</button>`
+};
+
+// ---------- actions inside the runner ----------
+function playDrill() {
+  const t = task(); R.st.plays = (R.st.plays || 0) + 1;
+  TTS.play([["A", t.say]], { rate: t.exam ? 1.0 : t.type === "spell" ? Math.min(S.rate, 0.85) : S.rate, onstart: () => setPlaying(true), onend: () => setPlaying(false) });
+}
+function setPlaying(on) { if (!R) return; R.st.playing = on; const b = $("#runner .play"); if (b) b.classList.toggle("playing", on); const w = $("#runner .wave")?.parentElement; if (w) w.classList.toggle("playing-wave", on); }
+function playHoeren() {
+  const t = task(), it = hItem(t.id); const lim = playLimit(t);
+  if ((R.st.plays || 0) >= lim) return;
+  R.st.plays = (R.st.plays || 0) + 1;
+  TTS.play(it.s, { rate: t.exam ? 1.0 : S.rate, onstart: () => setPlaying(true), onend: () => { setPlaying(false); if (R && R.st.plays >= lim) renderRunner(false); else { const n = $("#runner .player .tiny"); if (n) n.textContent = R.st.plays + "× gehört"; } } });
+  const n = $("#runner .player .tiny"); if (n) n.textContent = "läuft …";
+}
+function pickOption(q, i) {
+  const t = task(), st = R.st; if (st.done) return;
+  st.sel = st.sel || []; st.sel[q] = i;
+  if (t.kind === "vocab") {
+    const w = WORDS[t.wid]; const right = t.mode === "choose" ? w.de : w.en; const ok = st.opts[i] === right;
+    gradeWord(w, ok, t.mode === "listen" ? "listen" : "recognize");
+    if (ok) clearMistake("w", w.id);
+    return finishTask(ok, ok ? pick(["Richtig!", "Genau!", "Super!", "Sehr gut!"]) : "Nicht ganz.", `<b>${esc(w.de)}</b> = ${esc(w.en)}`);
+  }
+  if (t.kind === "article") {
+    const w = WORDS[t.wid]; const ok = ["der", "die", "das"][i] === w.art; record(["vocab.article", "topic." + w.topic], ok);
+    return finishTask(ok, ok ? "Richtig!" : "Nicht ganz.", `<b>${w.art} ${esc(w.noun)}</b> — ${esc(w.en)}`);
+  }
+  if (t.kind === "drill") {
+    const ok = t.opts[i] === t.ans; record(["drill." + t.type], ok);
+    return finishTask(ok, ok ? "Richtig!" : "Nicht ganz.", `Sie hörten: <b>${esc(t.say)}</b> = ${esc(t.ans)}`);
+  }
+  renderRunner(false);
+}
+function checkMulti() {
+  const t = task(), st = R.st, kind = t.kind;
+  const it = kind === "hoeren" ? hItem(t.id) : lItem(t.id);
+  let c = 0;
+  it.qs.forEach((q, qi) => { const ok = st.sel[qi] === q.a; if (ok) c++; recordItem(kind, it, qi, ok); });
+  if (c === it.qs.length) clearMistake(kind, it.id);
+  R.log.push({ kind, part: it.part, n: it.qs.length, c, id: it.id, mock: R.mock });
+  st.logged = true;
+  TTS.stop();
+  const ok = c === it.qs.length;
+  finishTask(ok, ok ? (it.qs.length > 1 ? "Alles richtig!" : "Richtig!") : (it.qs.length > 1 ? c + " von " + it.qs.length + " richtig" : "Nicht ganz."), R.mock ? "" : (kind === "hoeren" ? "Check the highlighted phrase in the transcript." : ""));
+}
+function checkRecall() {
+  const t = task(), w = WORDS[t.wid], st = R.st;
+  const val = $("#recall").value.trim(); st.typed = val;
+  if (!val) return;
+  let artOk = true, wordOk;
+  const f = fold(val);
+  if (w.art) {
+    const m = f.match(/^(der|die|das)\s+(.+)$/);
+    const noun = m ? m[2] : f;
+    artOk = !!m && m[1] === w.art;
+    const target = fold(w.noun); const d = lev(noun, target);
+    wordOk = d === 0 || (target.length >= 6 && d === 1);
+    st.typo = d === 1 && wordOk;
+  } else { const target = fold(w.de); const d = lev(f, target); wordOk = d === 0 || (target.length >= 6 && d === 1); st.typo = d === 1 && wordOk; }
+  const ok = wordOk && artOk;
+  gradeWord(w, ok, "recall", artOk);
+  if (ok) clearMistake("w", w.id);
+  let msg = `<b>${esc(w.de)}</b> = ${esc(w.en)}`;
+  if (wordOk && !artOk) msg = `Word right, article ${val.match(/^(der|die|das)\b/i) ? "wrong" : "missing"}: <b>${esc(w.de)}</b>`;
+  if (ok && st.typo) msg += " · small typo, check the spelling";
+  if (ok && w.noun && !/^(der|die|das)\s+[A-ZÄÖÜ]/.test(val)) msg += " · Nouns start with a capital letter.";
+  finishTask(ok, ok ? "Richtig!" : wordOk ? "Fast!" : "Nicht ganz.", msg);
+}
+function checkWriting() {
+  const t = task(), it = sItem(t.id), st = R.st;
+  const mark = ok => { const k = "schreiben:" + it.id; const x = S.items[k] || (S.items[k] = { n: 0, c: 0 }); x.n++; if (ok) x.c++; x.last = dayNum(); x.ok = ok; };
+  if (it.fields) {
+    st.vals = it.fields.map((_, i) => $("#f" + i).value.trim());
+    st.fieldOk = it.fields.map((f, i) => f.acc.some(a => fold(a) === fold(st.vals[i])));
+    let c = 0; st.fieldOk.forEach(ok => { record(["schreiben." + it.lvl + ".1"], ok); if (ok) c++; });
+    mark(c === it.fields.length);
+    return finishTask(c === it.fields.length, c + " von " + it.fields.length + " Feldern richtig", "Read the text again for the red fields. The exam gives 1 point per field.");
+  }
+  const text = $("#wtext").value; st.text = text;
+  const low = fold(text);
+  st.pts = it.points.map(p => has(text, p.kw));
+  st.greet = /^(liebe|lieber|hallo|hi|sehr geehrte|guten tag)/.test(low);
+  st.close = /(gruesse|gruss|bis bald|bis dann|tschuess|tschuss|herzlich)/.test(low);
+  st.wc = wordCount(text); const target = it.words || 30; st.len = st.wc >= Math.round(target * 0.7);
+  const all = [...st.pts, st.greet, st.close, st.len];
+  all.forEach(ok => record(["schreiben." + it.lvl + "." + it.part], ok));
+  const c = all.filter(Boolean).length;
+  mark(c >= all.length - 1);
+  finishTask(c >= all.length - 1, c + " / " + all.length + " Punkte erfüllt", "This is a quick keyword check. For grammar feedback, ask Claude below.");
+}
+function checkSpeaking() {
+  const t = task(), st = R.st, lvl = S.level;
+  st.vals = st.cards.map((_, i) => $("#sp" + i).value);
+  const type = lvl === "A1" ? ["", "intro", "card", "req"][t.part] : ["", "card", "tell", "plan"][t.part];
+  const key = "sprechen." + lvl + "." + t.part;
+  let marks = [];
+  if (type === "intro") { st.pts = st.cards[0].prompts.map(p => has(st.vals[0], p.kw)); marks = st.pts; }
+  else if (type === "card") {
+    const W = ["wann", "wo", "wie", "was", "wer", "warum", "welche", "welchen", "welcher", "woher", "wohin"];
+    st.pts = st.cards.map((c, i) => { const v = st.vals[i]; const f = fold(v); const first = f.split(" ")[0] || ""; const stem = fold(c.wort.replace("?", "")).slice(0, 5); return [v.includes("?"), f.includes(stem) || has(v, [c.thema.split(" ")[0]]), W.includes(first) || /(st|en|t)$/.test(first)]; });
+    marks = st.pts.flat();
+  } else if (type === "req") {
+    st.pts = st.cards.map((c, i) => { const v = st.vals[i]; return [/bitte|koennen sie|kannst du|darf ich|ich moechte|ich haette gern/.test(fold(v)), has(v, c.kw)]; });
+    marks = st.pts.flat();
+  } else if (type === "tell") { st.pts = [wordCount(st.vals[0]) >= 40, /\b(und|aber|dann|weil|oft|danach|meistens|manchmal)\b/.test(fold(st.vals[0]))]; marks = st.pts; }
+  else { const f = fold(st.vals[0]); st.pts = [/(\d|uhr|um )/.test(f), /\?|was meinst|geht es|passt|einverstanden|gute idee/.test(st.vals[0].toLowerCase() + f)]; marks = st.pts; }
+  marks.forEach(ok => record([key], ok));
+  const c = marks.filter(Boolean).length;
+  finishTask(c >= marks.length - 1, c + " / " + marks.length + " erfüllt", "Now read the example out loud. Copy the rhythm.");
+}
+
+// ---------- Claude feedback (sample capability) ----------
+let SAMPLE = null;
+function aiBlock(kind) {
+  const st = R.st;
+  if (!SAMPLE) return "";
+  if (st.ai) return `<div class="stack-s"><div class="eyebrow">Feedback von Claude</div>${st.ai}</div>`;
+  return `<button class="btn block" data-act="ai-feedback" data-k="${kind}" ${st.aiBusy ? "disabled" : ""}>${ic("spark", 16)} ${st.aiBusy ? "Claude liest …" : "Get grammar feedback from Claude"}</button>`;
+}
+async function aiFeedback(kind) {
+  const t = task(), st = R.st; if (!SAMPLE || st.aiBusy) return;
+  let taskText, answer;
+  if (kind === "w") { const it = sItem(t.id); taskText = "Goethe " + it.lvl + " Schreiben Teil " + it.part + ": " + it.task + " Points to cover: " + it.points.map(p => p.label).join("; ") + ". Target length about " + (it.words || 30) + " words."; answer = st.text; }
+  else { taskText = "Goethe " + S.level + " Sprechen Teil " + t.part + " (" + PART_INFO[S.level].sprechen[t.part] + "). Cards: " + JSON.stringify(st.cards.map(c => c.wort || c.hint || c.title || "self-introduction")); answer = st.vals.join("\n---\n"); }
+  if (!answer || !answer.trim()) { toast("Write something first."); return; }
+  st.aiBusy = true; renderRunner(false);
+  try {
+    const res = await SAMPLE.json(`You are a friendly, strict Goethe-Institut examiner for level ${S.level}. The learner's first language is English.
+Task: ${taskText}
+Learner's answer (German):
+"""${answer.slice(0, 2500)}"""
+Reply with only JSON: {"score": <0-10 how this would score in the exam>, "verdict": "<one short English sentence>", "corrections": [{"wrong": "<exact phrase from the answer>", "right": "<corrected German>", "why": "<very short English reason>"}], "better": "<the learner's text rewritten as a strong ${S.level} answer, same ideas>", "tip": "<one concrete tip in English>"}. At most 6 corrections; only real errors.`, { modelTier: "default", cache: false });
+    const cor = Array.isArray(res.corrections) ? res.corrections.slice(0, 6) : [];
+    st.ai = `<div class="ai-out"><div class="row between"><b>${esc(res.verdict || "")}</b>${typeof res.score === "number" ? `<span class="chip ${res.score >= 7 ? "green" : res.score >= 5 ? "amber" : "red"} num">${res.score}/10</span>` : ""}</div>
+      ${cor.length ? `<div style="margin-top:8px">${cor.map(c => `<div class="correction"><div><s>${esc(c.wrong)}</s> → <ins>${esc(c.right)}</ins></div><div class="tiny">${esc(c.why)}</div></div>`).join("")}</div>` : `<div class="tiny" style="margin-top:6px">No grammar errors found.</div>`}
+      ${res.better ? `<div class="eyebrow" style="margin-top:10px">Stronger version</div><div style="margin-top:4px">${esc(res.better)}</div><button class="btn small" style="margin-top:8px" data-act="say" data-text="${esc(res.better)}">${ic("play", 14)} Anhören</button>` : ""}
+      ${res.tip ? `<div class="hand blue" style="margin-top:8px">${esc(res.tip)}</div>` : ""}</div>`;
+    S.writing.unshift({ d: TODAY(), k: kind, score: res.score ?? null }); S.writing = S.writing.slice(0, 20); Store.save();
+  } catch (e) {
+    if (e && (e.code === "not_granted" || e.code === "sampling_disabled" || e.code === "capability_disabled" || e.code === "not_declared")) { SAMPLE = null; st.ai = ""; }
+    else st.ai = `<div class="notice">${e?.code === "rate_limited" ? "Claude is busy right now. Try again in a minute." : "Feedback didn't come through. Try again."}</div>`;
+  } finally { st.aiBusy = false; if (R) renderRunner(false); }
+}
+
+// ---------- end of session ----------
+function finishSession() {
+  TTS.stop();
+  if (R.daily) { S.dailyDone = TODAY(); S.doneDays = S.doneDays || {}; S.doneDays[TODAY()] = true; }
+  const answered = R.tasks.length;
+  const el = $("#runner");
+  let body;
+  if (R.mock) {
+    const h = R.log.filter(x => x.kind === "hoeren"), l = R.log.filter(x => x.kind === "lesen");
+    const sc = arr => { const n = arr.reduce((a, x) => a + x.n, 0), c = arr.reduce((a, x) => a + x.c, 0); return { n, c, pts: n ? Math.round(c / n * 25 * 10) / 10 : 0 }; };
+    const H = sc(h), L = sc(l);
+    S.mocks.unshift({ d: TODAY(), lvl: S.level, h: H.pts, l: L.pts, hn: H.c + "/" + H.n, ln: L.c + "/" + L.n, min: Math.round((Date.now() - R.started) / 60000) });
+    S.mocks = S.mocks.slice(0, 20); Store.save();
+    const per = (H.pts + L.pts) / 50;
+    const wrong = R.log.filter(x => x.c < x.n);
+    body = `<div class="eyebrow">Modelltest · ${S.level}</div>
+      <div class="row" style="align-items:flex-end;gap:18px"><div><div class="summary-num num">${H.pts}</div><div class="tiny">Hören / 25 · ${H.c}/${H.n}</div></div><div><div class="summary-num num">${L.pts}</div><div class="tiny">Lesen / 25 · ${L.c}/${L.n}</div></div></div>
+      <div class="notice">${per >= 0.6 ? "<b>On track.</b> " : "<b>Not yet at the pass line.</b> "}You need 60 of 100 points overall; that's 15 of 25 per part on average. Here: ${Math.round(per * 100)}% of the Hören + Lesen points.</div>
+      ${wrong.length ? `<div class="section-head"><h3>Your mistakes</h3></div>${wrong.map(x => { const it = x.kind === "hoeren" ? hItem(x.id) : lItem(x.id); return `<div class="card flat stack-s"><div class="tag">${MOD_NAME[x.kind]} · Teil ${it.part} · ${x.c}/${x.n}</div>${it.qs.map(q => `<div class="small"><b>${esc(q.q)}</b> → ${esc(q.o[q.a])}</div>`).join("")}${x.kind === "hoeren" ? `<div class="transcript">${it.s.map(([sp, tx]) => `<div>${hilite(tx, it.key)}</div>`).join("")}</div><div class="hand">${esc(it.ex || "")}</div>` : ""}</div>`; }).join("")}` : ""}`;
+  } else {
+    const today = S.days[TODAY()] || { q: 0, c: 0 };
+    Store.save();
+    const w = weaknesses(3);
+    body = `<div class="eyebrow">${esc(R.title)} · geschafft</div>
+      <div class="summary-num num">${today.q ? pct(today.c / today.q) : 0}%</div><div class="muted">correct today · ${today.q} answers</div>
+      ${w.length ? `<div class="card flat stack-s"><div class="eyebrow">Still weak</div>${w.map(x => `<div class="row between"><span>${esc(x.label)}</span><b class="num" style="color:var(--red)">${pct(x.v)}%</b></div>`).join("")}<div class="tiny">Tomorrow's plan will focus on these.</div></div>` : ""}
+      <div class="hand blue">Gut gemacht! ${daysLeft() > 0 ? "Noch " + daysLeft() + " Tage." : ""}</div>`;
+  }
+  el.innerHTML = `<div class="runner-top"><button class="xbtn" data-act="quit-yes" aria-label="Close">${ic("x", 18)}</button><div class="prog"><b style="width:100%"></b></div></div>
+    <div class="runner-body"><div class="runner-in">${body}</div></div>
+    <div class="runner-foot"><div class="runner-foot-in"><button class="btn primary block" data-act="quit-yes">Fertig</button></div></div>`;
+}
+// ================= Screens, practice builders, events, boot =================
+const UI = { tab: "heute", resetAsk: false, genBusy: false, voiceNote: false };
+const EXAM_NAME = { A1: "Goethe-Zertifikat A1 · Start Deutsch 1", A2: "Goethe-Zertifikat A2" };
+const fmtDate = iso => new Date(iso + "T12:00:00").toLocaleDateString("de-DE", { weekday: "short", day: "numeric", month: "long" });
+function toast(msg) { const t = document.createElement("div"); t.className = "toast"; t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2600); }
+const meterCls = v => v === null ? "" : v >= 0.75 ? "good" : v >= 0.55 ? "warn" : "bad";
+const mrow = (label, v, valText, sub) => `<div class="mrow"><div><div class="lbl">${esc(label)}</div>${sub ? `<div class="tiny">${esc(sub)}</div>` : ""}</div><div class="meter ${meterCls(v)}"><b style="width:${v === null ? 0 : Math.max(3, pct(v))}%"></b></div><div class="val">${valText ?? (v === null ? "–" : pct(v) + "%")}</div></div>`;
+
+// ---------- practice builders ----------
+const P = {
+  part(mod, part) {
+    const lvl = S.level;
+    if (mod === "hoeren") return { title: "Hören Teil " + part, tasks: chooseItems(allHoeren(), "hoeren", 5, x => x.lvl === lvl && x.part === part).map(it => ({ kind: "hoeren", id: it.id })) };
+    if (mod === "lesen") return { title: "Lesen Teil " + part, tasks: chooseItems(LESEN, "lesen", 3, x => x.lvl === lvl && x.part === part).map(it => ({ kind: "lesen", id: it.id })) };
+    if (mod === "schreiben") return { title: "Schreiben Teil " + part, tasks: chooseItems(SCHREIBEN, "schreiben", 1, x => x.lvl === lvl && x.part === part).map(it => ({ kind: "schreiben", id: it.id })) };
+    return { title: "Sprechen Teil " + part, tasks: [{ kind: "sprechen", part }] };
+  },
+  drill(type, n = 10) { return { title: "Hörtraining", tasks: Array.from({ length: n }, (_, i) => makeDrill(type || weakestDrills(3)[i % 3])) }; },
+  topic(tid) {
+    const nw = shuffle(newWords(tid)).slice(0, 8);
+    const seen = shuffle(TOPICS[tid].words.filter(w => S.words[w.id])).slice(0, 10);
+    return { title: TOPICS[tid].de, tasks: [...nw.map(learnTask), ...shuffle([...nw.map(w => vocabTask(w, "recognize")), ...seen.map(w => vocabTask(w))])] };
+  },
+  due() { return { title: "Wiederholung", tasks: dueWords().slice(0, 25).map(w => vocabTask(w)) }; },
+  articles() {
+    const nouns = lvlWords().filter(w => w.art);
+    const seen = nouns.filter(w => S.words[w.id]);
+    const pool = seen.length >= 15 ? seen : nouns;
+    return { title: "Artikel", tasks: shuffle(pool).slice(0, 15).map(w => ({ kind: "article", wid: w.id })) };
+  },
+  listenWords() {
+    const seen = lvlWords().filter(w => S.words[w.id]);
+    const pool = seen.length >= 10 ? seen : lvlWords();
+    return { title: "Hör-Vokabeln", tasks: shuffle(pool).slice(0, 15).map(w => vocabTask(w, "listen")) };
+  },
+  trap(t) { return { title: "Hör-Fallen", tasks: chooseItems(allHoeren(), "hoeren", 6, x => x.lvl === S.level && (x.traps || []).includes(t)).map(it => ({ kind: "hoeren", id: it.id })) }; },
+  mistakes() {
+    const tasks = [];
+    for (const m of S.mistakes.slice(0, 18)) {
+      if (m.t === "w" && WORDS[m.id]) tasks.push(vocabTask(WORDS[m.id], S.words[m.id]?.b >= 3 ? "recall" : "choose"));
+      if (m.t === "hoeren" && hItem(m.id)) tasks.push({ kind: "hoeren", id: m.id });
+      if (m.t === "lesen" && lItem(m.id)) tasks.push({ kind: "lesen", id: m.id });
+    }
+    return { title: "Fehler", tasks };
+  }
+};
+function goWeak(g) {
+  if (g.mod) return startSession(P.part(g.mod, g.part));
+  if (g.trap) return startSession(P.trap(g.trap));
+  if (g.drill) return startSession(P.drill(g.drill));
+  if (g.topic) return startSession(P.topic(g.topic));
+  if (g.article) return startSession(P.articles());
+}
+
+// ---------- Claude-made listening items ----------
+async function genHoeren() {
+  if (!SAMPLE || UI.genBusy) return;
+  const lvl = S.level, part = weakestPart("hoeren", lvl);
+  const traps = Object.keys(TRAP_INFO).map(t => ({ t, v: (skillVal("trap." + t) ?? 0.5) + Math.random() * 0.15 })).sort((a, b) => a.v - b.v).slice(0, 2).map(x => x.t);
+  const topics = topicsFor(lvl).map(t => ({ t, v: (skillVal("topic." + t.id) ?? 0.55) + Math.random() * 0.2 })).sort((a, b) => a.v - b.v).slice(0, 2).map(x => x.t);
+  const fmt = { A1: { 1: "a short everyday dialogue between two people (A and B), 3–5 lines; one question with 3 options a/b/c", 2: "one public announcement (speaker N: station, airport, shop, radio), 2–3 sentences; one statement with options [\"Richtig\",\"Falsch\"]", 3: "one phone/voicemail message (speaker A), 3–5 sentences; one question with 3 options" },
+    A2: { 1: "a radio or public announcement (speaker N), 3–4 sentences; one question with 3 options", 3: "a short everyday dialogue (A and B), 4–6 lines; one question with 3 options", 4: "a radio interview (A interviewer, B guest), 6–8 lines; five statements with options [\"Ja\",\"Nein\"]" } }[lvl][part];
+  UI.genBusy = true; render();
+  try {
+    const res = await SAMPLE.json(`Write 3 NEW original listening exercises for the Goethe-Zertifikat ${lvl} exam, Hören Teil ${part}. Format of each: ${fmt}.
+Target these weak spots of the learner: listening traps ${traps.map(t => TRAP_INFO[t][0] + " (" + TRAP_INFO[t][1] + ")").join(", ")}; themes ${topics.map(t => t.de).join(", ")}.
+Use only ${lvl} vocabulary and grammar. Write every number, price, time and date as German WORDS in the script (e.g. "zwei Euro vierzig", "halb sieben") because it will be read by text-to-speech. Distractor options must be things actually mentioned in the text, as in the real exam.
+Reply with only a JSON array of 3 objects: {"s": [["A","German line"],["B","German line"]], "qs": [{"q": "German question or statement", "en": "English translation of q", "o": ["option", "option", "option"], "oen": ["English translation of each option"], "a": <index of correct option>}], "key": "<exact short phrase from the script that gives the answer>", "ex": "<one-sentence English explanation of the trap>", "trap": "<one of: ${Object.keys(TRAP_INFO).join(", ")}>"}`, { modelTier: "default", cache: false });
+    const arr = (Array.isArray(res) ? res : [res]).filter(x => x && Array.isArray(x.s) && Array.isArray(x.qs) && x.qs.every(q => Array.isArray(q.o) && Number.isInteger(q.a) && q.a >= 0 && q.a < q.o.length));
+    if (!arr.length) throw { code: "invalid_json" };
+    const made = arr.map((x, i) => ({ id: "gen-" + Date.now() + "-" + i, lvl, part, gen: true, topic: topics[0].id, traps: TRAP_INFO[x.trap] ? [x.trap] : traps.slice(0, 1),
+      s: x.s.filter(l => Array.isArray(l) && l[1]).map(([sp, tx]) => [["A", "B", "N"].includes(sp) ? sp : "A", String(tx)]), qs: x.qs.map(q => ({ q: String(q.q), en: q.en ? String(q.en) : "", oen: Array.isArray(q.oen) && q.oen.length === q.o.length ? q.oen.map(String) : null, o: q.o.map(String), a: q.a })), key: String(x.key || ""), ex: String(x.ex || "") }));
+    S.gen = [...made, ...(S.gen || [])].slice(0, 30); Store.save();
+    UI.genBusy = false;
+    startSession({ title: "Claude-Übung", tasks: made.map(it => ({ kind: "hoeren", id: it.id })) });
+  } catch (e) {
+    UI.genBusy = false;
+    if (e && ["not_granted", "sampling_disabled", "not_declared", "capability_disabled"].includes(e.code)) SAMPLE = null;
+    else toast(e?.code === "rate_limited" ? "Claude is busy. Try again in a minute." : "That didn't work. Try again.");
+    render();
+  }
+}
+
+// ---------- screens ----------
+function topbar() {
+  return `<div class="topbar"><div class="wordmark"><span class="dot"></span>Startklar</div>
+    <div class="row" style="gap:8px"><span class="sync ${Store.status === "cloud" ? "ok" : ""}" title="${Store.status === "cloud" ? "Saved to your Claude account" : "Saved in this browser"}"><i></i>${Store.status === "cloud" ? "Sync" : "Lokal"}</span><button class="pill" data-act="tab" data-t="analyse">${S.level}</button></div></div>`;
+}
+function voiceNotice() {
+  if (!TTS.ok) return `<div class="notice"><b>No audio here.</b> This browser can't read German aloud. Open the page in Safari on your iPhone for the listening practice.</div>`;
+  if (UI.voiceNote && !TTS.hasGerman()) return `<div class="notice"><b>No German voice found.</b> On iPhone: Settings → Accessibility → Spoken Content → Voices → German, then download “Anna” or “Helena (Enhanced)”. <button class="linkbtn" data-act="test-voice">Test sound</button></div>`;
+  return "";
+}
+function hd(de, en, right = "") { return `<div class="section-head"><div><h2>${de}</h2>${en ? `<div class="h-en">${esc(en)}</div>` : ""}</div>${right}</div>`; }
+function countdownStrip() {
+  const dl = daysLeft(); if (S.level !== "A1" || dl < 0 || dl > 9) return "";
+  const cells = [];
+  for (let k = 9; k >= 0; k--) {
+    const date = addDays(S.exam.A1, -k), c = COUNTDOWN[k], dt = new Date(date + "T12:00:00");
+    const done = S.doneDays?.[date];
+    cells.push(`<div class="cd ${k === dl ? "today" : ""} ${k > dl ? "past" : ""} ${done ? "done" : ""}">
+      <div class="cd-date">${dt.toLocaleDateString("de-DE", { weekday: "short" })} ${dt.getDate()}.${dt.getMonth() + 1}.</div>
+      <div class="cd-mark">${done ? "✓" : k === 0 ? "Prüfung" : "Tag " + (10 - k)}</div>
+      <div class="cd-t">${esc(c.t)}</div><div class="cd-en">${esc(c.en)}</div></div>`);
+  }
+  return `<div class="section">${hd("Dein Countdown", "Your plan until " + fmtDate(S.exam.A1) + " · swipe")}<div class="cd-strip" id="cdstrip">${cells.join("")}</div></div>`;
+}
+function examTips() {
+  return `<div class="card stack-s"><div class="eyebrow">Am Prüfungstag · on exam day</div>
+    <div class="checklist">
+      ${ck(null, "Bring your passport or ID and your exam confirmation.")}
+      ${ck(null, "Hören: read the questions before each recording starts. Teil 2 plays only once.")}
+      ${ck(null, "Copy your answers onto the answer sheet (Antwortbogen) before time runs out.")}
+      ${ck(null, "Lesen: stuck on a question? Mark a guess, move on, come back later.")}
+      ${ck(null, "Sprechen: speak slowly. Didn't understand? „Können Sie das bitte wiederholen?“")}
+    </div></div>`;
+}
+function screenHeute() {
+  const d = daysLeft(), est = estimate();
+  const plan = buildDailyCached();
+  const doneToday = S.dailyDone === TODAY();
+  const tday = S.days[TODAY()];
+  const streak = (() => { let n = 0, day = TODAY(); if (!S.days[day]) day = addDays(day, -1); while (S.days[day]?.q) { n++; day = addDays(day, -1); } return n; })();
+  const weak = weaknesses(3);
+  const due = dueWords().length;
+  const after = d < 0;
+  const cd = countdownDay();
+  return `${topbar()}
+  <div class="card ink stack">
+    <div class="eyebrow">${esc(EXAM_NAME[S.level])}</div>
+    <div class="hero">
+      <div class="days num">${after ? "✓" : d}<small>${after ? "Prüfung vorbei" : d === 0 ? "Heute ist Prüfung!" : d === 1 ? "Tag bis zur Prüfung" : "Tage bis zur Prüfung"}</small></div>
+      <div class="stack-s">
+        <div class="small">${esc(fmtDate(S.exam[S.level]))}</div>
+        ${est.answered >= 10 ? `<div><div class="row between small"><span>Geschätzt</span><b class="num" style="font-size:20px">${est.total}<span style="font-size:13px;opacity:.8"> / 100</span></b></div><div class="scoreline"><b style="width:${est.total}%"></b><span class="pass" style="left:60%"></span></div></div><div class="tiny">Estimated score · pass mark 60</div>` : `<div class="tiny">Your score estimate appears after the first session.</div>`}
+      </div>
+    </div>
+    <div class="today-box">
+      <div class="eyebrow">${doneToday ? "Heute erledigt ✓" : cd ? "Heute · Tag " + (10 - d) + " von 10" : "Heute"}</div>
+      <div class="today-t">${esc(plan.title)}</div>
+      <div class="small" style="opacity:.85">${esc(plan.en || "")}${plan.mins ? " · about " + plan.mins + " min" : ""}</div>
+    </div>
+    <button class="btn ink-on block" data-act="start-daily">${ic("play", 16)} ${doneToday ? "Do another round" : plan.check ? "Start the level check" : plan.mock ? "Start the mock test" : "Start today's session"}</button>
+    ${plan.check || plan.mock ? "" : `<button class="linkbtn on-ink" data-act="start-short">Only 10 minutes? Start the short version</button>`}
+  </div>
+  ${voiceNotice()}
+  ${d >= 0 && d <= 1 && S.level === "A1" ? examTips() : ""}
+  ${after && S.level === "A1" ? `<div class="card stack-s"><h3>How did the A1 exam go?</h3><div class="small muted">Switch to A2. Your A1 words stay in your reviews.</div><button class="btn primary" data-act="set-level" data-v="A2">Start A2 preparation</button></div>` : ""}
+  ${countdownStrip()}
+  <div class="section">
+    ${hd(doneToday ? "Heute erledigt" : "Was heute drin ist", doneToday ? "Done for today" : "What's in today's session, and why")}
+    <div class="card">
+      ${doneToday && tday ? `<div class="hand green" style="margin-bottom:6px">${tday.q} answers today, ${pct(tday.c / tday.q)}% correct. Another round is optional.</div>` : ""}
+      <div class="plan">${plan.blocks.map(b => `<div class="plan-row"><div class="plan-ico">${ic(b.ico, 16)}</div><div><div style="font-weight:600">${esc(b.t)}</div><div class="why">${esc(b.why)}</div></div><div></div></div>`).join("")}</div>
+    </div>
+  </div>
+  <div class="section">
+    ${hd("Schnell üben", "Quick practice", streak ? `<span class="chip blue">${ic("flame", 14)} ${streak} ${streak === 1 ? "Tag" : "Tage"}</span>` : "")}
+    <div class="grid2">
+      <button class="tile" data-act="p-due"><span class="eyebrow">Wörter · words</span><span class="t-title">Wiederholen</span><span class="tiny num">${due} due for review</span></button>
+      <button class="tile" data-act="p-drill"><span class="eyebrow">Hören · 3 min</span><span class="t-title">Zahlen & Uhrzeiten</span><span class="tiny">Numbers and times</span></button>
+      <button class="tile" data-act="p-mistakes" ${S.mistakes.length ? "" : "disabled"}><span class="eyebrow">Fehler · mistakes</span><span class="t-title">Fehler wiederholen</span><span class="tiny num">${S.mistakes.length ? S.mistakes.length + " to redo" : "None yet"}</span></button>
+      <button class="tile ${cd && cd.mock ? "accent" : ""}" data-act="p-mock"><span class="eyebrow">Prüfung · exam</span><span class="t-title">Modelltest</span><span class="tiny">Mock test: Hören + Lesen</span></button>
+    </div>
+  </div>
+  ${weak.length ? `<div class="section">${hd("Schwachstellen", "Your weak spots", `<button class="linkbtn" data-act="tab" data-t="analyse">See all</button>`)}<div class="card">${weak.map((w, i) => `<div class="weak"><div><div style="font-weight:600">${esc(w.label)}</div><div class="tiny">${esc(w.sub)} · ${w.n} answers</div></div><div class="row"><span class="pct num">${pct(w.v)}%</span><button class="btn small" data-act="weak" data-i="${i}">Practise</button></div></div>`).join("")}</div></div>` : ""}`;
+}
+let _daily = null, _dailyKey = "";
+function buildDailyCached() { const key = TODAY() + S.level + (S.dailyDone || "") + Object.keys(S.words).length + (Object.values(S.days).reduce((a, d) => a + d.q, 0) >= 10); if (key !== _dailyKey || !_daily) { _daily = buildDaily(); _dailyKey = key; } return _daily; }
+
+function screenWoerter() {
+  const ts = topicsFor(S.level), all = lvlWords();
+  const known = all.filter(w => (S.words[w.id]?.b || 0) >= 3).length, learning = all.filter(w => S.words[w.id] && S.words[w.id].b < 3).length;
+  const art = skillVal("vocab.article"), lis = skillVal("vocab.listen");
+  return `${topbar()}<h1>Wortschatz ${S.level}</h1><div class="h-en">Vocabulary · tap a theme to learn its words</div>
+  <div class="card stack-s" style="margin-top:14px">
+    <div class="row between"><span class="small muted">Sicher gelernt</span><b class="num">${known} / ${all.length}</b></div>
+    <div class="meter good"><b style="width:${known / all.length * 100}%"></b></div>
+    <div class="row between tiny"><span>${learning} im Lernen · ${all.length - known - learning} neu</span><span>Artikel ${art === null ? "–" : pct(art) + "%"} · Hören ${lis === null ? "–" : pct(lis) + "%"}</span></div>
+  </div>
+  <div class="grid2" style="margin-top:12px">
+    <button class="tile" data-act="p-due"><span class="t-title">Fällig</span><span class="tiny num">${dueWords().length} Wörter</span></button>
+    <button class="tile" data-act="p-listenwords"><span class="t-title">Hör-Vokabeln</span><span class="tiny">Audio only, pick the meaning</span></button>
+    <button class="tile" data-act="p-articles"><span class="t-title">der · die · das</span><span class="tiny">Article drill</span></button>
+    <button class="tile" data-act="level-toggle"><span class="t-title">${S.level === "A1" ? "A2-Wörter" : "A1-Wörter"}</span><span class="tiny">Switch level in Analyse</span></button>
+  </div>
+  <div class="section">${hd("Themen", "Themes from the Goethe word list")}
+  <div class="stack-s">${ts.map(t => { const m = topicMastery(t.id), sv = skillVal("topic." + t.id), nw = newWords(t.id).length; return `<button class="list-btn" data-act="p-topic" data-t="${t.id}"><div class="stack-s" style="gap:5px"><div class="row between"><b>${esc(t.de)}</b><span class="tiny num">${t.words.length - nw}/${t.words.length}${sv !== null ? " · " + pct(sv) + "%" : ""}</span></div><div class="meter ${meterCls(sv)}"><b style="width:${Math.max(2, m * 100)}%"></b></div><div class="sub">${esc(t.en)}${nw ? " · " + nw + " new" : ""}</div></div><span class="chev">${ic("chev", 18)}</span></button>`; }).join("")}</div></div>`;
+}
+
+function screenHoeren() {
+  const lvl = S.level, parts = partsOf("hoeren", lvl);
+  return `${topbar()}<h1>Hören</h1><div class="h-en">Listening</div><p class="muted small">${lvl === "A1" ? "About 20 minutes, 15 questions in 3 parts. Teil 2 is played only once." : "About 30 minutes, 20 questions in 4 parts."} Read the questions before the audio starts.</p>
+  ${voiceNotice()}
+  <div class="card" style="margin-top:6px">${speedSeg()}<div class="tiny" style="margin-top:6px">Practice slowly, then switch to “Prüfung” speed in the last week.</div></div>
+  <div class="section">${hd("Prüfungsteile", "Exam parts: practise one")}<div class="stack-s">
+  ${parts.map(p => { const v = modulePart("hoeren", p), n = skillN("hoeren." + lvl + "." + p), cnt = allHoeren().filter(x => x.lvl === lvl && x.part === p).length; return `<button class="list-btn" data-act="p-part" data-m="hoeren" data-p="${p}"><div class="stack-s" style="gap:5px"><div class="row between"><b>Teil ${p}</b><span class="tiny num">${v === null ? "neu" : pct(v) + "% · " + n}</span></div><div class="meter ${meterCls(v)}"><b style="width:${v === null ? 0 : pct(v)}%"></b></div><div class="sub">${esc(PART_INFO[lvl].hoeren[p])} · ${cnt} Aufgaben</div></div><span class="chev">${ic("chev", 18)}</span></button>`; }).join("")}
+  </div></div>
+  <div class="section">${hd("Hörtraining", "Number & time drills, unlimited")}
+  <div class="grid2">${Object.entries(DRILL_INFO).map(([k, [de, en]]) => { const v = skillVal("drill." + k); return `<button class="tile" data-act="p-drilltype" data-t="${k}"><span class="t-title">${esc(de)}</span><span class="tiny">${esc(en)}</span><div class="meter ${meterCls(v)}" style="margin-top:auto"><b style="width:${v === null ? 0 : pct(v)}%"></b></div></button>`; }).join("")}</div></div>
+  <div class="section">${hd("Hör-Fallen", "Listening traps: where points get lost")}
+  <div class="card">${Object.entries(TRAP_INFO).map(([k, [de, en]]) => { const v = skillVal("trap." + k), n = skillN("trap." + k); return `<div class="mrow"><div><div class="lbl">${esc(de)}</div><div class="tiny">${esc(en)}</div></div><div class="meter ${meterCls(n >= 2 ? v : null)}"><b style="width:${v === null ? 0 : pct(v)}%"></b></div><div class="val">${n ? `<button class="linkbtn" data-act="p-trap" data-t="${k}">${pct(v)}%</button>` : "–"}</div></div>`; }).join("")}</div></div>
+  ${SAMPLE ? `<div class="section"><div class="card stack-s"><div class="eyebrow">${ic("spark", 14)} Mit Claude</div><h3>New exercises for your weak spots</h3><div class="small muted">Claude writes 3 fresh Teil ${weakestPart("hoeren", lvl)} recordings aimed at your weakest traps and themes. Uses your Claude usage.</div><button class="btn primary" data-act="gen-hoeren" ${UI.genBusy ? "disabled" : ""}>${UI.genBusy ? "Claude schreibt … (up to a minute)" : "Create 3 exercises"}</button>${(S.gen || []).filter(x => x.lvl === lvl).length ? `<div class="tiny">${S.gen.filter(x => x.lvl === lvl).length} Claude exercises are already mixed into your practice.</div>` : ""}</div></div>` : ""}`;
+}
+
+function screenPruefung() {
+  const lvl = S.level, pi = PART_INFO[lvl];
+  const block = mod => `<div class="section"><div class="section-head"><h2>${MOD_NAME[mod]}</h2><span class="tiny num">${pct(moduleScore(mod).v)}% geschätzt</span></div><div class="stack-s">${Object.keys(pi[mod]).map(Number).map(p => { const v = modulePart(mod, p); return `<button class="list-btn" data-act="p-part" data-m="${mod}" data-p="${p}"><div class="stack-s" style="gap:5px"><div class="row between"><b>Teil ${p}</b><span class="tiny num">${v === null ? "neu" : pct(v) + "%"}</span></div><div class="meter ${meterCls(v)}"><b style="width:${v === null ? 0 : pct(v)}%"></b></div><div class="sub">${esc(pi[mod][p])}</div></div><span class="chev">${ic("chev", 18)}</span></button>`; }).join("")}</div></div>`;
+  const mocks = S.mocks.filter(m => m.lvl === lvl);
+  return `${topbar()}<h1>Prüfung ${lvl}</h1><div class="h-en">Exam practice: reading, writing, speaking, mock test</div>
+  <div class="card stack-s" style="margin-top:14px"><div class="eyebrow">Modelltest</div><h3>Hören + Lesen under exam rules</h3>
+    <div class="small muted">Audio plays at exam speed with the real replay limits. No feedback until the end. About ${lvl === "A1" ? "40" : "55"} minutes.</div>
+    <button class="btn primary" data-act="p-mock">Start mock test</button>
+    ${mocks.length ? `<hr class="rule"><div class="stack-s">${mocks.slice(0, 5).map(m => `<div class="row between small"><span>${esc(fmtDate(m.d))}</span><span class="num">Hören <b>${m.h}</b> · Lesen <b>${m.l}</b> <span class="tiny">/ 25</span></span></div>`).join("")}</div>` : ""}
+  </div>
+  ${block("lesen")}${block("schreiben")}${block("sprechen")}
+  <div class="section"><details class="card more"><summary>How the ${lvl} exam works</summary><div class="small stack-s" style="margin-top:10px">
+    ${lvl === "A1" ? `<div><b>Hören</b> · ~20 min · 3 parts, 15 questions</div><div><b>Lesen</b> · ~25 min · 3 parts, 15 questions</div><div><b>Schreiben</b> · ~20 min · fill in a form + write a short message (~30 words)</div><div><b>Sprechen</b> · ~15 min in a small group · introduce yourself, ask & answer with word cards, make requests with picture cards</div>` : `<div><b>Lesen</b> · 30 min · 4 parts</div><div><b>Hören</b> · 30 min · 4 parts</div><div><b>Schreiben</b> · 30 min · a text message and an email</div><div><b>Sprechen</b> · ~15 min with a partner · questions about yourself, talk about your life, plan something together</div>`}
+    <div>Each part is worth 25 points. You pass with <b>60 of 100</b>. Check the official Goethe-Institut model test for your exam centre's exact rules.</div></div></details></div>`;
+}
+
+function screenAnalyse() {
+  const est = estimate(), lvl = S.level;
+  const days = Array.from({ length: 14 }, (_, i) => addDays(TODAY(), i - 13));
+  const maxQ = Math.max(10, ...days.map(d => S.days[d]?.q || 0));
+  const weak = weaknesses(6);
+  const all = lvlWords(); const boxes = [0, 0, 0]; all.forEach(w => { const b = S.words[w.id]?.b; if (b === undefined) boxes[0]++; else if (b < 3) boxes[1]++; else boxes[2]++; });
+  return `${topbar()}<h1>Analyse</h1><div class="h-en">Your progress and settings</div>
+  <div class="section"><div class="section-head"><div><h2>Geschätztes Ergebnis</h2><div class="h-en">Estimated score</div></div><b class="num" style="font-family:var(--f-display);font-size:22px">${est.total}<span class="tiny"> / 100</span></b></div>
+    <div class="card">${est.mods.map(m => mrow(MOD_NAME[m.m], m.v, Math.round(m.v * 25) + "/25", m.n < 5 ? "little data yet" : m.n + " answers")).join("")}
+    <div class="tiny" style="margin-top:8px">Recent answers count more than old ones. Parts you haven't practised count as 45% until you try them, so the estimate starts low on purpose. Pass mark: 60.</div></div></div>
+  <div class="section">${hd("Schwachstellen", "Weak spots, weakest first")}
+    <div class="card">${weak.length ? weak.map((w, i) => `<div class="weak"><div><div style="font-weight:600">${esc(w.label)}</div><div class="tiny">${esc(w.sub)} · ${w.n} answers</div></div><div class="row"><span class="pct num">${pct(w.v)}%</span><button class="btn small" data-act="weak6" data-i="${i}">Üben</button></div></div>`).join("") : `<div class="small muted">Nothing below 80% yet, or not enough answers. Keep practising and this list fills in.</div>`}</div></div>
+  <div class="section">${hd("Aktivität", "Answers per day, last 14 days")}
+    <div class="card"><div class="bars" role="img" aria-label="Answers per day over the last 14 days">${days.map(d => { const x = S.days[d]; const q = x?.q || 0; return `<div class="bar ${d === TODAY() ? "today" : ""} ${q ? "" : "zero"}" title="${esc(fmtDate(d))}: ${q} answers${q ? ", " + pct(x.c / q) + "% correct" : ""}"><b style="height:${q / maxQ * 100}%"></b></div>`; }).join("")}</div>
+    <div class="bars-x">${days.map((d, i) => `<span>${i % 2 === 1 ? "" : new Date(d + "T12:00:00").getDate()}</span>`).join("")}</div></div></div>
+  <div class="section">${hd("Wortschatz", "Vocabulary")}<div class="card">
+    ${mrow("Sicher", boxes[2] / all.length, boxes[2] + "")}${mrow("Im Lernen", boxes[1] / all.length, boxes[1] + "")}${mrow("Neu", boxes[0] / all.length, boxes[0] + "")}
+    ${mrow("Artikel", skillVal("vocab.article"), null, "der/die/das when typing")}${mrow("Hör-Vokabeln", skillVal("vocab.listen"), null, "audio only")}</div></div>
+  <div class="section">${hd("Einstellungen", "Settings")}<div class="card">
+    <div class="set-row"><div><b>Level</b><div class="tiny">Switching keeps all progress</div></div><select class="input" id="set-level" data-act-change="level"><option ${lvl === "A1" ? "selected" : ""}>A1</option><option ${lvl === "A2" ? "selected" : ""}>A2</option></select></div>
+    <div class="set-row"><div><b>A1 exam date</b></div><input type="date" class="input" id="set-a1" value="${S.exam.A1}" data-act-change="date" data-l="A1"></div>
+    <div class="set-row"><div><b>A2 exam date</b></div><input type="date" class="input" id="set-a2" value="${S.exam.A2}" data-act-change="date" data-l="A2"></div>
+    <div class="set-row"><div><b>English help</b><div class="tiny">Translations beside questions and options</div></div><button class="btn small" data-act="toggle-en" aria-pressed="${enOn()}">${enOn() ? "On" : "Off"}</button></div>
+    <div class="set-row"><div><b>Speech speed</b><div class="tiny">${TTS.voices[0] ? "Voice: " + esc(TTS.voices[0].name) : "System German voice"}</div></div><div class="row">${speedSeg().replace('<span class="tiny">Tempo</span>', "")}<button class="btn small" data-act="test-voice">Test</button></div></div>
+    <div class="set-row"><div><b>Saved</b><div class="tiny">${Store.status === "cloud" ? "To your Claude account. Open this page on any device to continue." : "On this device only. Always open the app the same way (for example from your Home Screen icon) so your progress is there."}</div></div><span class="sync ${Store.status === "cloud" ? "ok" : ""}"><i></i></span></div>
+    <div class="set-row"><div><b>Reset progress</b><div class="tiny">Deletes all answers and word history</div></div>${UI.resetAsk ? `<div class="row"><button class="btn small" data-act="reset-no">Cancel</button><button class="btn small" style="color:var(--red)" data-act="reset-yes">Delete</button></div>` : `<button class="btn small" data-act="reset-ask">Reset</button>`}</div>
+  </div></div>`;
+}
+
+const TABS = [["heute", "Heute", "home"], ["woerter", "Wörter", "words"], ["hoeren", "Hören", "ear"], ["pruefung", "Prüfung", "exam"], ["analyse", "Analyse", "chart"]];
+function render() {
+  const scr = { heute: screenHeute, woerter: screenWoerter, hoeren: screenHoeren, pruefung: screenPruefung, analyse: screenAnalyse }[UI.tab];
+  $("#app").innerHTML = `<main class="app">${scr()}</main>
+  <nav class="tabbar" aria-label="Main"><div class="tabbar-in">${TABS.map(([k, l, i]) => `<button class="tab" data-act="tab" data-t="${k}" ${UI.tab === k ? 'aria-current="page"' : ""}>${ic(i, 22)}<span>${l}</span></button>`).join("")}</div></nav>`;
+  const strip = $("#cdstrip"), cell = strip && strip.querySelector(".today"); if (cell && strip.scrollTo) strip.scrollLeft = Math.max(0, cell.offsetLeft - 16);
+}
+
+// ---------- events ----------
+document.addEventListener("click", e => {
+  const el = e.target.closest("[data-act]"); if (!el) return;
+  const a = el.dataset.act;
+  switch (a) {
+    case "tab": UI.tab = el.dataset.t; UI.resetAsk = false; render(); scrollTo(0, 0); try { localStorage.setItem("startklar-tab", UI.tab); } catch (_) {} break;
+    case "start-daily": { const p = buildDaily(); startSession({ ...p, daily: true }); break; }
+    case "start-short": { const p = buildDaily({ short: true }); startSession({ ...p, title: p.title + " (kurz)", daily: true }); break; }
+    case "toggle-en": toggleEn(); break;
+    case "p-due": startSession(P.due()); break;
+    case "p-drill": startSession(P.drill(null, 10)); break;
+    case "p-drilltype": startSession(P.drill(el.dataset.t, 10)); break;
+    case "p-mistakes": startSession(P.mistakes()); break;
+    case "p-mock": startSession(buildMock()); break;
+    case "p-topic": startSession(P.topic(el.dataset.t)); break;
+    case "p-articles": startSession(P.articles()); break;
+    case "p-listenwords": startSession(P.listenWords()); break;
+    case "p-part": startSession(P.part(el.dataset.m, +el.dataset.p)); break;
+    case "p-trap": startSession(P.trap(el.dataset.t)); break;
+    case "weak": goWeak(weaknesses(3)[+el.dataset.i].go); break;
+    case "weak6": goWeak(weaknesses(6)[+el.dataset.i].go); break;
+    case "level-toggle": UI.tab = "analyse"; render(); break;
+    case "set-level": S.level = el.dataset.v; Store.save(); render(); break;
+    case "gen-hoeren": genHoeren(); break;
+    case "test-voice": TTS.say("Hallo! Ich bin Ihre Stimme für die Hörübungen. Viel Erfolg bei der Prüfung!"); break;
+    case "rate": S.rate = +el.dataset.v; Store.save(); document.querySelectorAll('[data-act="rate"]').forEach(b => b.setAttribute("aria-pressed", b === el || +b.dataset.v === S.rate)); break;
+    case "reset-ask": UI.resetAsk = true; render(); break;
+    case "reset-no": UI.resetAsk = false; render(); break;
+    case "reset-yes": { const keep = { level: S.level, exam: S.exam, rate: S.rate }; S = { ...freshState(), ...keep }; Store.save(); UI.resetAsk = false; _daily = null; render(); toast("Progress deleted."); break; }
+    // runner
+    case "quit": if (R) { R.st.quitAsk = true; renderRunner(false); } break;
+    case "quit-no": if (R) { R.st.quitAsk = false; renderRunner(false); } break;
+    case "quit-yes": closeRunner(); break;
+    case "next": next(); break;
+    case "say": TTS.say(el.dataset.text); break;
+    case "learn-ok": { const w = WORDS[task().wid]; if (!S.words[w.id]) S.words[w.id] = { b: 0, d: dayNum(), n: 0, c: 0, x: 0 }; Store.save(); next(); break; }
+    case "pick": pickOption(+el.dataset.q, +el.dataset.i); break;
+    case "drill-play": playDrill(); break;
+    case "h-play": playHoeren(); break;
+    case "multi-check": checkMulti(); break;
+    case "recall-check": checkRecall(); break;
+    case "recall-skip": { const w = WORDS[task().wid]; gradeWord(w, false, "recall", false); finishTask(false, "Kein Problem.", `<b>${esc(w.de)}</b> = ${esc(w.en)}. It comes back soon.`); break; }
+    case "write-check": checkWriting(); break;
+    case "speak-check": checkSpeaking(); break;
+    case "ai-feedback": aiFeedback(el.dataset.k); break;
+    case "uml": { const t = document.getElementById(el.dataset.t); if (t) { const s = t.selectionStart ?? t.value.length, en = t.selectionEnd ?? s; t.value = t.value.slice(0, s) + el.dataset.c + t.value.slice(en); t.focus(); t.setSelectionRange(s + 1, s + 1); t.dispatchEvent(new Event("input", { bubbles: true })); } break; }
+  }
+});
+document.addEventListener("change", e => {
+  const el = e.target; const a = el.dataset.actChange; if (!a) return;
+  if (a === "level") { S.level = el.value; Store.save(); _daily = null; render(); }
+  if (a === "date" && el.value) { S.exam[el.dataset.l] = el.value; Store.save(); _daily = null; render(); }
+});
+document.addEventListener("input", e => {
+  if (e.target.id === "wtext") { const n = wordCount(e.target.value); const c = $("#wc"); if (c) c.textContent = n + " Wörter"; if (R) R.st.text = e.target.value; }
+  if (R && /^sp\d$/.test(e.target.id)) { R.st.vals[+e.target.id.slice(2)] = e.target.value; }
+  if (R && /^f\d$/.test(e.target.id)) { R.st.vals = R.st.vals || []; R.st.vals[+e.target.id.slice(1)] = e.target.value; }
+  if (R && e.target.id === "recall") R.st.typed = e.target.value;
+});
+document.addEventListener("keydown", e => {
+  if (!R || e.key !== "Enter") return;
+  if (e.target.id === "recall" && !R.st.done) { e.preventDefault(); checkRecall(); }
+  else if (R.st.done && e.target.tagName !== "TEXTAREA") { e.preventDefault(); next(); }
+});
+
+// ---------- boot ----------
+(function boot() {
+  const local = Store.loadLocal(); if (local) S = normalize(local);
+  try { const t = localStorage.getItem("startklar-tab"); if (t && TABS.some(x => x[0] === t)) UI.tab = t; } catch (_) {}
+  if (location.hash && TABS.some(x => x[0] === location.hash.slice(1))) UI.tab = location.hash.slice(1);
+  TTS.init(); render();
+  setTimeout(() => { UI.voiceNote = true; if (!R && UI.tab !== "analyse") render(); }, 2500);
+  Store.connect(() => { _daily = null; if (!R) render(); });
+  (async () => { try { if (window.claude?.use) { const s = await window.claude.use("sample"); if (s) { SAMPLE = s; if (!R) render(); } } } catch (_) {} })();
+})();
+</script>
+</body>
+</html>

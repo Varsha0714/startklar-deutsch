@@ -1,0 +1,13 @@
+{
+  "name": "Startklar Deutsch",
+  "short_name": "Startklar",
+  "description": "Goethe A1 & A2 exam practice",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F6F7FB",
+  "theme_color": "#2743C9",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
